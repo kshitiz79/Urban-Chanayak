@@ -9,7 +9,7 @@ const Hero = () => {
       {/* Video Background */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/intro.mp4" // Replace with your video path
+        src="/videoblog2.mp4" // Replace with your video path
         autoPlay
         muted
         loop
