@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="200" height="100">
+  <!-- Path for the curved line -->
+  <path d="M10 20 C 40 0, 60 40, 90 20 C 120 0, 150 40, 180 20 L 180 50" fill="transparent" stroke="#E1B7B2" stroke-width="2"></path>
+
+  <!-- Arrow -->
+  <polygon points="160,50 165,55 160,60" fill="#E1B7B2"></polygon>
+
+  <!-- Circle with asterisk inside -->
+  <circle cx="50" cy="30" r="15" fill="#A7B7C5"></circle>
+  <text x="40" y="35" font-family="Arial" font-size="12" fill="white" text-anchor="middle">*</text>
+
+  <!-- Circle with a star inside -->
+  <circle cx="120" cy="30" r="15" fill="#A7C5A7"></circle>
+  <text x="120" y="35" font-family="Arial" font-size="12" fill="white" text-anchor="middle">★</text>
+</svg>
