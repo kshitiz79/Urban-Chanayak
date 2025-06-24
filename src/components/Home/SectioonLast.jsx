@@ -2,7 +2,7 @@ import React from 'react';
 
 const SectioonLast = () => {
   return (
-    <div className="relative w-full h-[200vh] overflow-hidden">
+    <div className="relative w-full h-[220vh] overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay
@@ -19,7 +19,7 @@ const SectioonLast = () => {
 
 
       {/* Overlay content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-10 px-10 ">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-14 px-10 ">
 
 
 
@@ -39,7 +39,7 @@ const SectioonLast = () => {
         Innovation – Smart Ideas, Real Results
         </div>
 
-             <div className="bg-black text-white text-4xl md:text-5xl  py-28 px-12 rounded-full text-center w-full  ">
+             <div className="bg-black text-white text-4xl md:text-5xl  py-28 px-12 rounded-full text-center w-full mb-60  ">
                Public Relations - Shaping Perception , Building Trust
    
         </div>
