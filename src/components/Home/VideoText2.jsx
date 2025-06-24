@@ -8,7 +8,7 @@ const VideoText2 = () => {
         
         {/* Left Image Section */}
         <div className="w-full md:w-3/4">
-          <img src="./download-2.jpg" className="w-full rounded-2xl" alt="Visual" />
+          <img src="./images1.png" className="w-full rounded-2xl" alt="Visual" />
         </div>
 
         {/* Right Text Section - Positioned at Bottom */}
@@ -31,7 +31,7 @@ const VideoText2 = () => {
         
         {/* Left Image Section */}
         <div className="w-full md:w-3/4">
-          <img src="./download-2.jpg" className="w-full rounded-2xl" alt="Visual" />
+          <img src="./images2.png" className="w-full rounded-2xl" alt="Visual" />
         </div>
 
         {/* Right Text Section - Positioned at Bottom */}

@@ -20,8 +20,8 @@ const VideoText = () => {
       <div className="w-full md:w-3/4  ">
        <div className="">
   <video
-    className="w-full h-[39rem] rounded-r-xl"
-    src="/video11.mp4"
+    className="w-full h-[40rem] rounded-r-2xl "
+    src="/June.mp4"
     autoPlay
     muted
     loop
