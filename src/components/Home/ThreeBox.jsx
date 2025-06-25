@@ -29,9 +29,10 @@ const ThreeBox = () => {
   // Define the 4 color stops as RGB
   const colorStops = [
     [0, 0, 0],           // black
-    [30, 30, 30],        // dark gray
-    [245, 245, 245],     // medium gray
-    [255, 255, 255],     // light gray
+    [0, 0, 0],        // dark gray
+    [15, 15, 15],     // medium gray
+    [243, 243, 243], 
+    [255, 255, 255],    // light gray
   ];
   
 
