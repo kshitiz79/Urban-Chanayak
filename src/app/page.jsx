@@ -10,6 +10,8 @@ import ThreeBox from "@/components/Home/ThreeBox";
 import Video from "@/components/Home/Video";
 import VideoText from "@/components/Home/VideoText";
 import VideoText2 from "@/components/Home/VideoText2";
+import VideoText3 from "@/components/Home/VideoText3";
+import VideoText4 from "@/components/Home/VideoText4";
 
 export default function Home() {
   return (
@@ -21,9 +23,12 @@ export default function Home() {
   <Testimonial/>
   <VideoText/>
   <SplitImageLayout/>
+  <VideoText3/>
+  {/* <VideoText2/> */}
 <DualImage/>
   <ManyDivs/>
-    <VideoText2/>
+  {/* <VideoText4/> */}
+
   <SectioonLast/>
 
     </div>
