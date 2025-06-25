@@ -64,7 +64,7 @@ const SplitImageLayout = () => {
       {/* Heading to trigger bg change */}
       <h1
         ref={headingRef}
-        className="text-6xl text-center font-bold py-24"
+        className="text-6xl text-center text-white font-bold py-24"
       >
         Our diverse projects, from environmental <br />
         initiatives to educational programs
