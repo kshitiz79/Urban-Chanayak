@@ -4,20 +4,21 @@ import React, { useState, useEffect } from "react";
 const Hero = () => {
   const [hoverTransform, setHoverTransform] = useState("translateX(0)");
 
-const handleMouseMove = (e) => {
-  const card = e.currentTarget;
-  const rect = card.getBoundingClientRect();
-  const x = e.clientX - rect.left; // x position within the card
-  const edgeThreshold = rect.width * 0.2; // 20% from each edge
+  const handleMouseMove = (e) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const edgeThreshold = rect.width * 0.2;
 
-  if (x < edgeThreshold) {
-    setHoverTransform("translateX(-12px)");
-  } else if (x > rect.width - edgeThreshold) {
-    setHoverTransform("translateX(12px)");
-  } else {
-    setHoverTransform("translateX(0)");
-  }
-};
+    if (x < edgeThreshold) {
+      setHoverTransform("translateX(-12px)");
+    } else if (x > rect.width - edgeThreshold) {
+      setHoverTransform("translateX(12px)");
+    } else {
+      setHoverTransform("translateX(0)");
+    }
+  };
+
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -28,12 +29,13 @@ const handleMouseMove = (e) => {
 
   const screenHeight = typeof window !== "undefined" ? window.innerHeight : 1080;
 
+  // Adjusted for 5 screen scrolls
   const fadeStart = 1 * screenHeight;
   const fadeEnd = 2 * screenHeight;
-  const videoFadeStart = 3 * screenHeight;
-  const videoFadeEnd = 6 * screenHeight;
+  const videoFadeStart = 2 * screenHeight;
+  const videoFadeEnd = 4.5 * screenHeight;
+  const showFinalHeading = scrollY > screenHeight * 4.2;
 
-  // Text opacity: fades between 1 → 2 scrolls
   const textOpacity =
     scrollY < fadeStart
       ? 1
@@ -41,22 +43,18 @@ const handleMouseMove = (e) => {
       ? 0
       : 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart);
 
-  // Black overlay opacity: fades in between 2 → 6 scrolls
   const overlayOpacity = Math.min(
     Math.max((scrollY - videoFadeStart) / (videoFadeEnd - videoFadeStart), 0),
     1
   );
 
-  // Show final heading at bottom after ~5.2 scrolls
-  const showFinalHeading = scrollY > screenHeight * 5.2;
-
   return (
-    <section className="relative w-full" style={{ height: "600vh", zIndex: 10 }}>
+    <section className="relative w-full" style={{ height: "480vh", zIndex: 10 }}>
       {/* Sticky Layer */}
       <div className="sticky top-0 w-full h-screen overflow-hidden" style={{ zIndex: 5 }}>
         {/* Background Video */}
         <video
-          className="absolute top-0  left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover"
           src="/hero.mp4"
           autoPlay
           muted
@@ -86,7 +84,7 @@ const handleMouseMove = (e) => {
         {showFinalHeading && (
           <div className="absolute bottom-20 w-full text-center z-20">
             <h2 className="text-white text-5xl md:text-5xl font-bold tracking-wide">
-            Urban Chanakya is for
+              Urban Chanakya is for
             </h2>
           </div>
         )}
