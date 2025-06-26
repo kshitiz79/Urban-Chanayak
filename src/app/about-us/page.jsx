@@ -7,6 +7,7 @@ export const page = () => {
   return (
     <div className='font-telegraf'>
       <UrbanAbout/>
+      <Creative/>
       <SuccessStories/>
     </div>
   )

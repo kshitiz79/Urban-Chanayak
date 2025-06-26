@@ -15,7 +15,7 @@ const UrbanAbout = () => {
   const scale = Math.max(1 - scrollY / 1000, 0.7); 
 
   return (
-    <section className="relative w-full h-[100vh] bg-white py-10 ">
+    <section className="sticky top-0 w-full h-[100vh] bg-white py-10 ">
       {/* Sticky Inner Content */}
       <div className="sticky top-0 h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20 gap-10">
         {/* Left: Title */}
@@ -55,9 +55,9 @@ const UrbanAbout = () => {
       </div>
 
       {/* Next Component Placeholder */}
-      <div className="relative bg-white flex items-center justify-center text-3xl text-black">
+      {/* <div className="relative bg-white flex items-center justify-center text-3xl text-black">
         <Creative/>
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -4,7 +4,7 @@ import React from "react";
 
 const Creative = () => {
   return (
-    <div className="bg-white w-full mt-190">
+    <div className="relative bg-white w-full">
     <section className="bg-white px-6 md:px-10">
       {/* Top Section */}
       <div className=" py-16 border-t-[1px] border-black flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-8">

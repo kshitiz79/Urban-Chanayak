@@ -2,10 +2,10 @@ import React from 'react'
 
 const SuccessStories = () => {
   return (
-    <section className='relative '>
+    <section className='sticky top-0 left-0  '>
 
   
-    <div className='bg-white text-black text-center min-h-screen z-0'>SuccessStories</div>
+    <div className='bg-white text-black text-center min-h-screen z-0 text-8xl justify-center py-90'>Success Stories</div>
     </section>
   )
 }
