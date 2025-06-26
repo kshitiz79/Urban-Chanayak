@@ -14,7 +14,6 @@ const UrbanAbout = () => {
 
   const scale = Math.max(1 - scrollY / 1000, 0.7); 
 
-
   return (
     <section className="relative w-full h-[100vh] bg-white py-10 ">
       {/* Sticky Inner Content */}

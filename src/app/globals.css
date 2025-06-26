@@ -28,7 +28,7 @@ body {
 
 @font-face {
   font-family: 'Telegraf';
-  src: url('/Telegraph.ttf') format('woff');
+  src: url('/Telegraph.otf') format('woff');
   font-weight: normal;
   font-style: normal;
 }
