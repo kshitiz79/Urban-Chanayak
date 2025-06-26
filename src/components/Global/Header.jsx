@@ -38,7 +38,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo or brand name */}
-          <div className=""><img src="https://urbanchanakya.in/wp-content/uploads/2024/04/logo-uc.png" className='w-20'/></div>
+          <div className=""><img src="https://urbanchanakya.in/wp-content/uploads/2024/04/logo-uc.png" className='w-28'/></div>
 
           {/* Navigation links */}
           <nav className="flex space-x-6 text-black">
