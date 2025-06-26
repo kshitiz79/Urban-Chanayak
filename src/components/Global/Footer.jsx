@@ -1,25 +1,16 @@
 import React from 'react';
-import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'; // For social icons
+import { MapPin, Mail, Phone } from "lucide-react";
+import { FaXTwitter } from 'react-icons/fa6'; // Add this import
+import {  FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa'; // For social icons
 
 const Footer = () => {
   return (
 
     <>
 
-     {/* Brand Name */}
-        {/* <div className="flex  justify-center  bg-black -mb-56 ">
-    <h1 className="  text-[18rem]  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-800 tracking-tight">
  
-  Resend
-</h1>
-
-
-
-
-        </div> */}
-    
  
-    <div className=" text-white py-16 min-h-[400px] flex bg-black z-50 items-center">
+    <div className=" text-white  min-h-[200px] flex bg-black z-50 items-center">
       <div className="  w-full">
        
 
@@ -28,58 +19,84 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="col-span-1">
-            <p className="text-gray-400 text-sm mb-4">
-              2261 Market Street #5039
-              <br />
-              San Francisco, CA 94114
-            </p>
+            <img src="https://urbanchanakya.in/wp-content/uploads/2024/04/logo-uc.png" alt="" />
+           
             {/* Social Icons */}
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
-                <FaTwitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+            <div className="flex space-x-4 ml-4 mt-4 ">
+            <a href="https://x.com/ChanakyaUrban" className="text-gray-400 hover:text-orange-500">
+  <FaXTwitter size={20} />
+</a>
+              <a href="https://www.linkedin.com/company/urbanchanakya/?originalSubdomain=in" className="text-gray-400 hover:text-orange-500">
                 <FaLinkedin size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                <FaGithub size={20} />
+              <a href="https://www.facebook.com/chanakyaurban" className="text-gray-400 hover:text-orange-500">
+                <FaFacebook size={20} />
+              </a>
+              <a href="https://www.instagram.com/urbanchanakya.in?igsh=ZTBiN2c2cXNlM2w=" className="text-gray-400 hover:text-orange-500">
+                <FaInstagram size={20} />
               </a>
             </div>
           </div>
 
           {/* Documentation */}
           <div className="col-span-1">
-            <h3 className="font-semibold text-sm uppercase text-white mb-4">Documentation</h3>
+            <h3 className="font-semibold text-sm uppercase text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Getting Started</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white text-sm">API Reference</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Integrations</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Examples</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white text-sm">SDKs</a></li>
+              <li><a href="/" className="text-gray-400 hover:text-white text-sm">Home</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white text-sm">About Us</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Our Services</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Blogs</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Contact Us</a></li>
             </ul>
           </div>
 
           {/* Resources */}
           <div className="col-span-1">
-            <h3 className="font-semibold text-sm uppercase text-white mb-4">Resources</h3>
+            <h3 className="font-semibold text-sm uppercase text-white mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Changelog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Pricing</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Security</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Status</a></li>
+
+              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Election Management</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Event Management</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Social Media</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Paid Promotion</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Web Design</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white text-sm">PR Management</a></li>
             </ul>
           </div>
 
           {/* Company */}
           <div className="col-span-1">
-            <h3 className="font-semibold text-sm uppercase text-white mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Contact</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Customers</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white text-sm">Brand</a></li>
-            </ul>
-          </div>
+    <h3 className="font-semibold text-sm uppercase text-white mb-4">Contact Us</h3>
+    <ul className="space-y-2">
+      <li>
+        <a
+          href="https://www.google.com/maps?q=Guwahati,Assam"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-gray-400 hover:text-white text-sm"
+        >
+          <MapPin size={16} /> Address: Guwahati, Assam
+        </a>
+      </li>
+      <li>
+        <a
+          href="mailto:hello@urbanchanakya.in"
+          className="flex items-center gap-2 text-gray-400 hover:text-white text-sm"
+        >
+          <Mail size={16} /> Email: hello@urbanchanakya.in
+        </a>
+      </li>
+      <li>
+        <a
+          href="tel:03613584834"
+          className="flex items-center gap-2 text-gray-400 hover:text-white text-sm"
+        >
+          <Phone size={16} /> Phone No: 036135 84834
+        </a>
+      </li>
+    </ul>
+  </div>
+
 
           {/* Legal */}
           <div className="col-span-1">

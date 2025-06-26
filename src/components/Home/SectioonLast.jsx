@@ -40,7 +40,7 @@ const SectioonLast = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[300vh] overflow-hidden">
+    <div className="relative w-full h-[310vh] overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay

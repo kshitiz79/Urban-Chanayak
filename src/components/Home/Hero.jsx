@@ -2,6 +2,22 @@
 import React, { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [hoverTransform, setHoverTransform] = useState("translateX(0)");
+
+const handleMouseMove = (e) => {
+  const card = e.currentTarget;
+  const rect = card.getBoundingClientRect();
+  const x = e.clientX - rect.left; // x position within the card
+  const edgeThreshold = rect.width * 0.2; // 20% from each edge
+
+  if (x < edgeThreshold) {
+    setHoverTransform("translateX(-12px)");
+  } else if (x > rect.width - edgeThreshold) {
+    setHoverTransform("translateX(12px)");
+  } else {
+    setHoverTransform("translateX(0)");
+  }
+};
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -14,7 +30,7 @@ const Hero = () => {
 
   const fadeStart = 1 * screenHeight;
   const fadeEnd = 2 * screenHeight;
-  const videoFadeStart = 2 * screenHeight;
+  const videoFadeStart = 3 * screenHeight;
   const videoFadeEnd = 6 * screenHeight;
 
   // Text opacity: fades between 1 → 2 scrolls
@@ -51,13 +67,13 @@ const Hero = () => {
         {/* Fade-to-black Overlay */}
         <div
           className="absolute top-0 left-0 w-full h-full bg-black"
-          style={{ opacity: overlayOpacity, transition: "opacity 0.3s ease-out" }}
+          style={{ opacity: overlayOpacity, transition: "opacity 0.2s ease-out" }}
         />
 
         {/* Center Text Box */}
         <div className="relative z-10 flex justify-center items-center h-full text-center">
           <div
-            className="rounded-[6rem] px-10 md:px-60 py-12 bg-white transition-opacity duration-300"
+            className="rounded-[8rem] px-10 md:px-60 py-24 bg-white transition-opacity duration-100"
             style={{ opacity: textOpacity }}
           >
             <h1 className="text-4xl md:text-8xl text-black font-normal font-sans text-center">
