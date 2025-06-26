@@ -26,14 +26,25 @@ body {
 }
 
 
-
 @font-face {
-  font-family: 'MyFont';
-  src: url('/telegraph.otf') format('truetype');
+  font-family: 'Telegraf';
+  src: url('/fonts/TelegrafRegular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'MyFont', Arial, sans-serif;
+  font-family: 'Telegraf', sans-serif;
 }
+
+@layer utilities {
+  .display-h {
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    font-family: 'Scotch Deck Compressed', sans-serif;
+    font-size: 4em;
+    font-weight: 300;
+    line-height: 1;
+  }
+}
+

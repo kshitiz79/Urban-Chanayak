@@ -74,7 +74,7 @@ const Hero = () => {
             className="rounded-[8rem] px-10 md:px-60 py-24 bg-white transition-opacity duration-100"
             style={{ opacity: textOpacity }}
           >
-            <h1 className="text-4xl md:text-8xl text-black font-normal font-sans text-center">
+            <h1 className="text-4xl md:text-8xl text-black font-telegraf text-center">
               We Create The <br /> Impact
             </h1>
           </div>
