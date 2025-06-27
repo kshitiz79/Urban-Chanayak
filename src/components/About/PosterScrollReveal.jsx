@@ -19,7 +19,7 @@ const PosterScrollReveal = () => {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=180%", // tighter scroll range
+          end: "+=200%", // tighter scroll range
           scrub: true,
           pin: true,
         },
