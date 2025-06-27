@@ -19,13 +19,12 @@ const PosterScrollReveal = () => {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=180%", // reduced duration for tighter spacing
+          end: "+=180%", // tighter scroll range
           scrub: true,
           pin: true,
         },
       });
 
-      // Card 1 folds away
       tl.fromTo(
         card1Ref.current,
         { clipPath: "inset(0% 0% 0% 0%)" },
@@ -33,27 +32,24 @@ const PosterScrollReveal = () => {
         0
       );
 
-      // Card 2 unfolds tightly after card 1 folds
       tl.fromTo(
         card2Ref.current,
         { clipPath: "inset(0% 0% 100% 0%)" },
         { clipPath: "inset(0% 0% 0% 0%)", ease: "power2.inOut" },
-        0.05
+        0.03 // closer to card 1
       );
 
-      // Card 2 folds away
       tl.to(
         card2Ref.current,
         { clipPath: "inset(100% 0% 0% 0%)", ease: "power2.inOut" },
-        0.45
+        0.32
       );
 
-      // Card 3 unfolds just after card 2 finishes
       tl.fromTo(
         card3Ref.current,
         { clipPath: "inset(0% 0% 100% 0%)" },
         { clipPath: "inset(0% 0% 0% 0%)", ease: "power2.inOut" },
-        0.5
+        0.33// very minimal gap
       );
     }, containerRef);
 
@@ -63,15 +59,15 @@ const PosterScrollReveal = () => {
   return (
     <section
       ref={containerRef}
-      className="relative h-[250vh] bg-white overflow-hidden"
+      className="relative h-[200vh] bg-white overflow-hidden"
     >
       <div className="sticky top-0 h-screen w-full flex items-center justify-center">
         {/* Card 1 */}
         <div
           ref={card1Ref}
-          className="absolute inset-0 flex items-center justify-center z-30"
+          className="absolute inset-0 min-h-screen flex items-center justify-center z-30 overflow-hidden rounded-xl"
         >
-          <div className="bg-white text-black min-h-screen w-full max-w-6xl rounded-xl px-10 flex items-center justify-center">
+          <div className="bg-white text-black min-h-screen w-full max-w-7xl rounded-xl px-10 flex items-center justify-center overflow-hidden">
             <h1 className="text-[7rem]">Success Stories</h1>
           </div>
         </div>
@@ -79,16 +75,16 @@ const PosterScrollReveal = () => {
         {/* Card 2 */}
         <div
           ref={card2Ref}
-          className="absolute inset-0 flex items-center justify-center z-20"
+          className="absolute inset-0 flex items-center justify-center z-20 overflow-hidden rounded-xl"
         >
-          <div className="bg-orange-500 text-white  w-full max-w-6xl rounded-xl shadow-xl px-10 py-40 grid grid-cols-1 md:grid-cols-2 items-center">
+          <div className="bg-black text-white min-h-screen w-full max-w-7xl rounded-xl px-10 py-20 grid grid-cols-1 md:grid-cols-2 items-center overflow-hidden">
             <div className="flex justify-center">
               <Image
-                src="/download-3.jpg"
+                src="/download-2.jpg"
                 alt="Second"
-                width={500}
-                height={500}
-                className="rounded-xl h-[60vh] object-cover shadow-lg py-20"
+                width={800}
+                height={800}
+                className="rounded-xl object-cover shadow-lg"
               />
             </div>
             <div>
@@ -103,16 +99,16 @@ const PosterScrollReveal = () => {
         {/* Card 3 */}
         <div
           ref={card3Ref}
-          className="absolute inset-0 flex items-center justify-center z-10"
+          className="absolute inset-0 flex items-center justify-center z-10 overflow-hidden rounded-xl"
         >
-          <div className="bg-blue-600 text-white w-full max-w-6xl rounded-xl shadow-xl px-10 py-40 grid grid-cols-1 md:grid-cols-2 items-center">
+          <div className="bg-black text-white  min-h-screen w-full max-w-7xl rounded-xl px-10 py-20 grid grid-cols-1 md:grid-cols-2 items-center overflow-hidden">
             <div className="flex justify-center">
               <Image
                 src="/download-1.jpg"
                 alt="Third"
                 width={500}
                 height={500}
-                className="rounded-xl h-[60vh] object-cover shadow-lg py-20"
+                className="rounded-xl object-cover shadow-lg"
               />
             </div>
             <div>
