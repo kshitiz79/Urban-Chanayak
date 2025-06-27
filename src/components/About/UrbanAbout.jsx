@@ -16,6 +16,7 @@ const UrbanAbout = () => {
 
   return (
     <section className="sticky top-0 w-full h-[100vh] bg-white py-10 ">
+      
       {/* Sticky Inner Content */}
       <div className="sticky top-0 h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20 gap-10">
         {/* Left: Title */}
