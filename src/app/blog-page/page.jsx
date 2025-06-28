@@ -11,6 +11,7 @@ const EvarsSection = () => {
     <Section2/>
     <Section3/>
     <SectionComponent/>
+  
       
     </>
   );

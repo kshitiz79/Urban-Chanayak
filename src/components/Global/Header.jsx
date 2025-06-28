@@ -48,9 +48,12 @@ const Header = () => {
              <a href="/about-us" className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300">
               About Us
             </a>
+            <a href="/our-service" className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300">
+              Our Services
+            </a>
 
             {/* Our Services with Dropdown */}
-            <div className="relative mt-2" ref={dropdownRef}>
+            {/* <div className="relative mt-2" ref={dropdownRef}>
               <a
                 onClick={() => setIsDropdownOpen(prev => !prev)}
                 className="text-gray-700 hover:text-white p-2 px-4 py-3 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
@@ -76,7 +79,7 @@ const Header = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </div> */}
 
 
            

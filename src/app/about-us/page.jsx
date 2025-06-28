@@ -9,6 +9,7 @@ import UrbanAbout from '@/components/About/UrbanAbout';
 import HeroSection from '@/components/About/HeroSection';
 import TeamSection from '@/components/About/TeamSection';
 import PosterScrollReveal from '@/components/About/PosterScrollReveal';
+import WhoWeAre from '@/components/About/WhoWeAre';
 
 const Page = () => {
   const [loaderDone, setLoaderDone] = useState(false);
@@ -25,6 +26,7 @@ const Page = () => {
           <Creative />
           {/* <SuccessStories /> */}
           <PosterScrollReveal/>
+          <WhoWeAre/>
        
         </>
       )}

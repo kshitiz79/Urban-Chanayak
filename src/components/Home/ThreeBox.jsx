@@ -65,7 +65,7 @@ const ThreeBox = () => {
           <div className="bg-white text-black font-normal w-full md:w-[50%] text-4xl py-16 px-10 rounded-2xl">
             Political Leaders & Campaigners
           </div>
-          <div className="bg-white text-black font-normal w-full md:w-[50%] text-4xl py-16 px-10 rounded-2xl">
+          <div className="bg-white text-black font-normal w-full md:w-[55%] text-4xl py-16 px-10 rounded-2xl">
             Government & Public Sector Bodies
           </div>
         </div>
