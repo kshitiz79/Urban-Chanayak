@@ -1,65 +1,70 @@
 "use client";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import Creative from "./Creative";
 
 const UrbanAbout = () => {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scale = Math.max(1 - scrollY / 1000, 0.7); 
+  // Title transforms: shrink font size and stick to top
+  const fontSize = Math.max(192 - scrollY / 20, 96); // Font size decreases from 192px to min 96px
+  const translateX = Math.min(scrollY / 4, 200); // Retain left movement
+  const stickyClass = scrollY > 0 ? "fixed top-0" : "sticky"; // Switch to fixed positioning after scroll
+
+  // Paragraph transform: move up as heading shrinks
+  const paraTranslateY = Math.min(scrollY / 2, 100); // Paragraph moves up, max 100px
 
   return (
-    <section className="sticky top-0 w-full h-[100vh] bg-white py-10 ">
-      
-      {/* Sticky Inner Content */}
-      <div className="sticky top-0 h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20 gap-10">
-        {/* Left: Title */}
-        <div className="w-full md:w-1/2 text-left mt-40">
-          <h1 className="text-6xl md:text-8xl font-telegraf text-black leading-none uppercase tracking-tight">
-          About Us
+    <div className="w-full overflow-hidden">
+      {/* Section 1: About Heading and Description */}
+      <section className="bg-white h-[80vh] w-full relative z-10 px-6 md:px-16 pt-40">
+        <div>
+          <h1
+            className={`text-[${fontSize}px] font-black font-telegraf text-black uppercase leading-none origin-left ${stickyClass}`}
+            style={{
+              transform: `translateX(-${translateX}px)`,
+              clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+              willChange: "transform, font-size",
+              transition: "transform 0.1s ease-out, font-size 0.1s ease-out",
+            }}
+          >
+            ABOUT
           </h1>
-        </div>
 
-        {/* Right: Image and Text */}
-        <div className="w-full md:w-1/2 flex flex-col items-center">
-        <div
-  className="w-full h-full transition-transform duration-100 ease-in-out"
-  style={{
-    transform: `scale(${scale})`,
-    transformOrigin: "left bottom"
-  }}
->
-
-          <div className="relative w-full max-w-xl aspect-[3/2] rounded-xl overflow-hidden shadow-lg ml-0 md:ml-15">
-          
-          <video
-    src="/logo.mp4" // replace with your actual video path
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="object-cover rounded-2xl w-full h-full "
-  />
-            </div>
-          </div>
-
-          <p className="mt-6 text-2xl md:text-3xl font-serif text-right text-black max-w-3xl  font-telegraf">
-         <span className="text-orange-500 "> Urban Chanakya </span> is a <br />  strategy-first, creativity-led brand powerhouse, <br /> delivering impactful outcomes across brand, political, and digital domains.
+          <p
+            className="mt-20 text-[26px] md:text-[32px] text-black font-black uppercase font-telegraf leading-snug max-w-4xl"
+            style={{
+              transform: `translateY(-${paraTranslateY}px)`,
+              willChange: "transform",
+              transition: "transform 0.2s ease-out",
+            }}
+          >
+            <span className="text-orange-500">Urban Chanakya</span> is a strategy-first,
+            creativity-led brand powerhouse, delivering impactful outcomes across brand,
+            political, and digital domains.
           </p>
         </div>
-      </div>
+      </section>
 
-      {/* Next Component Placeholder */}
-      {/* <div className="relative bg-white flex items-center justify-center text-3xl text-black">
-        <Creative/>
-      </div> */}
-    </section>
+      {/* Section 2: Background Video Fullscreen */}
+      <section className="relative w-full h-[150vh] bg-black overflow-hidden">
+        <video
+          src="/blogvideo2.mp4"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10" />
+        <p></p>
+        <button></button>
+      </section>
+    </div>
   );
 };
 

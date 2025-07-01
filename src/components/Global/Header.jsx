@@ -3,6 +3,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef();
 
@@ -38,7 +40,12 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo or brand name */}
-          <div className=""><img src="https://urbanchanakya.in/wp-content/uploads/2024/04/logo-uc.png" className='w-28'/></div>
+          <div className=""><img
+              src={scrolled ? "/logoblack.png" : "/logowhite.png"}
+              alt="Logo"
+              width={150}
+              height={50}
+            /></div>
 
           {/* Navigation links */}
           <nav className="flex space-x-6 text-black">
@@ -53,33 +60,7 @@ const Header = () => {
             </a>
 
             {/* Our Services with Dropdown */}
-            {/* <div className="relative mt-2" ref={dropdownRef}>
-              <a
-                onClick={() => setIsDropdownOpen(prev => !prev)}
-                className="text-gray-700 hover:text-white p-2 px-4 py-3 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
-              >
-                Our Services
-              </a>
-
-              <div
-                className={`absolute top-full left-0 mt-4 w-[30rem] bg-white rounded-lg shadow-lg py-4 px-2 transition-all duration-300 ease-in-out transform origin-top ${
-                  isDropdownOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none'
-                }`}
-                style={{ transformOrigin: 'top' }}
-              >
-                <div className="grid grid-cols-2 gap-2">
-                  {services.map((service, index) => (
-                   <Link
-            key={index}
-            href={service.path}
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-black rounded-md text-sm transition-all duration-200"
-          >
-            {service.name}
-          </Link>
-                  ))}
-                </div>
-              </div>
-            </div> */}
+         
 
 
            

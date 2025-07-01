@@ -150,16 +150,22 @@ const ManyDivs = () => {
                   <div
                     className={`bg-white p-9 rounded-3xl transition-shadow duration-300 ${shadowClass}`}
                   >
-                    <div className="flex flex-wrap justify-center">
-                      {["1", "2", "3", "4", "5"].map((num) => (
-                        <img
-                          key={num}
-                          src={`./Frame${num}.png`}
-                          className="rounded-full h-28 w-28"
-                          alt={`Avatar ${num}`}
-                        />
-                      ))}
-                    </div>
+                <div className="relative overflow-hidden w-full bg-white py-6">
+  <div className="flex w-[200%] animate-marquee-right">
+    {[...Array(2)].flatMap(() =>
+      ["1", "2", "3", "4", "5"].map((num, index) => (
+        <img
+          key={`${num}-${index}`}
+          src={`./Frame${num}.png`}
+          className="rounded-full h-28 w-28 mx-4"
+          alt={`Avatar ${num}`}
+        />
+      ))
+    )}
+  </div>
+</div>
+
+
                     <p className="mt-5 text-black font-semibold text-left">dfghjkl;kjhgfdghjkl;</p>
                     <p className="text-black text-lg mt-2 text-left">
                       Readymag offers a full library of flexible presentation dummies, all available for free.

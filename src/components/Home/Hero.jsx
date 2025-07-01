@@ -71,10 +71,10 @@ const Hero = () => {
         {/* Center Text Box */}
         <div className="relative z-10 flex justify-center items-center h-full text-center">
           <div
-            className="rounded-[8rem] px-10 md:px-60 py-24 bg-white transition-opacity duration-100"
+            className="rounded-[8rem] px-10 md:px-60 py-24 bg-white  text-black transition-opacity duration-100 hover:bg-orange-500 hover:text-white"
             style={{ opacity: textOpacity }}
           >
-            <h1 className="text-4xl md:text-8xl text-black font-telegraf text-center">
+            <h1 className="text-4xl md:text-8xl font-telegraf text-center hover:text-white">
               We Create The <br /> Impact
             </h1>
           </div>

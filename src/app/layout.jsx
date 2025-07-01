@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Global/Header";
 import Footer from "@/components/Global/Footer";
+import CustomCursor from "@/components/Global/CustomerCursor";
 
 
 export const metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
       <body
     
       >
+        <CustomCursor/>
         <Header/>
         {children}
           <Footer/>
