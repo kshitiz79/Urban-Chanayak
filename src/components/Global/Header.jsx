@@ -36,14 +36,14 @@ const Header = () => {
 
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-transparent">
-      <div className="max-w-7xl mx-auto px-6 py-4">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo or brand name */}
-          <div className=""><img
-              src={scrolled ? "/logoblack.png" : "/logowhite.png"}
+          <div className=" bg-transparent rounded-full"><img
+              src='/logoblack.png'
               alt="Logo"
-              width={150}
+              width={180}
               height={50}
             /></div>
 

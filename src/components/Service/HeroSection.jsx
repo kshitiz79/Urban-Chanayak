@@ -37,7 +37,7 @@ const HeroSection = () => {
       </div>
 
       {/* Right image */}
-      <div className="w-full md:w-1/2 relative min-h-[60vh] md:min-h-full">
+      <div className="w-full md:w-1/2 relative min-h-[80vh] md:min-h-full -m-10">
         <Image
           src="https://cdn.prod.website-files.com/656a0c59bc8ad4e5fa92b68e/68501955fbec5c4360eed01d_Frame%2022290.webp" // Replace with your image path
           alt="Branding Billboard"

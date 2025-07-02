@@ -1,3 +1,4 @@
+import ArtQuoteSection from '@/components/Blog/ArtQuoteSection';
 import Section1 from '@/components/Blog/Section1';
 import Section2 from '@/components/Blog/Section2';
 import Section3 from '@/components/Blog/Section3';
@@ -9,8 +10,9 @@ const EvarsSection = () => {
     <>
     <Section1/>
     <Section2/>
+    <ArtQuoteSection/>
     <Section3/>
-    <SectionComponent/>
+    {/* <SectionComponent/> */}
   
       
     </>

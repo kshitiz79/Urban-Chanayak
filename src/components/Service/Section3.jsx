@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import Section4 from "./Section4";
 
-const NextSection = () => {
+const Section3 = () => {
   return (
     <div className="relative bg-white w-full">
       {/* Pinned Layout Section */}
@@ -85,4 +85,4 @@ const NextSection = () => {
   );
 };
 
-export default NextSection;
+export default Section3;

@@ -10,24 +10,23 @@ const UrbanAbout = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Title transforms: shrink font size and stick to top
+  // Title transforms: shrink font size and move left
   const fontSize = Math.max(192 - scrollY / 20, 96); // Font size decreases from 192px to min 96px
-  const translateX = Math.min(scrollY / 4, 200); // Retain left movement
-  const stickyClass = scrollY > 0 ? "fixed top-0" : "sticky"; // Switch to fixed positioning after scroll
+  const translateX = Math.min(scrollY / 2, 300); // Left movement, max 300px
 
-  // Paragraph transform: move up as heading shrinks
+  // Paragraph transform: move up
   const paraTranslateY = Math.min(scrollY / 2, 100); // Paragraph moves up, max 100px
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden ">
       {/* Section 1: About Heading and Description */}
-      <section className="bg-white h-[80vh] w-full relative z-10 px-6 md:px-16 pt-40">
+      <section className="bg-white h-[80vh] w-full relative z-10 pt-40">
         <div>
           <h1
-            className={`text-[${fontSize}px] font-black font-telegraf text-black uppercase leading-none origin-left ${stickyClass}`}
+            className="text-[192px] font-black font-telegraf text-black uppercase leading-none origin-left"
             style={{
+              fontSize: `${fontSize}px`,
               transform: `translateX(-${translateX}px)`,
-              clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
               willChange: "transform, font-size",
               transition: "transform 0.1s ease-out, font-size 0.1s ease-out",
             }}
@@ -61,9 +60,24 @@ const UrbanAbout = () => {
           playsInline
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10" />
-        <p></p>
-        <button></button>
+        
       </section>
+      <section className="bg-white pt-20 px-6 ">
+  <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
+    {/* Left side: Paragraph */}
+    <p className="text-base md:text-4xl max-w-3xl font-semibold font-telegraf text-black md:w-2/3">
+    Over the past five years, we’ve delivered impactful outcomes for a distinguished clientele — not by following convention,<br />  but by rewriting the playbook
+    </p>
+
+    {/* Right side: Button */}
+    <div className="md:w-1/3 flex md:justify-center">
+      <button className="bg-black hover:bg-orange-500 text-white px-6 py-2 text-sm md:text-base rounded-full uppercase font-bold">
+        Let’s Work Together
+      </button>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
