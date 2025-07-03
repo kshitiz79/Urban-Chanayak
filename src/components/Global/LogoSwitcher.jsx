@@ -33,7 +33,7 @@ const LogoSwitcher = () => {
     <Image
       src={theme === "dark" ? "/logoblack.png" : "/logowhite.png"}
       alt="Logo"
-      width={200}
+      width={150}
       height={60}
       priority
     />
