@@ -43,7 +43,7 @@ const Section3 = () => {
   }, []);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white"> 
       <div className="min-h-screen py-20 bg-white max-w-5xl mx-auto ">
         <p ref={textRef} className="text-4xl text-black">
           Canadian artist Meg O’Hara is one of 11th Hour Racing’s newest
@@ -153,7 +153,7 @@ const Section3 = () => {
           “45 minutes can seem like a long time in theory, but in reality, it’s
           not,” Meg explains. “Firstly, you must - and I cannot stress this
           enough - go to the toilet as the land and ocean are preserved by the
-          <span className="text-red-500 underline">Antarctic Treaty</span>, so going to the toilet anywhere other than on the
+          <span className="text-red-500 underline"> Antarctic Treaty</span>, so going to the toilet anywhere other than on the
           ship is not an option. ‍
           </p><br />
           <p className="text-xl">

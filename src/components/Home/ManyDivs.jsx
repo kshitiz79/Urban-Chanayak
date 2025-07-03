@@ -100,8 +100,12 @@ const ManyDivs = () => {
                   <BiSolidLockOpen className="text-[14rem] h-full w-auto text-black" />
                 </div>
                 <p className="text-black text-lg p-4 text-left">
-                  Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
-                  Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
+               <span className="underline"> Strategic Political & Campaign Services</span><br />
+               Election & Electoral Management
+Leadership Branding
+360° Campaign Planning & Execution
+Ground Intelligence, Surveys & Field Reports
+Voter Outreach Drives
                 </p>
               </div>
 
@@ -117,8 +121,9 @@ const ManyDivs = () => {
                   />
                 </div>
                 <p className="text-black text-lg mt-4 text-left">
-                  <span className="underline">Lorem ipsum dolor sit amet Lorem ipsum</span><br />
-                  dolor sit amet consectetur. Nihil reprehenderit nemo culpa est eos cupiditate.
+                  
+                Experience With Government
+                Projects, Designing Outdoor Branding And Exhibitions
                 </p>
               </div>
             </div>
@@ -133,12 +138,10 @@ const ManyDivs = () => {
                   urbanchanakya.in
                 </h2>
                 <p className="underline mt-3 text-black text-lg max-w-5xl text-left">
-                  hshjxbdd dndm dwm
+                  Our Mission
                 </p>
                 <p className="text-black text-lg max-w-4xl text-left">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae libero
-                  tempore praesentium mollitia saepe error cupiditate dolorum eaque nobis. Vitae est
-                  non, atque magnam voluptas sint.
+                Is to craft compelling, clear, and culturally resonant communication that informs, engages, and inspires the public. We specialize in translating government initiatives into powerful visual narratives that are accessible to diverse audiences
                 </p>
               </div>
 
@@ -150,14 +153,14 @@ const ManyDivs = () => {
                   <div
                     className={`bg-white p-9 rounded-3xl transition-shadow duration-300 ${shadowClass}`}
                   >
-                <div className="relative overflow-hidden w-full bg-white py-6">
+            <div className="relative overflow-hidden w-full bg-white py-6">
   <div className="flex w-[200%] animate-marquee-right">
-    {[...Array(2)].flatMap(() =>
-      ["1", "2", "3", "4", "5"].map((num, index) => (
+    {[...Array(2)].flatMap((_, loopIndex) =>
+      ["1", "2", "3", "4", "5","6","7","8","9","10","11","12","13","14","15"].map((num, index) => (
         <img
-          key={`${num}-${index}`}
-          src={`./Frame${num}.png`}
-          className="rounded-full h-28 w-28 mx-4"
+          key={`loop-${loopIndex}-${num}-${index}`}
+          src={`./icons/${num}.png`}
+          className="rounded-full h-28 w-28"
           alt={`Avatar ${num}`}
         />
       ))
@@ -166,9 +169,10 @@ const ManyDivs = () => {
 </div>
 
 
-                    <p className="mt-5 text-black font-semibold text-left">dfghjkl;kjhgfdghjkl;</p>
+
+                    <p className="mt-5 text-black font-semibold text-left text-lg">Government Clients :</p>
                     <p className="text-black text-lg mt-2 text-left">
-                      Readymag offers a full library of flexible presentation dummies, all available for free.
+                    Transform your brand's presence now. Discover how our innovative approach can amplify your impact and resonate with your audience.
                     </p>
                   </div>
 
@@ -177,20 +181,20 @@ const ManyDivs = () => {
                     className={`bg-white py-10 px-8 rounded-3xl text-black border-black flex flex-col transition-shadow duration-300 ${shadowClass}`}
                   >
                     <div className="flex flex-wrap justify-start">
-                      {["Presentation", "Landing Page", "Editorial", "Portfolio", "E-Commerce"].map((tag) => (
+                      {["Innovative Design","Impact Creation", "Public Policy", "Crisis Management",  "Strategic Messaging"].map((tag) => (
                         <div
                           key={tag}
-                          className="px-9 py-4 border-4 text-2xl rounded-full hover:bg-[#f7680d] hover:border-[#f7680d] hover:text-white transition-all duration-200"
+                          className="px-2 py-4 border-4 text-2xl rounded-full hover:bg-[#f7680d] hover:border-[#f7680d] hover:text-white transition-all duration-200"
                         >
                           {tag}
                         </div>
                       ))}
                     </div>
                     <p className="mt-4 underline text-xl text-left">
-                      Use templates or create your own
+                      Core Competencies
                     </p>
                     <p className="text-lg text-left">
-                      Readymag offers a full library of flexible presentation dummies, all available for free.
+                    We specialize in crafting integrated marketing & communications strategies that go beyond traditional boundaries.
                     </p>
                   </div>
                 </div>
@@ -206,10 +210,10 @@ const ManyDivs = () => {
                   />
                   <div>
                     <p className="mt-4 underline text-xl text-black text-left">
-                      Use templates or create your own
+                    Driving Impactful Public Communication
                     </p>
                     <p className="text-lg text-black text-left">
-                      Readymag offers a full library of flexible presentation dummies, all available for free.
+                    By blending creativity with strategic messaging, we ensure every campaign not only reaches the masses but leaves a lasting impact.
                     </p>
                   </div>
                 </div>

@@ -1,173 +1,129 @@
-"use client"
-import React, { useState } from 'react';
+"use client";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faLinkedin,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import FaqSection from "@/components/Blog/FAQSection";
+import { Link } from "lucide-react";
 
-const ContactUs = () => {
-  const [selectedServices, setSelectedServices] = useState([]);
-
-    const services = [
-    "Branding",
-    "Social Media",
-        "SEO",
-            "Web Design",
-    "Content Creation & Marketing",
-        "Performance Media",
-       "Integrated Campaigns",
-    "Ad Film/Video Production",
-
-    "Website Transformation",
-        "IP Creation",
-    "Mobile App Development & UI/UX",
-    "CRM/Sales Pipeline Development",
-    "Influencer Marketing",
-      "Growth via Media Buying",
-
-    "Email & SMS Marketing Automation",
-
-  
-    "Social Listening & ORM",
-
-    "Consumer & Market Research",
- 
-    "Others",
+const page = () => {
+  const socialIcons = [
+    {
+      name: "Instagram",
+      icon: faInstagram,
+      Link: "https://www.instagram.com/urbanchanakya.in/?igsh=ZTBiN2c2cXNlM2w%3D#",
+    },
+    {
+      name: "LinkedIn",
+      icon: faLinkedin,
+      Link: "https://www.linkedin.com/company/urbanchanakya/?originalSubdomain=in",
+    },
+    {
+      name: "Twitter",
+      icon: faXTwitter,
+      Link: "https://x.com/ChanakyaUrban",
+    },
   ];
-
-  // Handle service selection
-  const handleServiceClick = (service) => {
-    if (selectedServices.includes(service)) {
-      setSelectedServices(selectedServices.filter((s) => s !== service));
-    } else {
-      if (selectedServices.length < 10) {
-        setSelectedServices([...selectedServices, service]);
-      }
-    }
-  };
-
-  // Han
-  return (
-    <div className="bg-orange-600 text-white  flex flex-col ">
-
-
-    <div className="max-w-full rounded-t-[10rem] mt-60 text-center py-32 bg-white text-black">
-        {/* Header */}
-        <h1 className="text-[6rem]   font-extrabold leading-36 text-center  mb-6">Let's Connect and Grow</h1>
-
-
-<div className='flex flex-row mx-auto items-center justify-center space-x-8'>
   
 
-
-
-<div className='flex-col max-w-3xl mx-auto space-y-16 '>
-
-
- <div className="bg-white p-8 rounded-xl  w-full max-w-3xl mx-auto">
-                   <img src="/contactus1.png"  className='w-[31rem]  rounded-2xl'/>
+  return (
+    <>
+      <section className="bg-white py-20 pt-50">
+        <div className="max-w-7xl mx-auto">
+          <div>
+            <h1 className="text-5xl text-black uppercase font-black whitespace-nowrap drop-shadow-[1px_1px_0_black]">
+              Your brand is unique, and so are our solutions. <br /> Get in touch.
+            </h1>
+          </div>
         </div>
 
+        <section className="flex flex-col md:flex-row gap-16 items-stretch justify-between px-6 md:px-10 py-16 bg-white">
+          {/* Left - Contact Form */}
+          <div className="w-full md:w-1/2 bg-[#182d3b] rounded-2xl p-8 space-y-6 shadow-xl">
+            <h3 className="text-white text-sm tracking-widest uppercase text-center">
+              Send Us A Message
+            </h3>
 
- <div className="bg-white p-8 rounded-xl  w-full max-w-3xl mx-auto">
-                   <img src="/contactus2.png"  className='w-[31rem]  rounded-2xl'/>
-        </div>
-</div>
-
-
-
-        <form className=" p-8 rounded-xl w-full max-w-md mx-auto">
-         <div className="mb-6">
-  <input
-    type="text"
-    name="name"
-    placeholder="First & Last Name"
-    className="w-full p-3 border-b-1 border-gray-300  focus:border-blue-900 focus:outline-none"
-  />
-</div>
-
-  <div className="mb-6">
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Organization's Name"
-    className="w-full p-3 border-b-1 border-gray-300  focus:border-blue-900 focus:outline-none"
-  />
-</div>
-<div className="mb-6">
-  <input
-    type="number"
-    name="number"
-    placeholder="Number"
-    className="w-full p-3 border-b-1 border-gray-300  focus:border-blue-900 focus:outline-none"
-  />
-</div>
-<div className="mb-6">
-  <input
-    type="email"
-    name="email"
-    placeholder="Email"
-    className="w-full p-3 border-b-1 border-gray-300  focus:border-blue-900 focus:outline-none"
-  />
-</div>
-<div className="mb-6">
-  <textarea
-    name="project"
-    placeholder="About Your Project"
-    className="w-full p-3 border-b-1 border-gray-300  h-32 focus:border-blue-900 focus:outline-none"
-  ></textarea>
-</div>
-
-<div className="">
-              <label className="block text-sm font-medium text-orange-950">
-                Which services are you interested in? (Select up to 10)
-              </label>
-              <div className="flex flex-wrap gap-2 mt-4 sm:mt-7">
-                {services.map((service) => {
-                  const isSelected = selectedServices.includes(service);
-                  const isDisabled = !isSelected && selectedServices.length >= 10;
-                  return (
-                    <button
-                      type="button"
-                      key={service}
-                      onClick={() => handleServiceClick(service)}
-                      disabled={isDisabled}
-                      className={`px-3 py-1 rounded-full text-sm border-2 transition-colors duration-200 
-                        ${isSelected ? 'bg-sky-500 text-white' : 'bg-white text-black'}
-                        ${isDisabled && !isSelected ? 'opacity-50 cursor-not-allowed' : 'hover:bg-sky-500 hover:text-white'}
-                        border-black`}
-                    >
-                      {service}
-                    </button>
-                  );
-                })}
+            <form className="space-y-4">
+              <input
+                type="text"
+                placeholder="Name"
+                className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+              />
+              <div className="flex flex-col md:flex-row gap-4">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone"
+                  className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+                />
               </div>
-              {selectedServices.length >= 10 && (
-                <p className="mt-2 text-sm text-red-600">You can select up to 10 services.</p>
-              )}
+              <input
+                type="text"
+                placeholder="Enter Subject"
+                className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+              />
+              <textarea
+                rows="4"
+                placeholder="Enter your Message"
+                className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+              ></textarea>
+              <button
+                type="submit"
+                className="w-full py-3 bg-black lactext-white font-medium rounded-md hover:bg-orange-500 transition"
+              >
+                Submit
+              </button>
+            </form>
+
+            {/* Direct Email */}
+            <div className="text-center text-white text-sm space-y-1">
+              <div className="uppercase tracking-widest">Direct Email</div>
+              <div className="text-lg font-light">hello@urbanchanakya.in</div>
             </div>
-          
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full mt-10 py-3 text-white rounded-lg hover:bg-blue-600 transition duration-300"
-          >
-            Get Started
-          </button>
-        </form>
 
+            {/* Social Icons */}
+            <div className="grid grid-cols-3 gap-4 mt-4">
+            {socialIcons.map((item) => (
+  <a
+    key={item.name}
+    href={item.Link || "#"}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-white rounded-lg py-8 flex flex-col items-center justify-center text-black hover:text-orange-500 transition"
+  >
+    <FontAwesomeIcon icon={item.icon} className="text-2xl" />
+    <span className="text-xs mt-2 uppercase tracking-wider">
+      {item.name}
+    </span>
+  </a>
+))}
 
-   
+            </div>
+          </div>
 
-
-
-</div>
-
-
-
-
-      </div>
-
-
-
-    </div>
+          {/* Right - Image */}
+          <div className="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src="/contact.png"
+              alt="Team"
+              width={620}
+              height={700}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </section>
+      </section>
+      <FaqSection/>
+    </>
   );
 };
 
-export default ContactUs;
+export default page;

@@ -37,13 +37,10 @@ const EventManagement = () => {
       </div>
 
       {/* Right image */}
-      <div className="w-full md:w-1/2 relative min-h-[60vh] md:min-h-full -m-10">
-        <Image
-          src="https://cdn.prod.website-files.com/656a0c59bc8ad4e5fa92b68e/684043d56102600f1920375a_DTS_Banquet_Daniel_Faro%CC%80_Photos_ID5369.webp" // Replace with your image path
-          alt="Branding Billboard"
-          fill
-          className="object-cover"
-        />
+      <div className="w-full md:w-1/2 relative min-h-[64vh] md:min-h-full -m-10">
+        <video src="/event.mp4" autoPlay loop muted
+  playsInline
+  className="w-full h-auto object-cover"></video>
       </div>
     </section>
   );

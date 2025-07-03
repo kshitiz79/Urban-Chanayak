@@ -6,7 +6,7 @@ const Video = () => {
       <div className="rounded-xl overflow-hidden h-full w-full max-w-[2830px] mx-auto shadow-lg">
         <video
           className="w-full h-full object-cover rounded-2xl mb-"
-          src="finalCut.mp4"
+          src="FinalCut.mp4"
           controls
           autoPlay
           muted

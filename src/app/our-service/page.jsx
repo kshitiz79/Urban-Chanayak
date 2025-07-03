@@ -16,7 +16,7 @@ const page = () => {
   return (
     <div>
         <HeroSection/>
-        <EventManagement/>
+
         <Branding/>
         <ElectionManagement/>
         <PaidPromotion/>

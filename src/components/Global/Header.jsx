@@ -1,6 +1,11 @@
 "use client"
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import LogoSwitcher from './LogoSwitcher';
+
+
+
+
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -33,19 +38,25 @@ const Header = () => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
-
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white">
+    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white' : 'bg-transparent '}`}>
+
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo or brand name */}
-          <div className=" bg-transparent rounded-full"><img
-              src='/logoblack.png'
-              alt="Logo"
-              width={180}
-              height={50}
-            /></div>
+          <div className="p-4">
+        <LogoSwitcher/>
+      </div>
 
           {/* Navigation links */}
           <nav className="flex space-x-6 text-black">
