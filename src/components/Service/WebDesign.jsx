@@ -12,26 +12,23 @@ const WebDesign= () => {
       <div className="w-full md:w-1/2 px-6 md:px-16 py-16 flex flex-col justify-center">
         <h1 className="text-5xl font-bold mb-6">Web Design</h1>
 
-        <ul className="text-sm font-semibold space-y-2 mb-6">
-          <li>• Stratégie de marque &nbsp;&nbsp; • Identité Visuelle &nbsp;&nbsp; • Charte Graphique</li>
-          <li>• Réseaux Sociaux &nbsp;&nbsp; • Brand Book &nbsp;&nbsp; • Assets</li>
+        <ul className="text-lg font-semibold space-y-2 mb-6">
+          <li>• Visual Appeal &nbsp;&nbsp; • User Experience &nbsp;&nbsp; </li>
+          <li>• Brand Identity Integration </li>
         </ul>
 
-        <div className="text-gray-800 text-base leading-relaxed border-t border-gray-300 pt-6 space-y-4">
+        <div className="text-gray-800 text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4">
           <p>
-            Créer une marque qui a du sens, c’est d’abord comprendre ce qu’elle incarne.
-            Le service de branding repose sur une analyse stratégique approfondie des fondations de votre marque : 
-            positionnement, mission, vision, cible. Ce travail donne naissance à un univers visuel sur-mesure —
-            une identité forte, cohérente et alignée avec vos ambitions.
+          At Urban Chanakya, we specialize in creating custom websites and web portals tailored for government bodies and corporate entities. Our focus on SEO-friendly content ensures that your digital presence is not only visually appealing but also ranks well on search engines, maximizing visibility and engagement. Leveraging the latest technologies and design trends, we provide a seamless and intuitive user experience, designed to meet the unique needs of our clients.
           </p>
           <p>
-            Ce service s’adresse autant aux marques qui se lancent qu’à celles qui souhaitent évoluer et affirmer une nouvelle image.
+          Trust Urban Chanakya to elevate your online presence and connect you with your audience more effectively.
           </p>
         </div>
 
         <div className="pt-6">
-          <a href="#" className="text-black font-medium underline underline-offset-4">
-            CE SERVICE M’INTÉRESSE
+          <a href="#" className="text-black font-medium underline underline-offset-4 uppercase">
+          Designing Digital Experiences, Tailored for Success
           </a>
         </div>
       </div>

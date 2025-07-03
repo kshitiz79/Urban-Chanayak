@@ -17,10 +17,12 @@ const page = () => {
     <div>
         <HeroSection/>
 
-        <Branding/>
+     
         <ElectionManagement/>
-        <PaidPromotion/>
+       
+        <Branding/>
         <WebDesign/>
+        <PaidPromotion/>
         <PRManagement/>
         <AudioVideo/>
         <ContentCreation/>

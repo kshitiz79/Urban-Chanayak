@@ -26,7 +26,7 @@ const WhatWeDo = () => {
 
     {/* Right side: Paragraph */}
     <div className="md:w-2/3 flex md:justify-center">
-      <p className="text-black px-2 md:px-6 py-2 text-xl uppercase drop-shadow-[1px_1px_0_black] mt-8">
+      <p className="text-black px-2 md:px-6 py-2 text-xl mt-8">
       At Urban Chanakya, we go beyond providing services — we work to engineer Impact.
 Whether it’s crafting winning political campaigns, shaping public opinion, building powerful brand identities, or integrating cutting-edge technology into outreach — we don’t just ask what can we do for you — we ask what can’t we.
 

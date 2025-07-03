@@ -9,20 +9,23 @@ const ElectionManagement = () => {
   return (
     <section className="sticky top-0 w-full h-[100vh] bg-white py-10 bg-white text-black w-full min-h-screen flex flex-col md:flex-row">
       {/* Left content */}
-      <div className="w-full md:w-1/2 px-6 md:px-16 py-16 flex flex-col justify-center">
+      <div className="w-full md:w-1/2 px-6 md:px-16 py-16 flex flex-col justify-center bg-gray-200 -mt-10 -mb-10">
         <h1 className="text-5xl font-bold mb-6">Election Management</h1>
 
-        <ul className="text-sm font-semibold space-y-2 mb-6">
-          <li>• Stratégie de marque &nbsp;&nbsp; • Identité Visuelle &nbsp;&nbsp; • Charte Graphique</li>
-          <li>• Réseaux Sociaux &nbsp;&nbsp; • Brand Book &nbsp;&nbsp; • Assets</li>
+        <ul className="text-lg font-semibold space-y-2 mb-6">
+          <li>• Process Optimization &nbsp;&nbsp; • Transparency Assurance &nbsp;&nbsp; </li>
+          <li>• Stakeholder Engagement </li>
         </ul>
 
-        <div className="text-gray-800 text-base leading-relaxed border-t border-gray-300 pt-6 space-y-4">
+        <div className="text-gray-800 text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4">
           <p>
-            Créer une marque qui a du sens, c’est d’abord comprendre ce qu’elle incarne.
-            Le service de branding repose sur une analyse stratégique approfondie des fondations de votre marque : 
-            positionnement, mission, vision, cible. Ce travail donne naissance à un univers visuel sur-mesure —
-            une identité forte, cohérente et alignée avec vos ambitions.
+          Empowering aspiring leaders and change-makers, Urban Chanakya is the preferred platform for young visionaries and professionals to actively engage in shaping the political landscape and governance, transcending traditional party affiliations.
+</p>
+<p>
+We started our journey in the mid-pandemic timezone, Urban Chanakya unites exceptional minds from diverse backgrounds, offering a distinctive opportunity to contribute to the electoral process and influence policy decisions in Assam/North-East India.
+</p>
+<p>
+Collaborating with visionary leaders of proven excellence, Urban Chanakya assists in crafting citizen-centric agendas, implementing impactful strategies, and garnering widespread public support for transformative governance.
           </p>
           <p>
             Ce service s’adresse autant aux marques qui se lancent qu’à celles qui souhaitent évoluer et affirmer une nouvelle image.
@@ -30,8 +33,8 @@ const ElectionManagement = () => {
         </div>
 
         <div className="pt-6">
-          <a href="#" className="text-black font-medium underline underline-offset-4">
-            CE SERVICE M’INTÉRESSE
+          <a href="#" className="text-black font-medium underline underline-offset-4 uppercase">
+          Navigating victories through strategic precision
           </a>
         </div>
       </div>
@@ -39,7 +42,7 @@ const ElectionManagement = () => {
       {/* Right image */}
       <div className="w-full md:w-1/2 relative min-h-[60vh] md:min-h-full -m-10">
         <Image
-          src="https://content.jdmagicbox.com/comp/service_catalogue/outdoor-election-management-software-in-pan-india-for-windows-022pxx22.xx22.221015143228.k4e7-i8xg0l8.jpg" // Replace with your image path
+          src="/election.gif" // Replace with your image path
           alt="Branding Billboard"
           fill
           className="object-cover"

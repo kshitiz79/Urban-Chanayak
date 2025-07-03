@@ -12,26 +12,33 @@ const PRManagement = () => {
       <div className="w-full md:w-1/2 px-6 md:px-16 py-16 flex flex-col justify-center">
         <h1 className="text-5xl font-bold mb-6">PR Management</h1>
 
-        <ul className="text-sm font-semibold space-y-2 mb-6">
-          <li>• Stratégie de marque &nbsp;&nbsp; • Identité Visuelle &nbsp;&nbsp; • Charte Graphique</li>
-          <li>• Réseaux Sociaux &nbsp;&nbsp; • Brand Book &nbsp;&nbsp; • Assets</li>
+        <ul className="text-lg font-semibold space-y-2 mb-6">
+          <li>
+            • Reputation Enhancement &nbsp;&nbsp; • Media Relations &nbsp;&nbsp;{" "}
+          </li>
+          <li>• Crisis Management </li>
         </ul>
 
-        <div className="text-gray-800 text-base leading-relaxed border-t border-gray-300 pt-6 space-y-4">
+        <div className="text-gray-800 text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4">
           <p>
-            Créer une marque qui a du sens, c’est d’abord comprendre ce qu’elle incarne.
-            Le service de branding repose sur une analyse stratégique approfondie des fondations de votre marque : 
-            positionnement, mission, vision, cible. Ce travail donne naissance à un univers visuel sur-mesure —
-            une identité forte, cohérente et alignée avec vos ambitions.
+            Urban Chanakya distinguishes itself with a foundation in thorough
+            problem identification and tailoring unique solutions. In a field
+            often reliant on generic templates and methodologies, we venture
+            into innovative territories for every project. Renowned for its
+            exceptional delivery, superior execution stands as a hallmark of
+            Urban Chanakya's service.
           </p>
           <p>
-            Ce service s’adresse autant aux marques qui se lancent qu’à celles qui souhaitent évoluer et affirmer une nouvelle image.
+          We don't just shift the dynamics; we command them. Our cadre of public relations experts excels in harnessing both proactive and responsive PR strategies. We're not about mere promotion; we position you as a pivotal voice in ongoing discussions, ensuring your business and brand become integral to any dialogue, regardless of the subject.
           </p>
         </div>
 
         <div className="pt-6">
-          <a href="#" className="text-black font-medium underline underline-offset-4">
-            CE SERVICE M’INTÉRESSE
+          <a
+            href="#"
+            className="text-black font-medium underline underline-offset-4 uppercase"
+          >
+           Fostering Connections, Influencing Perspectives, Cultivating Meaningful Values
           </a>
         </div>
       </div>
@@ -39,7 +46,7 @@ const PRManagement = () => {
       {/* Right image */}
       <div className="w-full md:w-1/2 relative min-h-[60vh] md:min-h-full -m-10">
         <Image
-          src="https://klizos.com/wp-content/uploads/Public-Relations-PR-2-1.png" // Replace with your image path
+          src="/pr.gif" // Replace with your image path
           alt="Branding Billboard"
           fill
           className="object-cover"

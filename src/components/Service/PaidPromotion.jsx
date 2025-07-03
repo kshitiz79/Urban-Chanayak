@@ -9,29 +9,26 @@ const PaidPromotion = () => {
   return (
     <section className="sticky top-0 w-full h-[100vh] bg-white py-10 bg-white text-black w-full min-h-screen flex flex-col md:flex-row">
       {/* Left content */}
-      <div className="w-full md:w-1/2 px-6 md:px-16 py-16 flex flex-col justify-center">
+      <div className="w-full md:w-1/2 px-6 md:px-16 py-16 flex flex-col justify-center bg-gray-100 -mt-10 -mb-10">
         <h1 className="text-5xl font-bold mb-6">Paid Promotion</h1>
 
-        <ul className="text-sm font-semibold space-y-2 mb-6">
-          <li>• Stratégie de marque &nbsp;&nbsp; • Identité Visuelle &nbsp;&nbsp; • Charte Graphique</li>
-          <li>• Réseaux Sociaux &nbsp;&nbsp; • Brand Book &nbsp;&nbsp; • Assets</li>
+        <ul className="text-lg font-semibold space-y-2 mb-6">
+          <li>• Audience Targeting &nbsp;&nbsp; • Brand Visibility &nbsp;&nbsp; </li>
+          <li>• ROI Optimizationt </li>
         </ul>
 
-        <div className="text-gray-800 text-base leading-relaxed border-t border-gray-300 pt-6 space-y-4">
+        <div className="text-gray-800 text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4">
           <p>
-            Créer une marque qui a du sens, c’est d’abord comprendre ce qu’elle incarne.
-            Le service de branding repose sur une analyse stratégique approfondie des fondations de votre marque : 
-            positionnement, mission, vision, cible. Ce travail donne naissance à un univers visuel sur-mesure —
-            une identité forte, cohérente et alignée avec vos ambitions.
+          At Urban Chanakya, we understand the importance of reaching the right audience at the right time. That's why we offer tailored paid promotion services designed to amplify brand visibility and drive results. Our team meticulously crafts strategic campaigns that leverage various digital channels to ensure maximum impact. From social media advertising to search engine marketing, we employ a data-driven approach to target your ideal customers and optimize campaign performance. With our expertise, you can rest assured that your brand will stand out in today's competitive landscape, reaching new heights of success through effective paid promotion strategies.
           </p>
           <p>
-            Ce service s’adresse autant aux marques qui se lancent qu’à celles qui souhaitent évoluer et affirmer une nouvelle image.
+          We specialize in elevating brand visibility through tailored paid promotion services.
           </p>
         </div>
 
         <div className="pt-6">
-          <a href="#" className="text-black font-medium underline underline-offset-4">
-            CE SERVICE M’INTÉRESSE
+          <a href="#" className="text-black font-medium underline underline-offset-4 uppercase">
+          Maximize Brand Exposure through Targeted Paid Promotion Services
           </a>
         </div>
       </div>
@@ -39,7 +36,7 @@ const PaidPromotion = () => {
       {/* Right image */}
       <div className="w-full md:w-1/2 relative min-h-[60vh] md:min-h-full -m-10">
         <Image
-          src="https://media.istockphoto.com/id/1322245015/photo/pay-per-click-payment-technology-digital-marketing-internet-concept-of-virtual-screen-ppc.jpg?s=612x612&w=0&k=20&c=zYN-dPOgD1JYYDxWLfdxMubwe9qJTSvHDccWY8dxaFA=" // Replace with your image path
+          src="/paid.png" // Replace with your image path
           alt="Branding Billboard"
           fill
           className="object-cover"

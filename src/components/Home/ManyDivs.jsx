@@ -180,11 +180,11 @@ Voter Outreach Drives
                   <div
                     className={`bg-white py-10 px-8 rounded-3xl text-black border-black flex flex-col transition-shadow duration-300 ${shadowClass}`}
                   >
-                    <div className="flex flex-wrap justify-start">
+                    <div className="flex flex-wrap justify-start gap-2">
                       {["Innovative Design","Impact Creation", "Public Policy", "Crisis Management",  "Strategic Messaging"].map((tag) => (
                         <div
                           key={tag}
-                          className="px-2 py-4 border-4 text-2xl rounded-full hover:bg-[#f7680d] hover:border-[#f7680d] hover:text-white transition-all duration-200"
+                          className="px-12 py-4 border-2 text-2xl rounded-full hover:bg-[#f7680d] hover:border-[#f7680d] hover:text-white transition-all duration-200"
                         >
                           {tag}
                         </div>

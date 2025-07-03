@@ -11,27 +11,39 @@ const ContentCreation = () => {
       {/* Left content */}
       <div className="w-full md:w-1/2 px-6 md:px-16 py-16 flex flex-col justify-center">
         <h1 className="text-5xl font-bold mb-6">Content Creation and Design</h1>
-
-        <ul className="text-sm font-semibold space-y-2 mb-6">
-          <li>• Stratégie de marque &nbsp;&nbsp; • Identité Visuelle &nbsp;&nbsp; • Charte Graphique</li>
-          <li>• Réseaux Sociaux &nbsp;&nbsp; • Brand Book &nbsp;&nbsp; • Assets</li>
+        <ul className="text-lg font-semibold space-y-2 mb-6">
+          <li>
+            • Strategic Content &nbsp;&nbsp; • Creative Design&nbsp;&nbsp;{" "}
+          </li>
+          <li>• Measurable Impact</li>
         </ul>
 
-        <div className="text-gray-800 text-base leading-relaxed border-t border-gray-300 pt-6 space-y-4">
+        <div className="text-gray-800 text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4">
           <p>
-            Créer une marque qui a du sens, c’est d’abord comprendre ce qu’elle incarne.
-            Le service de branding repose sur une analyse stratégique approfondie des fondations de votre marque : 
-            positionnement, mission, vision, cible. Ce travail donne naissance à un univers visuel sur-mesure —
-            une identité forte, cohérente et alignée avec vos ambitions.
+            Urban Chanakya specializes in Content & Design Services, catering to
+            the diverse needs of clients with expert copywriting, content
+            creation, and stunning design. Our seasoned writers and innovative
+            designers work hand in hand to ensure your brand identity and
+            narratives not only resonate with but also convert your target
+            audience. From crafting iconic logos and engaging social media
+            content to designing dynamic hoardings, print ads, prospectuses, and
+            television ads, we tailor each piece to amplify your message
+            effectively.
           </p>
           <p>
-            Ce service s’adresse autant aux marques qui se lancent qu’à celles qui souhaitent évoluer et affirmer une nouvelle image.
+            If you’re active on Twitter, you're likely familiar with our impact.
+            Urban Chanakya stands at the forefront of Content & Design, expertly
+            bridging the gap between your brand and its audience with unmatched
+            precision and creativity.
           </p>
         </div>
 
         <div className="pt-6">
-          <a href="#" className="text-black font-medium underline underline-offset-4">
-            CE SERVICE M’INTÉRESSE
+          <a
+            href="#"
+            className="text-black font-medium underline underline-offset-4 uppercase"
+          >
+            Creative Content, Dynamic Design
           </a>
         </div>
       </div>
@@ -39,7 +51,7 @@ const ContentCreation = () => {
       {/* Right image */}
       <div className="w-full md:w-1/2 relative min-h-[60vh] md:min-h-full -m-10">
         <Image
-          src="https://miro.medium.com/v2/resize:fit:1400/1*jzVlSVkjH9l32B4pgh7jbQ.jpeg" // Replace with your image path
+          src="/content.png" // Replace with your image path
           alt="Branding Billboard"
           fill
           className="object-cover"

@@ -12,26 +12,24 @@ const HeroSection = () => {
       <div className="w-full md:w-1/2 px-6 md:px-16 py-16 flex flex-col justify-center">
         <h1 className="text-5xl font-bold mb-6">Integrated Marketing</h1>
 
-        <ul className="text-sm font-semibold space-y-2 mb-6">
-          <li>• Stratégie de marque &nbsp;&nbsp; • Identité Visuelle &nbsp;&nbsp; • Charte Graphique</li>
-          <li>• Réseaux Sociaux &nbsp;&nbsp; • Brand Book &nbsp;&nbsp; • Assets</li>
+        <ul className="text-lg font-semibold space-y-2 mb-6">
+          <li>• Content Marketing &nbsp;&nbsp; • Traditional Advertising &nbsp;&nbsp; • Digital Advertising</li>
+          <li>• Performance Monitoring &nbsp;&nbsp; • Audience Segmentation &nbsp;&nbsp; </li>
+          <li>• Strategic Planning</li>
         </ul>
 
-        <div className="text-gray-800 text-base leading-relaxed border-t border-gray-300 pt-6 space-y-4">
+        <div className="text-gray-800 text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4">
           <p>
-            Créer une marque qui a du sens, c’est d’abord comprendre ce qu’elle incarne.
-            Le service de branding repose sur une analyse stratégique approfondie des fondations de votre marque : 
-            positionnement, mission, vision, cible. Ce travail donne naissance à un univers visuel sur-mesure —
-            une identité forte, cohérente et alignée avec vos ambitions.
+          Strategizing synergy, crafting narratives, and amplifying brand resonance through seamlessly integrated marketing solutions
           </p>
           <p>
-            Ce service s’adresse autant aux marques qui se lancent qu’à celles qui souhaitent évoluer et affirmer une nouvelle image.
+          We specialize in synergizing strategies, crafting compelling narratives, and enhancing brand resonance through seamlessly integrated marketing solutions tailored to elevate your brand's visibility and impact.
           </p>
         </div>
 
         <div className="pt-6">
-          <a href="#" className="text-black font-medium underline underline-offset-4">
-            CE SERVICE M’INTÉRESSE
+          <a href="#" className="text-black font-medium underline underline-offset-4 uppercase">
+          Synergized Marketing Excellence
           </a>
         </div>
       </div>
@@ -39,7 +37,7 @@ const HeroSection = () => {
       {/* Right image */}
       <div className="w-full md:w-1/2 relative min-h-[80vh] md:min-h-full -m-10">
         <Image
-          src="https://cdn.prod.website-files.com/656a0c59bc8ad4e5fa92b68e/68501955fbec5c4360eed01d_Frame%2022290.webp" // Replace with your image path
+          src="/integrated.png" // Replace with your image path
           alt="Branding Billboard"
           fill
           className="object-cover"
