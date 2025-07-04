@@ -1,97 +1,77 @@
-"use client"
-import React, { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
-import LogoSwitcher from './LogoSwitcher';
+"use client";
+import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
+import BlendBox from "./BlendBox";
 
-
-
-
-
-const Header = () => {
+export default function Header() {
   const [scrolled, setScrolled] = useState(false);
-
+  const dropdownRef = useRef(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef();
 
-  // Associate services with paths
-  const services = [
-    { name: 'Integrated Marketing', path: '/services/integrated-marketing' },
-    { name: 'Branding & Strategy', path: '/services/branding-strategy' },
-    { name: 'Election Management', path: '/services/election-management' },
-    { name: 'Digital & Social Media', path: '/services/digital-social-media' },
-    { name: 'Paid Promotions', path: '/services/paid-promotions' },
-    { name: 'Event Management', path: '/services/event-management' },
-    { name: 'Content Creation and Design', path: '/services/content-creation-design' },
-    { name: 'PR Management', path: '/services/pr-management' },
-    { name: 'Web Design', path: '/services/web-devlopment' },
-    { name: 'Audio-Visual Productions', path: '/services/audio-visual-productions' },
-  ];
-
-  // Close dropdown if clicked outside
+  // close dropdown on outside click
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setIsDropdownOpen(false);
       }
     };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  // change header bg on scroll
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-  
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white' : 'bg-transparent '}`}>
-
+    <header
+      className="fixed top-0 left-0 w-full z-50 transition-colors duration-300 
+ "
+ 
+    >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between">
-          {/* Logo or brand name */}
-          <div className="p-4">
-        <LogoSwitcher/>
-      </div>
+        <div className="flex items-center justify-between py-4">
+          {/* BlendBox logo/marker */}
+          <BlendBox size={48} />
 
-          {/* Navigation links */}
-          <nav className="flex space-x-6 text-black">
-            <Link href="/" className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300">
+          {/* Navigation */}
+          <nav className="flex space-x-4">
+            <Link
+              href="/"
+              className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
+            >
               Home
             </Link>
-             <a href="/about-us" className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300">
-              About Us
-            </a>
-            <a href="/our-service" className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300">
-              Our Services
-            </a>
-
-            {/* Our Services with Dropdown */}
-         
-
-
-           
-             <Link
-    href="/blog-page"
-    className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
-  >
-    Blogs
-  </Link>
             <Link
-    href="/contact-us"
-    className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
-  >
-    Contact Us
-  </Link>
+              href="/about-us"
+              className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
+            >
+              About Us
+            </Link>
+            <Link
+              href="/our-service"
+              className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
+            >
+              Our Services
+            </Link>
+            <Link
+              href="/blog-page"
+              className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
+            >
+              Blogs
+            </Link>
+            <Link
+              href="/contact-us"
+              className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
+            >
+              Contact Us
+            </Link>
           </nav>
         </div>
       </div>
     </header>
   );
-};
-
-export default Header;
+}

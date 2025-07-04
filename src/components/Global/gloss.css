@@ -1,0 +1,31 @@
+/* gloss.css */
+.gloss-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.gloss-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  animation: gloss-move 2.5s infinite;
+  mix-blend-mode: screen;
+  transform: skewX(-20deg);
+}
+
+@keyframes gloss-move {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
