@@ -11,8 +11,8 @@ const VideoText3 = () => {
         {/* Left Text Section */}
         <div className="w-full md:w-1/4 px-6 py-8 flex flex-col">
 
-          <p className="text-left text-lg text-black leading-snug">
-          Our ambition extends beyond achieving <span className='text-gray-500 hover:text-orange-500'> market dominance for our clients</span>; it is about creating a lasting impression. It is not about what we can do for you, <span className='text-gray-500 hover:text-orange-500'> but what we can't</span>.
+          <p className="text-left text-lg font-bold text-black leading-snug">
+          Our ambition extends beyond achieving <span className='text-gray-500 hover:text-orange-500 font-bold' > market dominance for our clients</span>; it is about creating a lasting impression. It is not about what we can do for you, <span className='text-gray-500 hover:text-orange-500 font-bold'> but what we can't</span>.
           </p>
         </div>
 

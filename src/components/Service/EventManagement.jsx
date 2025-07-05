@@ -35,7 +35,7 @@ const EventManagement = () => {
       </div>
 
       {/* Right image */}
-      <div className="w-full md:w-1/2 relative min-h-[64vh] md:min-h-full -m-10">
+      <div className="w-full md:w-1/2 relative min-h-[60vh] md:min-h-auto -m-10">
         <video src="/event.mp4" autoPlay loop muted
   playsInline
   className="w-full h-auto object-cover"></video>
