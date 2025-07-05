@@ -27,50 +27,54 @@ export default function Header() {
   }, []);
 
   return (
-    <header
-      className="fixed top-0 left-0 w-full z-50 transition-colors duration-300 
- "
- 
-    >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between py-4">
+    <header className="fixed bg-white top-0 left-0 w-full z-50">
+      <div className="bg-white">
+      <div className="max-w-7xl mx-auto px-6 bg-white">
+        <div className="flex items-center justify-between">
           {/* BlendBox logo/marker */}
-          <BlendBox size={48} />
+          <div className="w-50 h-24 bg-white rounded-[2.3rem] flex items-center justify-center mt-2">
+            <img
+              src="/logo1.png"
+              alt=""
+              className="w-[30vh] h-[30vh] rounded-[2.3rem]"
+            />
+          </div>
 
           {/* Navigation */}
-          <nav className="flex space-x-4">
+          <nav className="flex space-x-4 text-xl">
             <Link
               href="/"
-              className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
+              className="text-gray-700 hover:text-orange-500 p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
             >
               Home
             </Link>
             <Link
               href="/about-us"
-              className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
+              className="text-gray-700 hover:text-orange-500 p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
             >
               About Us
             </Link>
             <Link
               href="/our-service"
-              className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
+              className="text-gray-700 hover:text-orange-500 p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
             >
               Our Services
             </Link>
             <Link
               href="/blog-page"
-              className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
+              className="text-gray-700 hover:text-orange-500 p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
             >
               Blogs
             </Link>
             <Link
               href="/contact-us"
-              className="text-gray-700 hover:text-white p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
+              className="text-gray-700 hover:text-orange-500 p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
             >
               Contact Us
             </Link>
           </nav>
         </div>
+      </div>
       </div>
     </header>
   );

@@ -16,7 +16,7 @@ const VideoText2 = () => {
           </div>
 
           {/* Right Text Section */}
-          <div className="w-full md:w-1/4 p-5 flex items-end bg-gray-200">
+          <div className="w-full md:w-1/4 p-5 flex items-end bg-gray-400">
             <p className="text-black hover:text-orange-500">
               At Urban Chanakya, we combine visuals, motion, and messaging to shape narratives that engage, influence, and drive results.
             </p>

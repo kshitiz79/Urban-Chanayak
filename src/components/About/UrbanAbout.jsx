@@ -11,11 +11,11 @@ const UrbanAbout = () => {
   }, []);
 
   // Title transforms: shrink font size and move left
-  const fontSize = Math.max(192 - scrollY / 20, 96); // Font size decreases from 192px to min 96px
-  const translateX = Math.min(scrollY / 2, 300); // Left movement, max 300px
+  const fontSize = Math.max(182 - scrollY / 1, 10); // Font size decreases from 192px to min 96px
+  const translateX = Math.min(scrollY / 1, 10); // Left movement, max 300px
 
   // Paragraph transform: move up
-  const paraTranslateY = Math.min(scrollY / 2, 100); // Paragraph moves up, max 100px
+  const paraTranslateY = Math.min(scrollY / 2, 300); // Paragraph moves up, max 100px
 
   return (
     <div className="w-full overflow-hidden ">
@@ -23,19 +23,19 @@ const UrbanAbout = () => {
       <section className="bg-white h-[80vh] w-full relative z-10 pt-40">
         <div>
           <h1
-            className="text-[192px] font-black font-telegraf text-black uppercase leading-none origin-left"
+            className=" font-black font-telegraf text-black uppercase leading-none origin-left p-4"
             style={{
               fontSize: `${fontSize}px`,
               transform: `translateX(-${translateX}px)`,
               willChange: "transform, font-size",
-              transition: "transform 0.1s ease-out, font-size 0.1s ease-out",
+              transition: "transform 0.2s ease-out, font-size 0.1s ease-out",
             }}
           >
             ABOUT
           </h1>
 
           <p
-            className="mt-20 text-[26px] md:text-[32px] text-black font-black uppercase font-telegraf leading-snug max-w-4xl"
+            className="mt-20 text-[26px] md:text-[32px] text-black font-black uppercase font-telegraf leading-snug max-w-4xl pl-4"
             style={{
               transform: `translateY(-${paraTranslateY}px)`,
               willChange: "transform",
@@ -52,7 +52,7 @@ const UrbanAbout = () => {
       {/* Section 2: Background Video Fullscreen */}
       <section className="relative w-full h-[150vh] bg-black overflow-hidden">
         <video
-          src="/blogvideo2.mp4"
+          src="/about.mp4"
           className="absolute top-0 left-0 w-full h-full object-cover"
           autoPlay
           muted

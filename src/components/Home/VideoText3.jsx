@@ -20,11 +20,11 @@ const VideoText3 = () => {
         <div className="w-full md:w-3/4 h-auto m-0 p-0">
           <video
             className="w-full h-full aspect-video rounded-r-2xl object-cover block"
-            src="/blogvideo2.mp4"
+            src="/homepage.mp4"
             autoPlay
             muted
             loop
-            controls
+         
           >
             Your browser does not support the video tag.
           </video>
