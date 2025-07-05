@@ -27,16 +27,16 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed bg-white top-0 left-0 w-full z-50">
-      <div className="bg-white">
-      <div className="max-w-7xl mx-auto px-6 bg-white">
+    <header className="fixed  top-0 left-0 w-full z-50">
+      <div className="">
+      <div className="max-w-7xl mx-auto px-6 ">
         <div className="flex items-center justify-between">
           {/* BlendBox logo/marker */}
-          <div className="w-50 h-24 bg-white rounded-[2.3rem] flex items-center justify-center mt-2">
+          <div className="w-36 h-20 founded-full   flex items-center justify-center ">
             <img
               src="/logo1.png"
               alt=""
-              className="w-[30vh] h-[30vh] rounded-[2.3rem]"
+              className=""
             />
           </div>
 

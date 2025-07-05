@@ -99,7 +99,7 @@ const ManyDivs = () => {
               <div className="w-3/4 flex flex-col gap-6">
                 {/* Box 1 */}
                 <div
-                  className={`bg-white rounded-3xl flex flex-col h-full justify-between transition-shadow duration-300 ${shadowClass}`}
+                  className={`bg-white rounded-3xl flex flex-col h-3/6  justify-between transition-shadow duration-300 ${shadowClass}`}
                 >
                   <div className="flex justify-center">
                     <BiSolidLockOpen className="text-[14rem] h-full w-auto text-black" />
@@ -118,7 +118,7 @@ const ManyDivs = () => {
 
                 {/* Box 2 */}
                 <div
-                  className={`bg-white rounded-3xl flex flex-col p-6 justify-between transition-shadow duration-300 ${shadowClass}`}
+                  className={`bg-white rounded-3xl flex flex-col p-6 justify-between h-3/6 justify-between transition-shadow duration-300 ${shadowClass}`}
                 >
                   <div className="flex justify-center ">
                     <img

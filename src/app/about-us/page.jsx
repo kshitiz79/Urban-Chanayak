@@ -6,6 +6,9 @@ import UrbanAbout from '@/components/About/UrbanAbout';
 import WhatWeDo from '@/components/About/WhatWeDo';
 import WhoWeAre from '@/components/About/WhoWeAre';
 import PosterScrollReveal from '@/components/About/PosterScrollReveal';
+import SuccessStories from '@/components/About/SuccessStories';
+import ScrollRevealPanel from '@/components/About/ScrollRevealPanel';
+import Hole from '@/components/About/Hole';
 
 const Page = () => {
 
@@ -15,8 +18,10 @@ const Page = () => {
     
         <UrbanAbout />
         <WhatWeDo />
+          <Hole/>
         <WhoWeAre />
-        <PosterScrollReveal />
+  
+
     
     </div>
   );
