@@ -50,7 +50,7 @@ const UrbanAbout = () => {
       </section>
 
       {/* Section 2: Background Video Fullscreen */}
-      <section className="relative w-full h-[150vh] bg-black overflow-hidden">
+      <section className="relative w-full h-[130vh] bg-black overflow-hidden">
         <video
           src="/about.mp4"
           className="absolute top-0 left-0 w-full h-full object-cover"
@@ -60,7 +60,7 @@ const UrbanAbout = () => {
           playsInline
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10" />
-        
+
       </section>
       <section className="bg-white pt-20 px-6 ">
   <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10">

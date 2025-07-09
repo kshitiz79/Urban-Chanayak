@@ -18,7 +18,7 @@ const Page = () => {
     
         <UrbanAbout />
         <WhatWeDo />
-          <Hole/>
+          {/* <Hole/> */}
         <WhoWeAre />
   
 

@@ -67,6 +67,12 @@ export default function Header() {
               Blogs
             </Link>
             <Link
+              href="/careers"
+              className="text-gray-700 hover:text-orange-500 p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
+            >
+              Careers
+            </Link>
+            <Link
               href="/contact-us"
               className="text-gray-700 hover:text-orange-500 p-2 px-4 bg-white hover:bg-transparent rounded-3xl transition-all duration-300"
             >

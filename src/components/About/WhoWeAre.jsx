@@ -87,9 +87,6 @@ const CoreCompetencies = () => {
             ))}
           </div>
 
-
-
-          
         </div>
       </div>
     </div>
