@@ -71,16 +71,16 @@ export default function ContactSection() {
             <input
               type="text"
               placeholder="Name"
-              className="w-full p-4 bg-[#1a1a1a] border border-gray-700 rounded-md text-white placeholder-gray-500"
+              className="w-full p-4 bg-[#1a1a1a] border border-gray-400 rounded-md text-white placeholder-gray-300"
             />
             <input
               type="email"
               placeholder="Email"
-              className="w-full p-4 bg-[#1a1a1a] border border-gray-700 rounded-md text-white placeholder-gray-500"
+              className="w-full p-4 bg-[#1a1a1a] border border-gray-400 rounded-md text-white placeholder-gray-300"
             />
             <textarea
               placeholder="Message"
-              className="w-full p-4 bg-[#1a1a1a] border border-gray-700 rounded-md text-white placeholder-gray-500 min-h-[150px]"
+              className="w-full p-4 bg-[#1a1a1a] border border-gray-400 rounded-md text-white placeholder-gray-300 min-h-[150px]"
             />
             <div className="flex items-center space-x-2">
               <input type="checkbox" id="robot" className="w-5 h-5" />
@@ -89,7 +89,7 @@ export default function ContactSection() {
               </label>
               <div className="ml-auto">
                 {/* Placeholder for reCAPTCHA */}
-                <div className="bg-gray-700 text-xs px-2 py-1 rounded">
+                <div className="bg-gray-300 text-xs px-2 py-1 rounded">
                   reCAPTCHA
                 </div>
               </div>

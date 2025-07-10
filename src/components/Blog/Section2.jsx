@@ -16,9 +16,9 @@ const ScrollColorText = () => {
 
     const text = textRef.current.textContent;
     textRef.current.innerHTML = text
-      .split("")
+      .split("  ")
       .map((char) => `<span class="text-gray-500 inline-block">${char}</span>`)
-      .join("");
+      .join("  ");
 
     const spans = textRef.current.querySelectorAll("span");
 
@@ -46,57 +46,32 @@ const ScrollColorText = () => {
     <div className="bg-white">
       <div className="min-h-screen py-20 bg-white max-w-5xl mx-auto">
         <p ref={textRef} className="text-4xl text-black">
-          Canadian artist Meg O’Hara is one of 11th Hour Racing’s newest
-          ambassadors; an artist and environmentalist, her work not only
-          inspires but educates people globally about the ever-changing state of
-          our planet.
+        In today’s political reality, social media is not just a platform. It is the main stage. For political leaders in Assam, it has become a powerful medium to communicate vision, counter opposition, and shape public perception. The digital voice of a leader now carries as much weight as their speech at a rally or a statement in the Assembly
+.
         </p>
-        <div className="text-black text-xl mt-12 ml-80">
-          <p>
-            Her unique art focuses on ocean conservation in the polar regions,
-            and she is often selected to participate in various expeditions to
-            the Arctic, Antarctica, and other isolated locations (alongside
-            explorers and scientists) to help bring to life the beauty—but also
-            the drastic changes—of these regions. As she puts it, through her
-            art, she’s{" "}
-            <i>
-              “found purpose in bridging the gap between science and
-              communication through art.”
-            </i>
-          </p>
-          <br />
-          <br />
-          <p>
-            Originally from Toronto, Meg is a Fellow of the{" "}
-            <span className="underline text-red-500">
-              {" "}
-              Royal Canadian Geographical Society
-            </span>
-            . She’s also a Member International at{" "}
-            <span className="text-red-500 underline"> The Explorers Club</span>,
-            a WINGS WorldQuest Flag Carrier, and a Creative Ambassador for
-            Protect Our Winters. Her{" "}
-            <span className="text-red-500 underline">
-              ever-growing list of accolades{" "}
-            </span>
-            is impressive.{" "}
-          </p>
-          <br /> <br />
-          <p>
-            ‍To give you an idea of just how popular her art and the story
-            behind it is becoming, last year she was a ‘Featured Artist’ for
-            Ocean Week and as part of that project, her work was included in the
-            James Cameron exhibit in conjunction with National Geographic,
-            Rolex, Woods Hole Oceanographic Institute (WHOI) and many more.{" "}
-          </p>
-          <br /> <br />
-          <p>
-            We’re excited that Meg agreed to take us behind the scenes for a day
-            in her life as an ‘Artist in Residence’ for a Canadian delegation in
-            Antarctica looking at the impact of climate change in a remote
-            region few think about, and even fewer visit.
-          </p>
-        </div>
+      <div className="text-black text-xl mt-12 ml-80">
+  <h2 className="text-2xl font-bold mb-4">Case Study 1: Himanta Biswa Sarma</h2>
+  <h3 className="text-xl font-semibold mb-6 italic">The Storyteller of Governance</h3>
+
+  <p className="mb-4">
+    Dr. Himanta Biswa Sarma, the Chief Minister of Assam, has developed a commanding digital presence. 
+    His style is consistent, culturally rooted, and development-focused.
+  </p>
+
+  <p className="mb-4 font-semibold">What defines his strategy:</p>
+  <ul className="list-disc list-inside ml-4 mb-6">
+    <li>He posts regularly about government work, public welfare schemes, and ground-level progress.</li>
+    <li>His content celebrates Assamese culture and tradition, creating a strong emotional bond with the people.</li>
+    <li>He uses Assamese, Hindi, and English to ensure accessibility for all audiences across the state and beyond.</li>
+  </ul>
+
+  <p className="mb-4">
+    A defining example was seen during the COVID-19 pandemic. He used <strong>X</strong> as a real-time helpline, 
+    personally responding to citizens, coordinating health infrastructure, and setting an example in digital crisis management. 
+    His approach built trust across demographic and political lines.
+  </p>
+</div>
+
         <div className="mt-12">
           <img
             src="https://cdn.prod.website-files.com/66336211b81e8a10a1428f79/6659a120e7e53787788be7f0_PC%20Mary%20Paquet_SOI%20Foundation%202.webp"
@@ -107,63 +82,44 @@ const ScrollColorText = () => {
             Foundation
           </p>
         </div>
-        <div className="ml-80 text-black py-16 ">
-          <h1 className=" text-[30px]">
-            Good morning Antarctica! Or is it goodnight? ‍
-          </h1>
-          ‍<br />
-          <p className="text-xl">
-            Spending time living aboard a research vessel in Antarctica can
-            throw your body clock out of sync by confusing the circadian rhythm.
-            This is because the polar regions have ‘polar day/polar night,’
-            which is basically (depending on where you are on the continent and
-            what time of year it is) 24-hour daylight. ‍
-          </p>
-          <br />
-          <p className="text-xl">
-            For Meg, the sun dipped below the horizon for 60 minutes each night
-            at around 2 a.m., and it was well worth waiting up for and looking
-            out the window from her room on the boat. ‍
-          </p>
-          <br />
-          <p className="text-xl">
-            She said: “It was always the most beautiful time of day where you
-            could see the colors of the sunset. I’d be up again at 6 am so
-            needless to say, some nights were short! ‍
-          </p>
-          <br />
-          <p className="text-xl">
-            “Every morning, we’d wake up, open the blackout blinds very slowly,
-            put on our base layers, and head up to the dining area for
-            breakfast. Everyone was on time, and no one was late, not even by 5
-            minutes. The ship kept a tight schedule that must be respected.” ‍ ‍
-          </p>
-          <br />
-          <h1 className="text-[30px]">Layering up ‍ ‍</h1>
-          <br />
-          <p className="text-xl">
-            Dressing for the coldest continent on Earth is no easy feat. Picture
-            getting ready to go skiing and multiply the layers a few times. For
-            Meg, it was a daily performance that occurred during the 45 minutes
-            between breakfast and docking off the big ship via zodiac
-            (inflatable boat) onto land. ‍
-          </p>
-          <br />
-          <p className="text-xl">
-          “45 minutes can seem like a long time in theory, but in reality, it’s
-          not,” Meg explains. “Firstly, you must - and I cannot stress this
-          enough - go to the toilet as the land and ocean are preserved by the
-          <span className="text-red-500 underline">Antarctic Treaty</span>, so going to the toilet anywhere other than on the
-          ship is not an option. ‍
-          </p><br />
-          <p className="text-xl">
-            “Brushing your teeth is also an interesting one as you’re doing it
-            with your sunglasses on! By the time you’ve gathered your affairs
-            and put your four clothing layers on the bottom and seven on top,
-            you make your way back up to regroup and get ready for the first
-            dock off. Trust me, those 45 minutes go pretty Quickly"
-          </p>
-        </div>
+      <div className="ml-80 text-black py-16">
+  <h2 className="text-2xl font-bold mb-4">Case Study 2: Ashok Singhal</h2>
+  <h3 className="text-xl font-semibold mb-6 italic">The Crisis Communicator</h3>
+
+  <p className="text-xl mb-4">
+    Ashok Singhal, the Minister of Housing and Urban Affairs, brings a contrasting but equally effective style. 
+    His posts are bold, immediate, and unapologetically ideological.
+  </p>
+
+  <p className="text-xl font-semibold mb-2">Key pillars of his strategy:</p>
+  <ul className="list-disc list-inside text-xl mb-6 ml-4">
+    <li>He reacts swiftly to political events, often shaping the public narrative before others can respond.</li>
+    <li>His language is firm and emotionally charged, making his posts resonate in high-tension moments.</li>
+    <li>He connects state-level incidents with national-level sentiments, reinforcing the ideological line of the party.</li>
+  </ul>
+
+  <p className="text-xl mb-4">
+    Two standout moments illustrate his digital strategy.
+  </p>
+
+  <p className="text-xl mb-4">
+    In June 2025, he strongly condemned protestors who allegedly threw water bottles at the Chief Minister during a public appearance. 
+    He called it an act of organized anarchy, immediately framing the incident as a breakdown of democratic norms. 
+    The post drew widespread attention and reinforced a law-and-order message.
+  </p>
+
+  <p className="text-xl mb-4">
+    Earlier, in May 2025, he criticized Rahul Gandhi for allegedly echoing anti-national sentiment. 
+    The post went viral, with national media amplifying his message. 
+    It shifted a state-level issue into the national conversation on patriotism and security.
+  </p>
+
+  <p className="text-xl">
+    The impact is strategic. Singhal’s digital persona projects strength, ideological clarity, and readiness to confront challenges head-on. 
+    His audience views him as a protector of the party’s dignity and values.
+  </p>
+</div>
+
       </div>
     </div>
   );

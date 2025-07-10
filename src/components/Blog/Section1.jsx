@@ -10,7 +10,7 @@ const Section1 = () => {
           <div>
             <span className="text-red-600 text-sm font-medium">WORDS</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mt-2 leading-tight">
-              A Day Off-Grid With Meg O’Hara: Artist, Conservationist, and 11th Hour Racing Ambassador
+              Social Media Brand Management for Political Leaders: The Assam Playbook
             </h1>
             <button className="text-gray-600 text-sm bg-gray-100 rounded-full p-2">7 mins</button>
           </div>
