@@ -62,14 +62,14 @@ const ThreeBox = () => {
     >
       <div className="flex flex-col items-center px-10 mx-auto space-y-4 mb-8">
         <div className="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-6 w-full justify-center">
-          <div className="bg-white text-black font-normal w-full md:w-[50%] text-4xl py-16 px-10 rounded-2xl">
+          <div className="bg-white hover:bg-orange-500 hover:text-white text-black font-normal w-full md:w-[50%] text-4xl py-16 px-10 rounded-2xl">
             Political Leaders & Campaigners
           </div>
-          <div className="bg-white text-black font-normal w-full md:w-[55%] text-4xl py-16 px-10 rounded-2xl">
+          <div className="bg-white text-black hover:bg-orange-500 hover:text-white font-normal w-full md:w-[55%] text-4xl py-16 px-10 rounded-2xl">
             Government & Public Sector Bodies
           </div>
         </div>
-        <div className="bg-white text-black font-normal text-4xl w-full md:w-[100%] py-16 px-10 rounded-2xl mt-2">
+        <div className="bg-white text-black hover:bg-orange-500 hover:text-white font-normal text-4xl w-full md:w-[100%] py-16 px-10 rounded-2xl mt-2">
           Brands & Businesses Seeking Impact
         </div>
         <p className="text-white text-xl max-w-4xl mx-auto py-10">

@@ -14,7 +14,7 @@ export default function HeroSection() {
   const background = useTransform(
     scrollYProgress,
     [0, 0.33, 0.66, 1],
-    ['#ffffff', '#000000', '#ffffff', '#000000']
+    ['#000000', '#ffffff', '#000000', '#ffffff']
   );
 
   return (
@@ -24,51 +24,16 @@ export default function HeroSection() {
       className="text-white min-h-screen flex flex-col items-center justify-center px-4 py-26 transition-colors duration-1000"
     >
      <div className="text-center mb-12 mt-12">
-      <h1 className="text-4xl md:text-[7rem] font-bold leading-tight text-black dark:text-white">
-        become{' '}
-        <span className="relative inline-block">
-          {/* Actual Text */}
-          <span className="z-10 relative">the one</span>
+     <h1 className="text-4xl md:text-[7rem] font-bold leading-none dark:text-white">
+  become <span className="relative inline-block">
+    <span className="z-10 relative">a part</span>
+  </span> of Urban Chanakya family
+</h1>
 
-          {/* Hand-drawn Ribbon Animation */}
-          <motion.svg
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 1 }}
-            transition={{
-              duration: 1.2,
-              delay: 1, // 1s delay before animation starts
-              ease: 'easeInOut',
-            }}
-            className="absolute inset-0 z-0 w-full h-full scale-125"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-          >
-            <motion.path
-              d="
-                M 10,50
-                Q 10,10 50,10
-                Q 90,10 90,50
-                Q 90,90 50,90
-                Q 10,90 10,50
-              "
-              fill="none"
-              stroke="#ef4444"  // Tailwind red-500
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </motion.svg>
-        </span>{' '}
-        of Urban Chanakyas
-        <br />
-        family
-      </h1>
     </div>
 
       {/* CTA Button */}
-      <button className="border text-black border-orange-500 hover:text-white py-2 px-6 rounded-lg hover:bg-orange-500 transition mb-16">
-        See job openings
-      </button>
+
 
       {/* Grid of images */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 max-w-7xl w-full px-4">

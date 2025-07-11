@@ -77,7 +77,7 @@ const page = () => {
               ></textarea>
               <button
                 type="submit"
-                className="w-full py-3 bg-black lactext-white font-medium rounded-md hover:bg-orange-500 transition"
+                className="w-full py-3 bg-white lactext-white font-medium rounded-md hover:bg-orange-500 transition"
               >
                 Submit
               </button>

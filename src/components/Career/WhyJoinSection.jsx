@@ -2,12 +2,10 @@
 import { CheckCircle } from "lucide-react";
 
 const features = [
-  "80+ specialists with over 3 years of experience in IT",
-  "Regular meetups and other educational activities",
-  "Caring team leads",
-  "Smart division of tasks and responsibilities on each project",
-  "Teamwork and mutual support",
-  "Engaging projects and full-stack technologies",
+  " A Supportive, Inclusive Culture",
+  " Meaningful Work, Real Impact",
+  " Room to Learn and Lead",
+  "Workplace That Feels Like Home",
 ];
 
 export default function WhyJoinSection() {
@@ -18,7 +16,7 @@ export default function WhyJoinSection() {
         <div>
           <p className="text-sm uppercase text-gray-400 mb-3">Our Features</p>
           <h2 className="text-4xl md:text-5xl font-semibold mb-8">
-            why join Che IT Group
+            why join UC
           </h2>
           <ul className="space-y-5">
             {features.map((feature, index) => (

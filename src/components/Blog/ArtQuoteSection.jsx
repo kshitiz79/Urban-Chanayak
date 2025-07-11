@@ -18,9 +18,9 @@ const ArtQuoteSection = () => {
     paragraphs.forEach((paragraph) => {
       const text = paragraph.textContent;
       paragraph.innerHTML = text
-        .split("")
-        .map((char) => `<span class="text-gray-700 inline-block">${char}</span>`)
-        .join("");
+        .split(" ")
+        .map((char) => `<span class="text-gray-700 ">${char}</span>`)
+        .join(" ");
     });
 
     const spans = textRef.current.querySelectorAll("span");
@@ -48,11 +48,12 @@ const ArtQuoteSection = () => {
   return (
     <div className="bg-orange-500 min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-        <div ref={textRef} className="flex-1 z-2">
-          <p className="text-4xl md:text-6xl font-bold text-black mb-4" >
-            <span className="text-gray-100">"I see my art as a form of science communication, bridging the gap between academia and the general population to show this beautiful landscape."</span>
+        <div ref={textRef} className="flex-1 z-2 max-w-5xl">
+                      <p className="text-5xl text-gray-700 italic mb-6 -mt-4">The Assam Model</p>
+          <p className="text-4xl md:text-6xl font-bold mb-4 -mr-4 " >
+            <span className="text-gray-100">These two case studies highlight two distinct yet successful approaches to political brand-building on social media.</span>
           </p>
-          <p className="text-lg text-gray-700 italic">- Meg O’Hara</p>
+
         </div>
         <div className="flex-1 flex flex-col md:flex-row gap-6">
           <div className="w-full md:w-1/2 -ml-24 z-0">

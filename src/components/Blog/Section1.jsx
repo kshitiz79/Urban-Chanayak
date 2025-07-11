@@ -18,11 +18,11 @@ const Section1 = () => {
         </div>
       </header>
       <main className="container mx-auto py-6">
-        <div className="relative w-full h-[70vh] md:h-[100vh] overflow-hidden shadow-lg">
+        <div className="relative w-full h-[70vh] md:h-[100vh] xl:h-[100vh] lg:h-[100vh] overflow-hidden shadow-lg">
           <img
-            src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&h=1000&fit=crop&crop=face" // Replace with actual image URL
+            src="/blogpage.png" // Replace with actual image URL
             alt="Meg O’Hara in a snowy landscape"
-            className="w-full h-full object-cover"
+            className="w-full h-full"
             loading="lazy"
           />
         </div>
