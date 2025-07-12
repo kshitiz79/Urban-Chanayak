@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { BiSolidLockOpen } from "react-icons/bi";
 import VideoText2 from "./VideoText2";
 
 const ManyDivs = () => {
@@ -102,7 +101,7 @@ const ManyDivs = () => {
                   className={`bg-white rounded-3xl flex flex-col h-3/6  justify-between transition-shadow duration-300 ${shadowClass}`}
                 >
                   <div className="flex justify-center">
-                    <BiSolidLockOpen className="text-[14rem] h-full w-auto text-black" />
+                    <img src="/lotus.png" className="text-[14rem] h-full w-auto text-black p-8 pt-12" />
                   </div>
                   <p className="text-black text-lg p-4 text-left">
                     <span className="underline">
