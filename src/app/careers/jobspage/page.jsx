@@ -107,7 +107,7 @@ export default function Page() {
               {/* Job 1 */}
               <div className=" pt-4">
                 <div className="flex justify-between">
-                  <a href="#" className="text-indigo-600 font-semibold text-lg hover:underline">
+                  <a href="#" className="text-orange-600 font-semibold text-lg hover:underline">
                     Project Executive
                   </a>
                   <div className="text-right text-sm text-gray-500">
@@ -129,7 +129,7 @@ export default function Page() {
               {/* Job 2 */}
               <div className=" pt-4">
                 <div className="flex justify-between">
-                  <a href="#" className="text-indigo-600 font-semibold text-lg hover:underline">
+                  <a href="#" className="text-orange-600 font-semibold text-lg hover:underline">
                     Business Growth Manager
                   </a>
                   <div className="text-right text-sm text-gray-500">
@@ -150,7 +150,13 @@ export default function Page() {
             </div>
           </main>
         </div>
+     
       </section>
+         <a href="/">
+        <div className="border-t border-b text-lg text-center mb-2 text-orange-500">
+            visit website
+        </div>
+        </a>
     </>
   );
 }
