@@ -35,9 +35,7 @@ export default function VacanciesSection() {
           <h2 className="text-4xl md:text-6xl font-semibold leading-tight mb-10">
             build your <br /> brilliant career <br /> with us
           </h2>
-          <button className="border border-red-500 text-white px-6 py-3 rounded-md hover:bg-red-600 transition">
-            See job openings
-          </button>
+        
         </div>
 
         {/* Right Job Cards */}

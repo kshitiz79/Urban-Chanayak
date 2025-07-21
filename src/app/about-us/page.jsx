@@ -11,15 +11,18 @@ import ScrollRevealPanel from '@/components/About/ScrollRevealPanel';
 import Hole from '@/components/About/Hole';
 
 const Page = () => {
+  
 
 
   return (
+    
     <div className="font-telegraf relative">
     
         <UrbanAbout />
         <WhatWeDo />
-          {/* <Hole/> */}
+   
         <WhoWeAre />
+        <Hole/>
   
 
     
