@@ -7,21 +7,30 @@ import { useRouter } from 'next/navigation';
 export default function AddJobPage() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const res = await fetch('http://localhost:5000/api/jobs/admin/add', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title, description }),
-    });
-
-    if (res.ok) {
-      router.push('/admin/jobs');
-    } else {
-      alert('Failed to create job.');
+    setLoading(true);
+    setError('');
+    try {
+      const res = await fetch('http://localhost:5001/api/jobs/admin/add', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title, description }),
+      });
+      if (res.ok) {
+        router.push('/admin/jobs');
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setError(data.error || 'Failed to create job.');
+      }
+    } catch (err) {
+      setError('Network error: ' + err.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -44,8 +53,9 @@ export default function AddJobPage() {
           onChange={(e) => setDescription(e.target.value)}
           required
         />
-        <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
-          Add Job
+        {error && <div className="text-red-600">{error}</div>}
+        <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded" disabled={loading}>
+          {loading ? 'Adding...' : 'Add Job'}
         </button>
       </form>
     </div>

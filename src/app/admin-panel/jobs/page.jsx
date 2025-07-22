@@ -7,7 +7,7 @@ export default function JobListPage() {
   const [jobs, setJobs] = useState([]);
 
   const fetchJobs = async () => {
-    const res = await fetch('http://localhost:5000/api/jobs');
+    const res = await fetch('http://localhost:5001/api/jobs');
     const data = await res.json();
     setJobs(data);
   };
@@ -19,7 +19,7 @@ export default function JobListPage() {
   const deleteJob = async (id) => {
     if (!confirm('Are you sure you want to delete this job?')) return;
 
-    const res = await fetch(`http://localhost:5000/api/jobs/admin/delete/${id}`, {
+    const res = await fetch(`http://localhost:5001/api/jobs/admin/delete/${id}`, {
       method: 'DELETE',
     });
 

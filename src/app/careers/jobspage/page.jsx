@@ -1,8 +1,24 @@
 "use client";
- import { FaArrowRightLong } from "react-icons/fa6";
- import { FaSearch, FaSearchLocation } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { FaSearch, FaSearchLocation } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
 export default function Page() {
+  const [showModal, setShowModal] = useState(false);
+  const [jobs, setJobs] = useState([]);
+  const [selectedJob, setSelectedJob] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:5001/api/jobs")
+      .then((res) => res.json())
+      .then((data) => setJobs(data));
+  }, []);
+
+  const openModal = (job) => {
+    setSelectedJob(job);
+    setShowModal(true);
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -104,49 +120,33 @@ export default function Page() {
 
             {/* Job List */}
             <div className="space-y-8">
-              {/* Job 1 */}
-              <div className=" pt-4">
-                <div className="flex justify-between">
-                  <a href="#" className="text-orange-600 font-semibold text-lg hover:underline">
-                    Project Executive
-                  </a>
-                  <div className="text-right text-sm text-gray-500">
-                    Full time<br />
-                    20/05/2025
+              {jobs.map((job) => (
+                <div
+                  key={job._id}
+                  className="pt-4 cursor-pointer"
+                  onClick={() => openModal(job)}
+                >
+                  <div className="flex justify-between">
+                    <span className="text-orange-600 font-semibold text-lg hover:underline">
+                      {job.title}
+                    </span>
+                    <div className="text-right text-sm text-gray-500">
+                      {/* You can add job type and date if available in job object */}
+                      {job.type || "Full time"}
+                      <br />
+                      {job.date || (job.createdAt ? new Date(job.createdAt).toLocaleDateString() : "")}
+                    </div>
                   </div>
+                  <p className="text-sm text-gray-600">
+                    {job.location || "Mumbai, Maharashtra, India"}
+                    <br />
+                    {job.experience || "2-3 years"}
+                  </p>
+                  <p className="text-sm text-gray-700 mt-2">
+                    {job.description}
+                  </p>
                 </div>
-                <p className="text-sm text-gray-600">
-                  Mumbai, Maharashtra, India<br />
-                  2-3 years
-                </p>
-                <p className="text-sm text-gray-700 mt-2">
-                  We are seeking a highly motivated and detail-oriented Project Executive
-                  to join our team and assist in the planning, implementation, and
-                  monitoring of...
-                </p>
-              </div>
-
-              {/* Job 2 */}
-              <div className=" pt-4">
-                <div className="flex justify-between">
-                  <a href="#" className="text-orange-600 font-semibold text-lg hover:underline">
-                    Business Growth Manager
-                  </a>
-                  <div className="text-right text-sm text-gray-500">
-                    Full time<br />
-                    18/02/2025
-                  </div>
-                </div>
-                <p className="text-sm text-gray-600">
-                  Mumbai, Maharashtra, India<br />
-                  3-4 years
-                </p>
-                <p className="text-sm text-gray-700 mt-2">
-                  Key Responsibilities: 1. New Business Acquisition & Revenue Growth.
-                  Identify, prospect, and generate leads for potential clients in sectors
-                  like D2C, E-...
-                </p>
-              </div>
+              ))}
             </div>
           </main>
         </div>
@@ -157,6 +157,68 @@ export default function Page() {
             visit website
         </div>
         </a>
+
+      {/* Modal Popup Form */}
+      {showModal && selectedJob && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg shadow-lg w-full max-w-lg p-8 relative">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl"
+              onClick={() => setShowModal(false)}
+            >
+              &times;
+            </button>
+            <h2 className="text-2xl font-bold mb-4 text-center text-black">Apply for {selectedJob.title}</h2>
+            <form className="space-y-4">
+              <div className="flex gap-4">
+                <div className="w-1/2">
+                  <label className="block text-gray-700">First Name</label>
+                  <input type="text" className="w-full border rounded px-3 py-2" required />
+                </div>
+                <div className="w-1/2">
+                  <label className="block text-gray-700">Last Name</label>
+                  <input type="text" className="w-full border rounded px-3 py-2" required />
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-1/2">
+                  <label className="block text-gray-700">Email</label>
+                  <input type="email" className="w-full border rounded px-3 py-2" required />
+                </div>
+                <div className="w-1/2">
+                  <label className="block text-gray-700">Phone No</label>
+                  <input type="tel" className="w-full border rounded px-3 py-2" required />
+                </div>
+              </div>
+              <div>
+                <label className="block text-gray-700">Portfolio</label>
+                <input type="file" className="w-full border rounded px-3 py-2" />
+              </div>
+              <div>
+                <label className="block text-gray-700">Resume</label>
+                <input type="file" className="w-full border rounded px-3 py-2" />
+              </div>
+              <div>
+                <label className="block text-gray-700">How did you hear about us?</label>
+                <input type="text" className="w-full border rounded px-3 py-2" />
+              </div>
+              <div className="bg-gray-100 rounded p-4">
+                <div className="font-semibold text-black">{selectedJob.title}</div>
+                <div className="text-sm text-gray-600">{selectedJob.type || "Full time"}</div>
+                <div className="text-sm text-gray-600">{selectedJob.date || (selectedJob.createdAt ? new Date(selectedJob.createdAt).toLocaleDateString() : "")}</div>
+                <div className="text-sm text-gray-600">{selectedJob.location || "Mumbai, Maharashtra, India"}</div>
+                <div className="text-sm text-gray-600">{selectedJob.experience || "2-3 years"}</div>
+                <div className="text-xs text-gray-700 mt-2">
+                  {selectedJob.description}
+                </div>
+              </div>
+              <button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">
+                Submit Application
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </>
   );
 }
