@@ -8,7 +8,7 @@ export default function ApplicationsPage() {
   const [applications, setApplications] = useState([]);
 
   const fetchApplications = async () => {
-    const res = await fetch('http://localhost:5000/api/applications/admin');
+    const res = await fetch('http://localhost:5000/api/applications/admin-panel');
     const data = await res.json();
     setApplications(data);
   };

@@ -35,7 +35,7 @@ const UrbanAbout = () => {
           </h1>
 
           <p
-            className="mt-20 text-[26px] md:text-[32px] text-black font-black uppercase font-telegraf leading-snug max-w-4xl pl-4"
+            className="mt-16 text-[26px] md:text-[32px] text-black font-black uppercase font-telegraf leading-snug max-w-4xl pl-4 "
             style={{
               transform: `translateY(-${paraTranslateY}px)`,
               willChange: "transform",

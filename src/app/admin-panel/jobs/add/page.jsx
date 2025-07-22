@@ -16,7 +16,7 @@ export default function AddJobPage() {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('http://localhost:5001/api/jobs/admin/add', {
+      const res = await fetch('http://localhost:5001/api/jobs/admin-panel/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title, description }),

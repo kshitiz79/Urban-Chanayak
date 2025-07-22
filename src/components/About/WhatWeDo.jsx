@@ -5,7 +5,7 @@ const WhatWeDo = () => {
     <div>
 
 
-        <section>  <section className="bg-white pt-40 px-6">
+        <section>  <section className="bg-white pt-40 px-6 pb-10">
   <div className="flex flex-col md:flex-row items-start md:items-start justify-between gap-10">
     
     {/* Left side: Heading + Video */}

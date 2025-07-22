@@ -5,10 +5,9 @@ import React, { useEffect, useRef } from 'react';
 import UrbanAbout from '@/components/About/UrbanAbout';
 import WhatWeDo from '@/components/About/WhatWeDo';
 import WhoWeAre from '@/components/About/WhoWeAre';
-import PosterScrollReveal from '@/components/About/PosterScrollReveal';
-import SuccessStories from '@/components/About/SuccessStories';
-import ScrollRevealPanel from '@/components/About/ScrollRevealPanel';
+
 import Hole from '@/components/About/Hole';
+import Test from '@/components/About/Test';
 
 const Page = () => {
   
@@ -20,9 +19,11 @@ const Page = () => {
     
         <UrbanAbout />
         <WhatWeDo />
+        <Test/>
    
-        <WhoWeAre />
-        <Hole/>
+     
+        {/* <Hole/> */}
+        {/* <WhoWeAre /> */}
   
 
     
