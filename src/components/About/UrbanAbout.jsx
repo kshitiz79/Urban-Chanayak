@@ -18,7 +18,7 @@ const UrbanAbout = () => {
   const paraTranslateY = Math.min(scrollY / 2, 300); // Paragraph moves up, max 100px
 
   return (
-    <div className="w-full overflow-hidden ">
+    <div className="relative w-full overflow-hidden ">
       {/* Section 1: About Heading and Description */}
       <section className="bg-white h-[80vh] w-full relative z-10 pt-40">
         <div>
@@ -50,7 +50,7 @@ const UrbanAbout = () => {
       </section>
 
       {/* Section 2: Background Video Fullscreen */}
-      <section className="relative w-full h-[130vh] bg-black overflow-hidden">
+      <section className="relative w-full h-[130vh] bg-black overflow-hidden z-10">
         <video
           src="/about.mp4"
           className="absolute top-0 left-0 w-full h-full object-cover"
@@ -62,10 +62,10 @@ const UrbanAbout = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10" />
 
       </section>
-      <section className="bg-white pt-20 px-6 ">
+      <section className="bg-white pt-20 px-6 z-10 relative">
   <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
     {/* Left side: Paragraph */}
-    <p className="text-base md:text-4xl max-w-3xl font-semibold font-telegraf text-black md:w-2/3">
+    <p className="text-base md:text-4xl max-w-3xl font-semibold font-telegraf text-black md:w-2/3 ">
     Over the past five years, we’ve delivered impactful outcomes for a distinguished clientele — not by following convention,<br />  but by rewriting the playbook
     </p>
 

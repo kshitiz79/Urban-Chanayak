@@ -29,6 +29,15 @@ export default function AdminDashboard() {
               Review applications submitted by candidates across all job roles.
             </p>
           </Link>
+          <Link
+            href="/admin-panel/Messages"
+            className="block p-6 rounded-xl shadow-md bg-white hover:shadow-xl transition duration-200 border border-gray-200"
+          >
+            <h2 className="text-2xl font-semibold text-indigo-600 mb-2">📝 View All Messages</h2>
+            <p className="text-sm text-gray-500">
+              Review Messages submitted by candidates across all job roles.
+            </p>
+          </Link>
         </div>
       </div>
     </div>

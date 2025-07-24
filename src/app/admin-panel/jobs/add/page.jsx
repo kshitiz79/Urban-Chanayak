@@ -16,13 +16,13 @@ export default function AddJobPage() {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('http://localhost:5001/api/jobs/admin-panel/add', {
+      const res = await fetch('http://localhost:5001/api/jobs/admin/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title, description }),
       });
       if (res.ok) {
-        router.push('/admin/jobs');
+        router.push('/admin-panel/jobs');
       } else {
         const data = await res.json().catch(() => ({}));
         setError(data.error || 'Failed to create job.');

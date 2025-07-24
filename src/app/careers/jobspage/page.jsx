@@ -1,12 +1,23 @@
 "use client";
+import { useState, useEffect, useRef } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaSearch, FaSearchLocation } from "react-icons/fa";
-import { useState, useEffect } from "react";
 
 export default function Page() {
   const [showModal, setShowModal] = useState(false);
   const [jobs, setJobs] = useState([]);
   const [selectedJob, setSelectedJob] = useState(null);
+
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    source: "",
+  });
+
+  const resumeRef = useRef();
+  const portfolioRef = useRef();
 
   useEffect(() => {
     fetch("http://localhost:5001/api/jobs")
@@ -17,6 +28,49 @@ export default function Page() {
   const openModal = (job) => {
     setSelectedJob(job);
     setShowModal(true);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("name", `${form.firstName} ${form.lastName}`);
+    formData.append("email", form.email);
+    formData.append("phone", form.phone);
+    formData.append("job", selectedJob._id);
+    formData.append("resume", resumeRef.current.files[0]);
+    formData.append("portfolio", portfolioRef.current.files[0]);
+
+    try {
+      const res = await fetch("http://localhost:5001/api/applications/apply", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (res.ok) {
+        alert("Application submitted successfully!");
+        setShowModal(false);
+        setForm({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          source: "",
+        });
+        resumeRef.current.value = "";
+        portfolioRef.current.value = "";
+      } else {
+        alert("Failed to submit application.");
+      }
+    } catch (err) {
+      console.error("Application submission error:", err);
+      alert("An error occurred while submitting your application.");
+    }
   };
 
   return (
@@ -49,24 +103,23 @@ export default function Page() {
       {/* Jobs Section */}
       <section className="px-4 md:px-54 py-16 bg-white text-gray-400">
         <div className="flex flex-col md:flex-row gap-12">
-          {/* Left Filters */}
           <aside className="md:w-1/4">
             <h2 className="text-lg mb-2 text-black">Filters</h2>
             <div className="border border-gray-200 rounded p-4 space-y-6">
               <div>
-                <h3 className=" mb-2">Job Type</h3>
+                <h3 className="mb-2">Job Type</h3>
                 <label className="flex items-center gap-2 text-sm">
                   <input type="checkbox" />
                   Full time (2)
                 </label>
-                 <label className="flex items-center gap-2 text-sm">
+                <label className="flex items-center gap-2 text-sm">
                   <input type="checkbox" />
                   Part time (4)
                 </label>
               </div>
               <hr />
               <div>
-                <h3 className=" mb-2">Work Experience</h3>
+                <h3 className="mb-2">Work Experience</h3>
                 <label className="flex items-center gap-2 text-sm">
                   <input type="checkbox" />
                   2-3 years (1)
@@ -79,43 +132,40 @@ export default function Page() {
             </div>
           </aside>
 
-          {/* Right Content */}
           <main className="md:w-3/4">
             <h1 className="text-3xl text-black font-semibold mb-1">Join us</h1>
             <p className="text-lg text-gray-600 mb-6">Current Openings</p>
 
             {/* Search Bar */}
             <div className="flex flex-col md:flex-row gap-6 mb-10">
-                <div className="flex flex-col w-full">
-                 <h1 className="text-black">what</h1>
-              <div className="flex border border-gray-300 rounded-md px-3 py-2 w-full">
-               
-                <input
-                  type="text"
-                  placeholder="Job title or skill"
-                  className="w-full outline-none"
-                />
-                <FaSearch className="text-gray-400" />
-              </div>
+              <div className="flex flex-col w-full">
+                <h1 className="text-black">what</h1>
+                <div className="flex border border-gray-300 rounded-md px-3 py-2 w-full">
+                  <input
+                    type="text"
+                    placeholder="Job title or skill"
+                    className="w-full outline-none"
+                  />
+                  <FaSearch className="text-gray-400" />
+                </div>
               </div>
               <div className="flex flex-col w-full">
-                 <h1 className="text-black">where</h1>
-              <div className="flex border border-gray-300 rounded-md px-3 py-2 w-full ">
-                <input
-                  type="text"
-                  placeholder="City, state/province or country"
-                  className="w-full outline-none"
-                />
-                <FaSearchLocation className="text-gray-400" />
+                <h1 className="text-black">where</h1>
+                <div className="flex border border-gray-300 rounded-md px-3 py-2 w-full ">
+                  <input
+                    type="text"
+                    placeholder="City, state/province or country"
+                    className="w-full outline-none"
+                  />
+                  <FaSearchLocation className="text-gray-400" />
+                </div>
               </div>
+              <div className="flex flex-col w-full">
+                <h1>Search</h1>
+                <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md font-medium">
+                  Search
+                </button>
               </div>
-                <div className="flex flex-col w-full">
-                    <h1>Search</h1>
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md font-medium">
-                Search
-              </button>
-              </div>
-            
             </div>
 
             {/* Job List */}
@@ -131,10 +181,9 @@ export default function Page() {
                       {job.title}
                     </span>
                     <div className="text-right text-sm text-gray-500">
-                      {/* You can add job type and date if available in job object */}
                       {job.type || "Full time"}
                       <br />
-                      {job.date || (job.createdAt ? new Date(job.createdAt).toLocaleDateString() : "")}
+                      {job.createdAt ? new Date(job.createdAt).toLocaleDateString() : ""}
                     </div>
                   </div>
                   <p className="text-sm text-gray-600">
@@ -142,23 +191,21 @@ export default function Page() {
                     <br />
                     {job.experience || "2-3 years"}
                   </p>
-                  <p className="text-sm text-gray-700 mt-2">
-                    {job.description}
-                  </p>
+                  <p className="text-sm text-gray-700 mt-2">{job.description}</p>
                 </div>
               ))}
             </div>
           </main>
         </div>
-     
       </section>
-         <a href="/">
-        <div className="border-t border-b text-lg text-center mb-2 text-orange-500">
-            visit website
-        </div>
-        </a>
 
-      {/* Modal Popup Form */}
+      <a href="/">
+        <div className="border-t border-b text-lg text-center mb-2 text-orange-500">
+          visit website
+        </div>
+      </a>
+
+      {/* Modal Popup */}
       {showModal && selectedJob && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg shadow-lg w-full max-w-lg p-8 relative">
@@ -168,51 +215,90 @@ export default function Page() {
             >
               &times;
             </button>
-            <h2 className="text-2xl font-bold mb-4 text-center text-black">Apply for {selectedJob.title}</h2>
-            <form className="space-y-4">
+            <h2 className="text-2xl font-bold mb-4 text-center text-black">
+              Apply for {selectedJob.title}
+            </h2>
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="flex gap-4">
                 <div className="w-1/2">
                   <label className="block text-gray-700">First Name</label>
-                  <input type="text" className="w-full border rounded px-3 py-2" required />
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={form.firstName}
+                    onChange={handleInputChange}
+                    className="w-full border rounded px-3 py-2"
+                    required
+                  />
                 </div>
                 <div className="w-1/2">
                   <label className="block text-gray-700">Last Name</label>
-                  <input type="text" className="w-full border rounded px-3 py-2" required />
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={form.lastName}
+                    onChange={handleInputChange}
+                    className="w-full border rounded px-3 py-2"
+                    required
+                  />
                 </div>
               </div>
               <div className="flex gap-4">
                 <div className="w-1/2">
                   <label className="block text-gray-700">Email</label>
-                  <input type="email" className="w-full border rounded px-3 py-2" required />
+                  <input
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleInputChange}
+                    className="w-full border rounded px-3 py-2"
+                    required
+                  />
                 </div>
                 <div className="w-1/2">
                   <label className="block text-gray-700">Phone No</label>
-                  <input type="tel" className="w-full border rounded px-3 py-2" required />
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={form.phone}
+                    onChange={handleInputChange}
+                    className="w-full border rounded px-3 py-2"
+                    required
+                  />
                 </div>
               </div>
               <div>
                 <label className="block text-gray-700">Portfolio</label>
-                <input type="file" className="w-full border rounded px-3 py-2" />
+                <input type="file" className="w-full border rounded px-3 py-2" ref={portfolioRef} />
               </div>
               <div>
                 <label className="block text-gray-700">Resume</label>
-                <input type="file" className="w-full border rounded px-3 py-2" />
+                <input type="file" className="w-full border rounded px-3 py-2" ref={resumeRef} />
               </div>
               <div>
                 <label className="block text-gray-700">How did you hear about us?</label>
-                <input type="text" className="w-full border rounded px-3 py-2" />
+                <input
+                  type="text"
+                  name="source"
+                  value={form.source}
+                  onChange={handleInputChange}
+                  className="w-full border rounded px-3 py-2"
+                />
               </div>
               <div className="bg-gray-100 rounded p-4">
                 <div className="font-semibold text-black">{selectedJob.title}</div>
                 <div className="text-sm text-gray-600">{selectedJob.type || "Full time"}</div>
-                <div className="text-sm text-gray-600">{selectedJob.date || (selectedJob.createdAt ? new Date(selectedJob.createdAt).toLocaleDateString() : "")}</div>
+                <div className="text-sm text-gray-600">
+                  {selectedJob.createdAt ? new Date(selectedJob.createdAt).toLocaleDateString() : ""}
+                </div>
                 <div className="text-sm text-gray-600">{selectedJob.location || "Mumbai, Maharashtra, India"}</div>
                 <div className="text-sm text-gray-600">{selectedJob.experience || "2-3 years"}</div>
-                <div className="text-xs text-gray-700 mt-2">
-                  {selectedJob.description}
-                </div>
+                <div className="text-xs text-gray-700 mt-2">{selectedJob.description}</div>
               </div>
-              <button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">
+              <button
+                type="submit"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded"
+              >
                 Submit Application
               </button>
             </form>

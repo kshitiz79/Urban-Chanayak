@@ -31,7 +31,7 @@ export default function JobListPage() {
   };
 
   return (
-    <div className="p-8">
+    <div className="p-8 text-black">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold text-black">All Job Listings</h1>
         <Link href="/admin-panel/jobs/add">

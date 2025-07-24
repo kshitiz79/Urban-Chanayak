@@ -7,9 +7,76 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import FaqSection from "@/components/Blog/FAQSection";
-import { Link } from "lucide-react";
-
+import { useState } from "react";
 const page = () => {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    try {
+      const res = await fetch("http://localhost:5001/api/message/submit", {
+        
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const data = await res.json();
+  
+      if (data.success) {
+        alert("Message sent successfully!");
+        setSubmitted(true);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (err) {
+      console.error("Error:", err);
+      alert("Something went wrong.");
+    }
+  };
+
+  const deleteMessage = async (id) => {
+    const res = await fetch(`http://localhost:5001/api/messages/admin/delete/${id}`, {
+      method: 'DELETE',
+    });
+  
+    const data = await res.json();
+  
+    if (data.success) {
+      fetchMessages();
+    } else {
+      alert('Failed to delete message.');
+    }
+  };
+  
+  
   const socialIcons = [
     {
       name: "Instagram",
@@ -46,42 +113,65 @@ const page = () => {
             <h3 className="text-white text-sm tracking-widest uppercase text-center">
               Send Us A Message
             </h3>
+            <form className="space-y-4" onSubmit={handleSubmit}>
+  <input
+    type="text"
+    name="name"
+    value={formData.name}
+    onChange={handleChange}
+    placeholder="Name"
+    className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+    required
+  />
 
-            <form className="space-y-4">
-              <input
-                type="text"
-                placeholder="Name"
-                className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
-              />
-              <div className="flex flex-col md:flex-row gap-4">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone"
-                  className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
-                />
-              </div>
-              <input
-                type="text"
-                placeholder="Enter Subject"
-                className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
-              />
-              <textarea
-                rows="4"
-                placeholder="Enter your Message"
-                className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
-              ></textarea>
-              <button
-                type="submit"
-                className="w-full py-3 bg-white lactext-white font-medium rounded-md hover:bg-orange-500 transition"
-              >
-                Submit
-              </button>
-            </form>
+  <div className="flex flex-col md:flex-row gap-4">
+    <input
+      type="email"
+      name="email"
+      value={formData.email}
+      onChange={handleChange}
+      placeholder="Email"
+      className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+      required
+    />
+    <input
+      type="tel"
+      name="phone"
+      value={formData.phone}
+      onChange={handleChange}
+      placeholder="Phone"
+      className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+    />
+  </div>
+
+  <input
+    type="text"
+    name="subject"
+    value={formData.subject}
+    onChange={handleChange}
+    placeholder="Enter Subject"
+    className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+    required
+  />
+
+  <textarea
+    name="message"
+    value={formData.message}
+    onChange={handleChange}
+    rows="4"
+    placeholder="Enter your Message"
+    className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+    required
+  ></textarea>
+
+  <button
+    type="submit"
+    className="w-full py-3 bg-orange-500 text-white font-medium rounded-md hover:bg-orange-600 transition"
+  >
+    Submit
+  </button>
+</form>
+
 
             {/* Direct Email */}
             <div className="text-center text-white text-sm space-y-1">

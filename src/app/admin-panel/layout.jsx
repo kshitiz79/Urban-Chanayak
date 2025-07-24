@@ -6,10 +6,10 @@ export default function AdminLayout({ children }) {
           <nav>
             <ul className="space-y-2">
               <li><a href="/admin-panel" className="block py-2 hover:underline">Dashboard</a></li>
-              <li><a href="/admin-panel/users" className="block py-2 hover:underline">Users</a></li>
+              <li><a href="/admin-panel/Messages" className="block py-2 hover:underline">Messages</a></li>
               <li><a href="/admin-panel/jobs" className="block py-2 hover:underline">All Jobs</a></li>
               <li><a href="/admin-panel/applications" className="block py-2 hover:underline">All Applications</a></li>
-              <li><a href="/admin-panel/settings" className="block py-2 hover:underline">Settings</a></li>
+              
             </ul>
           </nav>
         </aside>
