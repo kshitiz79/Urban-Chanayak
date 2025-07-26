@@ -1,87 +1,108 @@
+
+
+
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { useRef } from "react";
-import { useInView } from "framer-motion";
 
-const boxes = [
-  "Impact Creation – We Make the Trend, Others Follow ",
+const items = [
+  "Impact Creation – We Make the Trend, Others Follow",
   "Innovation – Using Intelligence to Create the Impact",
-  "Crisis Management – Clarity in Chaos, Creativity in Crisis ",
+  "Crisis Management – Clarity in Chaos, Creativity in Crisis",
   "Public Relations – Shaping Perception, Building Trust",
   "Strategic Messaging – Making Every Word Count",
 ];
 
-const boxVariants = {
-  hidden: {
-    opacity: 0,
-    y: 50,
-    scale: 0.95,
+// Define animation variants for the items
+const itemVariants = {
+  hidden: { 
+    opacity: 0, 
+    scale: 0.8, 
+    y: 60 
   },
   show: {
     opacity: 1,
-    y: 0,
     scale: 1,
+    y: 0,
     transition: {
-      duration: 0.6,
+      duration: 6.0,
+      ease: [0.6, -0.05, 0.01, 0.9],
       type: "spring",
-      stiffness: 120,
-      damping: 12,
+      stiffness: 80,
+      damping: 20,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeIn",
     },
   },
 };
 
-export default function TeamSection() {
+
+const TeamSection = () => {
   return (
-    <section className="w-full min-h-screen flex flex-col md:flex-row items-start justify-between px-6 md:px-20 py-12 bg-gray-100">
-      {/* Left Side - Image */}
-      <div className="w-full md:w-[35%] sticky top-24 self-start">
-        <Image
-          src="/ghoda.png"
-          alt="Team Visual"
-          width={500}
-          height={400}
-          className="rounded-xl object-cover h-[80vh]"
-        />
-      </div>
-
-      {/* Right Side - Content */}
-      <div className="w-full md:w-[65%] mt-12 md:mt-0">
-        {/* Heading Section */}
-        <div className="max-w-xl ml-auto mb-50 py-20">
-          <h2 className="text-4xl text-black">
-            Our Core Competencies
-            <br />
-            Concept to Campaign. First
-            <br />
-            Thought to Final Impact
-          </h2>
+    <div  className="relative bg-white min-h-screen flex items-center">
+      <div  className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 px-4 md:px-10 py-20 gap-10">
+        
+        {/* Left Half (Less than 50%) */}
+        <div className="hidden md:block md:col-span-2 items-center ">
+          <img src="/ghoda.png" alt="" className="mt-60 -ml-20"/>
         </div>
 
-        {/* Individual Scroll-triggered Boxes */}
-        <div className="space-y-8 max-w-3xl ml-auto">
-          {boxes.map((text, index) => {
-            const ref = useRef(null);
-            const isInView = useInView(ref, {
-              margin: "0px 0px -200px 0px",
-            });
+        {/* Right Half (More than 50%) */}
+        <div className="md:col-span-3">
+          <motion.p
+            className="text-[2.5rem] leading-snug mb-6 text-black drop-shadow-[1px_1px_0_black]"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
+            Our Core Competencies - <br />
+            Concept to Campaign. First Thought to Final Impact
+          </motion.p>
 
-            return (
-              <motion.div
-                key={index}
-                ref={ref}
-                className="bg-orange-500 p-9 rounded-md shadow-md text-white font-semibold text-xl"
-                variants={boxVariants}
-                initial="hidden"
-                animate={isInView ? "show" : "hidden"}
-              >
-                {text}
+          <div className="rounded-xl space-y-6 mt-20">
+            {items.map((text, index) => (
+             <motion.div
+             key={index}
+             className="bg-orange-500 hover:bg-[#182d3b] p-8  text-white text-[1.2rem] shadow-lg"
+             variants={itemVariants}
+             initial="hidden"
+             whileInView="show"
+             exit="exit"
+             viewport={{
+               once: false,
+               amount: 0.5,
+             }}
+           >
+
+
+<motion.p
+className="text-2xl text-white"
+  initial={{ opacity: 0, x: -100 }} // Start 100px to the left and invisible
+  whileInView={{ opacity: 1, x: 0 }} // Animate to original position and visible
+  exit={{ opacity: 0, x: 100 }} // (Optional) Animate out to the right
+  transition={{ duration: 0.7, ease: "easeOut" }}
+  viewport={{ once: false, amount: 0.5 }}
+>
+  {text}
+</motion.p>
+              
               </motion.div>
-            );
-          })}
+            ))}
+          </div>
+
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default TeamSection;

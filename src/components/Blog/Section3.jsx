@@ -70,7 +70,7 @@ const Section3 = () => {
         </div>
         <div className="mt-12">
           <img
-            src="https://cdn.prod.website-files.com/66336211b81e8a10a1428f79/6659a120e7e53787788be7f0_PC%20Mary%20Paquet_SOI%20Foundation%202.webp"
+            src="/blogpp.png"
             alt=""
           />
           <p className="p-4 text-gray-500">

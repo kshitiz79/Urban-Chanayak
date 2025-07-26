@@ -4,8 +4,8 @@
 export default function Test() {
   return (
     <div className="bg-white px-10 scroll-smooth">
-     <div className="flex justify-end text-left text-[6rem] text-black max-w-2xl ml-auto leading-none font-black mb-2">
-  <h1>Our Success Stories</h1>
+     <div className="flex justify-end text-left text-[5rem] text-black max-w-2xl ml-auto leading-none font-black mb-2">
+  <h1 className="mb-4">Our Success Stories</h1>
 </div>
 
     <section className="py-4 px-4 bg-[#182d3b] ">

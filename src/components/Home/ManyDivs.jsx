@@ -123,12 +123,11 @@ const ManyDivs = () => {
                     <img
                       src="/pencil.png"
                       alt="Pencil"
-                      className="h-full scale-x-[-1] transition-transform duration-300 hover:translate-x-2"
+                      className="  transition-transform duration-300 hover:translate-x-2"
                     />
                   </div>
                   <p className="text-black text-lg mt-4 text-left">
-                    Experience With Government Projects, Designing Outdoor
-                    Branding And Exhibitions
+                  Experience with government projects, designing outdoor branding and exhibitions. Whether it's large-scale outdoor campaigns or curated exhibition designs, Urban Chanakya brings creativity, precision, and strategic thinking to every project, ensuring a lasting impression
                   </p>
                 </div>
               </div>
@@ -241,16 +240,15 @@ const ManyDivs = () => {
                     <img
                       src="/link.png"
                       alt=""
-                      className="scale-x-[-1] text-black h-auto w-full mt-10"
+                      className=" text-black h-auto w-full mr-10 mt-5"
                     />
                     <div>
                       <p className="mt-4 underline text-xl text-black text-left">
                         Driving Impactful Public Communication
                       </p>
                       <p className="text-lg text-black text-left">
-                        By blending creativity with strategic messaging, we
-                        ensure every campaign not only reaches the masses but
-                        leaves a lasting impact.
+                      Creating Impactful Public Communication
+                      By merging innovative creativity with strategic messaging, we ensure that every campaign goes beyond just reaching the audience. We focus on crafting messages that resonate deeply, leaving a memorable and lasting impact on the public while driving meaningful engagement.
                       </p>
                     </div>
                   </div>

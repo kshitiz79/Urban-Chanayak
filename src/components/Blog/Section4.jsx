@@ -56,8 +56,8 @@ const Section4 = () => {
       <div>
         <div className="w-screen">
           <img
-            src="https://cdn.prod.website-files.com/66336211b81e8a10a1428f79/6696980dfd6431546f5c1984_PC%20Mary%20Paquet_SOI%20Foundation%203.webp"
-            alt=""
+            src="/blognew2.png"
+            alt="jj"
             className="w-full h-auto"
           />
         </div>
@@ -129,8 +129,8 @@ const Section4 = () => {
         <div className="max-w-5xl mx-auto">
         <div className="mt-12">
           <img
-            src="https://cdn.prod.website-files.com/66336211b81e8a10a1428f79/6659a120e7e53787788be7f0_PC%20Mary%20Paquet_SOI%20Foundation%202.webp"
-            alt=""
+            src="/bloglast.png"
+            alt="fghjk"
           />
           <p className="p-4 text-gray-500">
           Our Guwahati, Our Responsibility. – Urban Chanakya and GMC

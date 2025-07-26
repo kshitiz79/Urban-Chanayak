@@ -6,27 +6,81 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqs = [
   {
     id: 1,
-    question: "How can I use animation to digital presence?",
-    answer:
-      "Animation enhances engagement, captures attention, and builds a stronger digital identity through dynamic storytelling.",
+    question: "What’s in Our Playbook?",
+    answer: (
+      <>
+        We do it all, and we do it well
+        <br />
+        ✅
+        Political campaigns
+        <br /> ✅Government outreach   <br />
+        ✅Corporate communication   <br /> 
+        ✅Strategic communication & crisis Management   <br />
+         ✅Digital strategy & design   <br /> ✅ Mass mobilisation Clcampaigns   <br /> ✅High-end video productions From concept to execution – we own the outcome.
+      </>
+    ),
   },
   {
     id: 2,
-    question: "I’m new to animation. Where should I start?",
-    answer:
-      "Start by identifying your goals. Explore different styles and consult animation professionals to guide your vision.",
+    question: "Running for Office? We’ve Got You Covered.",
+    answer: (
+      <>
+        We help political leaders build powerful, winning narratives and win trust, online, on-ground, and in every conversation.
+
+        
+
+
+        <br /> ✅Campaign strategy
+        <br />
+        ✅Corporate communication   <br /> 
+        ✅Digital war rooms
+
+        <br />
+         ✅Digital strategy & design   <br /> ✅ Crisis & reputation management
+         <br /> ✅Technology-based election management
+         You lead. We amplify.
+      </>
+    ),
   },
   {
     id: 3,
-    question: "How long does an animation project take?",
-    answer:
-      "Project timelines vary, typically ranging from 2 to 8 weeks depending on complexity and scope.",
+    question: "Are You a Government Body? Let Us Help You Build Public Trust.",
+    answer: (
+      <>
+        We make government initiatives and policies relatable and visible. Our services cover:
+        <br />
+        ✅Scheme awareness campaigns
+        <br />
+        ✅Real-time service communication
+        <br />
+        ✅Behaviour change initiatives
+        <br />
+        ✅Event design and media content
+        <br />
+        ✅Call Centres and Public Feedback
+        <br />
+        ✅Crisis Management
+        <br />
+        We turn government work into citizen confidence.
+      </>
+    ),
   },
   {
     id: 4,
-    question: "What is your process for creating animations?",
-    answer:
-      "We start with concept development, move to storyboarding, design, animation, then final delivery with feedback loops.",
+    question: "A Brand or Corporate? We Build Your Voice",
+    answer: (
+      <>
+        We help brands communicate with clarity and purpose. Our offerings include:
+        <br />
+        ✅Branding and strategic communication
+        <br />
+        ✅CSR storytelling and visibility
+        <br />
+        ✅End-to-end digital campaigns
+        <br />
+        We don't just tell your story. We build reputation.
+      </>
+    ),
   },
 ];
 
