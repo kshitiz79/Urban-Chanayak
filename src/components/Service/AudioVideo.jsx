@@ -7,7 +7,7 @@ import React from "react";
 
 const AudioVideo = () => {
   return (
-    <section className="sticky top-0 w-full h-[100vh] bg-white py-10 bg-white text-black w-full min-h-screen flex flex-col md:flex-row">
+    <section className="scroll-smooth sticky top-0 w-full h-[100vh] bg-white py-10 bg-white text-black w-full min-h-screen flex flex-col md:flex-row">
       {/* Left content */}
       <div className="w-full md:w-1/2 px-6 md:px-16 py-16 flex flex-col justify-center -mt-10 -mb-10 bg-gray-100">
         <h1 className="text-5xl font-bold mb-6">Audio-Visual Production</h1>

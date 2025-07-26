@@ -43,7 +43,7 @@ const ScrollColorText = () => {
   }, []);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white scroll-smooth">
       <div className="min-h-screen py-20 bg-white max-w-5xl mx-auto">
         <p ref={textRef} className="text-4xl text-black">
         In today’s political reality, social media is not just a platform. It is the main stage. For political leaders in Assam, it has become a powerful medium to communicate vision, counter opposition, and shape public perception. The digital voice of a leader now carries as much weight as their speech at a rally or a statement in the Assembly
@@ -74,13 +74,10 @@ const ScrollColorText = () => {
 
         <div className="mt-12">
           <img
-            src="https://cdn.prod.website-files.com/66336211b81e8a10a1428f79/6659a120e7e53787788be7f0_PC%20Mary%20Paquet_SOI%20Foundation%202.webp"
+            src="/blog/assam-model1.png"
             alt=""
           />
-          <p className="p-4 text-gray-500">
-            Meg feels a "powerful" connection to the ice. © Mary Paquet/SOI
-            Foundation
-          </p>
+          
         </div>
       <div className="ml-80 text-black py-16">
   <h2 className="text-2xl font-bold mb-4">Case Study 2: Ashok Singhal</h2>

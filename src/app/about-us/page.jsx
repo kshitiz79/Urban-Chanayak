@@ -8,6 +8,9 @@ import WhoWeAre from '@/components/About/WhoWeAre';
 
 import Hole from '@/components/About/Hole';
 import Test from '@/components/About/Test';
+import TeamSection from '@/components/About/TeamSection';
+import HeroSection from '@/components/About/HeroSection';
+import PosterScrollReveal from '@/components/About/PosterScrollReveal';
 
 const Page = () => {
   
@@ -20,13 +23,7 @@ const Page = () => {
         <UrbanAbout />
         <WhatWeDo />
         <Test/>
-   
-     
-        {/* <Hole/> */}
-        {/* <WhoWeAre /> */}
-  
-
-    
+        <TeamSection/>
     </div>
   );
 };

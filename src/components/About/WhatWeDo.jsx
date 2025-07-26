@@ -2,10 +2,10 @@ import React from 'react'
 
 const WhatWeDo = () => {
   return (
-    <div className='relative'>
+    <div className='relative scroll-smooth'>
 
 
-        <section>  <section className="relative z-10 bg-white pt-40 px-6 pb-10">
+        <section>  <section className="relative z-10 bg-white pt-40 px-10 pb-10">
   <div className="flex flex-col md:flex-row items-start md:items-start justify-between gap-10">
     
     {/* Left side: Heading + Video */}

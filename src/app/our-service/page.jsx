@@ -15,11 +15,8 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-        <HeroSection/>
-
-     
+        <HeroSection />
         <ElectionManagement/>
-       
         <Branding/>
         <WebDesign/>
         <PaidPromotion/>
@@ -27,7 +24,6 @@ const page = () => {
         <AudioVideo/>
         <ContentCreation/>
         <EventManagement/>
-      
     </div>
   )
 }

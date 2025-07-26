@@ -122,4 +122,9 @@ h1.scroll-drive {
   filter: brightness(0) invert(1); /* optional tweak */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 

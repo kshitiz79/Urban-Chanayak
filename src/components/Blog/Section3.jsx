@@ -43,8 +43,8 @@ const Section3 = () => {
   }, []);
 
   return (
-    <div className="bg-white"> 
-      <div className="min-h-screen py-20 bg-white max-w-5xl mx-auto ">
+    <div className="scroll-smooth bg-white"> 
+      <div className="min-h-screen py-10 bg-white max-w-5xl mx-auto ">
         <p ref={textRef} className="text-4xl text-black">
         <span className="underline text-orange-500">  Dr. Himanta Biswa Sarma </span>uses optimism, development, and cultural connection to shape a positive and inclusive narrative.
 <span className="underline text-orange-500"> Ashok Singhal</span> uses sharp messaging, ideological strength, and timely response to take control of fast-moving political moments.
@@ -79,60 +79,46 @@ const Section3 = () => {
           </p>
         </div>
         <div className="ml-80 text-black py-16 ">
-          <h1 className=" text-[30px]">
-            Good morning Antarctica! Or is it goodnight? ‍
+          <h1 className=" text-[30px] font-semibold">
+          This is Poriborton : How Urban Chanakya Powered BTR’s Historic Employment Drive
+
           </h1>
           ‍<br />
           <p className="text-xl">
-            Spending time living aboard a research vessel in Antarctica can
-            throw your body clock out of sync by confusing the circadian rhythm.
-            This is because the polar regions have ‘polar day/polar night,’
-            which is basically (depending on where you are on the continent and
-            what time of year it is) 24-hour daylight. ‍
+          On June 17, 2025, history was made in the Bodoland Territorial Region (BTR). The results of a large-scale teacher recruitment drive were declared – transparent, fair, and purely merit-based. But what followed the very next day was nothing short of revolutionary. On June 18, 1,337 Graduate and Postgraduate Teachers from across BTR received their appointment letters through a seamless, real-time, and fully transparent process that set a new national benchmark.
+
           </p>
           <br />
           <p className="text-xl">
-            For Meg, the sun dipped below the horizon for 60 minutes each night
-            at around 2 a.m., and it was well worth waiting up for and looking
-            out the window from her room on the boat. ‍
+          At the heart of this transformative event was Urban Chanakya, the team that not only ideated the end-to-end experience but also delivered a pioneering technological breakthrough within just 24 hours.
+The challenge was clear: how to ensure that each selected candidate received a school posting based on their merit rank and preference, without chaos, lobbying, or delays. The solution? A first-of-its-kind, IT-enabled, real-time preference matching system – conceived, designed, coded, tested, and deployed by Urban Chanakya in under a day.
+
           </p>
           <br />
           <p className="text-xl">
-            She said: “It was always the most beautiful time of day where you
-            could see the colors of the sunset. I’d be up again at 6 am so
-            needless to say, some nights were short! ‍
+          Here’s how it worked: Candidates were asked to submit their school preferences. As each candidate was called (strictly according to their rank in the merit list) the system matched their preferences with available vacancies. If the preferred school was available, the posting was confirmed instantly. The candidate received their appointment letter on the spot, and the concerned departments were notified in real time, digitally, without paperwork or delay.
+
           </p>
           <br />
           <p className="text-xl">
-            “Every morning, we’d wake up, open the blackout blinds very slowly,
-            put on our base layers, and head up to the dining area for
-            breakfast. Everyone was on time, and no one was late, not even by 5
-            minutes. The ship kept a tight schedule that must be respected.” ‍ ‍
+          It was a technological and logistical feat powered by precision, innovation, and a deep commitment to good governance.
+
           </p>
           <br />
-          <h1 className="text-[30px]">Layering up ‍ ‍</h1>
+ 
           <br />
           <p className="text-xl">
-            Dressing for the coldest continent on Earth is no easy feat. Picture
-            getting ready to go skiing and multiply the layers a few times. For
-            Meg, it was a daily performance that occurred during the 45 minutes
-            between breakfast and docking off the big ship via zodiac
-            (inflatable boat) onto land. ‍
+          Urban Chanakya didn’t just stop at the backend. From branding the event as “This is Poriborton” to managing its digital coverage, live updates, and strategic communication, the team ensured that every candidate felt the dignity and pride of being part of a truly merit-based system.
+
           </p>
           <br />
           <p className="text-xl">
-          “45 minutes can seem like a long time in theory, but in reality, it’s
-          not,” Meg explains. “Firstly, you must - and I cannot stress this
-          enough - go to the toilet as the land and ocean are preserved by the
-          <span className="text-red-500 underline"> Antarctic Treaty</span>, so going to the toilet anywhere other than on the
-          ship is not an option. ‍
+          The visual identity, messaging, and event flow were crafted to reflect the BTR Government’s unwavering commitment to transparency and fairness. This wasn’t just an employment drive – it was a statement of intent, a declaration that BTR is ready to lead the way in governance reform.
+
           </p><br />
           <p className="text-xl">
-            “Brushing your teeth is also an interesting one as you’re doing it
-            with your sunglasses on! By the time you’ve gathered your affairs
-            and put your four clothing layers on the bottom and seven on top,
-            you make your way back up to regroup and get ready for the first
-            dock off. Trust me, those 45 minutes go pretty Quickly"
+          In a moment of immense significance, Urban Chanakya delivered not just a campaign, but a system, a process, and a new standard. What BTR promised, it delivered. And behind that delivery was a team that believed in not just executing change – but embodying it.
+          This is Poriborton. This is Urban Chanakya.
           </p>
         </div>
       </div>

@@ -46,7 +46,7 @@ const ArtQuoteSection = () => {
   }, []);
 
   return (
-    <div className="bg-orange-500 min-h-screen py-20">
+    <div className="scroll-smooth bg-orange-500 min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
         <div ref={textRef} className="flex-1 z-2 max-w-5xl">
                       <p className="text-5xl text-gray-700 italic mb-6 -mt-4">The Assam Model</p>
@@ -58,7 +58,7 @@ const ArtQuoteSection = () => {
         <div className="flex-1 flex flex-col md:flex-row gap-6">
           <div className="w-full md:w-1/2 -ml-24 z-0">
             <img
-              src="https://images.unsplash.com/photo-1501854140801-50d01698950b?fit=crop&w=400&h=300" 
+              src="/blog/assam-model1.png" 
               alt="Artwork by Meg O'Hara"
               className="w-full h-[40vh] object-cover rounded-lg shadow-md mt-80 "
               loading="lazy"
@@ -66,7 +66,7 @@ const ArtQuoteSection = () => {
           </div>
           <div className="w-full md:w-2/3">
             <img
-              src="https://cdn.prod.website-files.com/66336211b81e8a10a1428f79/6659a211fb7fcee3d67868ce_PC%20Elliott%20Muscat-min.webp" 
+              src="/blog/assam-model.png" 
               alt="Meg O'Hara in gallery"
               className="w-[200vh] h-full object-cover rounded-lg shadow-md"
               loading="lazy"

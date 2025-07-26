@@ -2,7 +2,7 @@ import React from 'react';
 
 const Section1 = () => {
   return (
-    <section className="pt-44 bg-white text-black">
+    <section className="pt-44 bg-white text-black scroll-smooth">
     <div className="min-h-screen bg-white font-sans">
       {/* Header Section */}
       <header className="container mx-auto py-6">
@@ -37,14 +37,10 @@ const Section1 = () => {
             <span className="text-red-600">Ambassadors</span>
                </p>
             </div>
-           
             <span className="ml-2">SHARE THIS STORY</span>
           </div>
       </main>
-
-  
     </div>
-
     </section>
   );
 };

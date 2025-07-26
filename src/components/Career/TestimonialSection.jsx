@@ -58,7 +58,7 @@ export default function TestimonialSection() {
         </div>
       </div>
       <div className="py-12">
-       <iframe width="1379" height="705" src="https://www.youtube.com/embed/a5He5teHaDA?si=wlD2XDegjTRN1yA6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       <iframe width="1300" height="705" src="https://www.youtube.com/embed/a5He5teHaDA?si=wlD2XDegjTRN1yA6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div className="mt-8">
         <h1 className="text-4xl font-bold">How Our Hiring Process Works</h1>
