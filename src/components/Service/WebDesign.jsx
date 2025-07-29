@@ -5,7 +5,7 @@ import React from "react";
 
 const WebDesign = () => {
   return (
-    <section className=" relative sticky top-0 h-[110vh] scroll-smooth w-full min-h-screen bg-white py-10 text-black flex flex-col md:flex-row">
+    <section className=" relative sticky top-0 h-[110vh] scroll-smooth w-full min-h-screen bg-white  text-black flex flex-col md:flex-row">
       {/* Left content */}
       <div className="w-full md:w-1/2 px-6 md:px-16 py-10 flex flex-col justify-center bg-white">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Web Design</h1>

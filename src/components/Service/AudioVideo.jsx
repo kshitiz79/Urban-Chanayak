@@ -5,7 +5,7 @@ import React from "react";
 
 const AudioVideo = () => {
   return (
-    <section className="scroll-smooth sticky top-0 w-full h-screen bg-gray-100 py-10 text-black flex flex-col md:flex-row">
+    <section className="scroll-smooth sticky top-0 w-full h-screen bg-gray-100  text-black flex flex-col md:flex-row">
       {/* Left content */}
       <div className="w-full md:w-1/2 px-6 md:px-16 md:py-16 py-0 flex flex-col justify-center bg-gray-100 space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold">Audio-Visual Production</h1>
@@ -44,7 +44,7 @@ const AudioVideo = () => {
       </div>
 
       {/* Right image */}
-      <div className="w-full md:w-1/2 relative h-[90vh]">
+      <div className="w-full md:w-1/2 relative h-[300px] sm:h-[400px] md:h-auto">
         <Image
           src="/audio.gif" // Ensure this path is correct
           alt="Audio-Visual Production example"
