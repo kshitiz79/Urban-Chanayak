@@ -67,8 +67,8 @@ const SplitImageLayout = () => {
         ref={headingRef}
         className="text-3xl sm:text-4xl md:text-6xl text-center text-white font-bold py-16 md:py-24 px-4"
       >
-        Our diverse projects, from environmental <br className="hidden md:block" />
-        initiatives to educational programs
+        
+        Our diverse projects range from environmental <br className="hidden md:block" />initiatives to educational programs.
       </h1>
     </div>
   );
