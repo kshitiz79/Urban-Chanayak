@@ -9,15 +9,15 @@ const VideoText2 = () => {
           {/* Left Image Section */}
           <div className="w-full md:w-3/4 h-96 md:h-[40rem] relative">
             <img
-              src="./image1.jpg"
+              src="./image2.jpg"
               alt="Visual"
               className="absolute inset-0 w-full h-full cover"
             />
           </div>
 
           {/* Right Text Section */}
-          <div className="w-full md:w-1/4 p-5 flex items-end bg-[#d1c8cb]">
-            <p className="text-black hover:text-orange-500">
+          <div className="w-full md:w-1/4 p-5 flex items-end bg-[#cecacc]">
+            <p className="text-black hover:text-orange-500 text-2xl">
               At Urban Chanakya, we combine visuals, motion, and messaging to shape narratives that engage, influence, and drive results.
             </p>
           </div>

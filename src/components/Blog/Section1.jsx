@@ -8,7 +8,7 @@ const Section1 = () => {
       <header className="container mx-auto py-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <span className="text-red-600 text-sm font-medium">WORDS</span>
+      
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mt-2 leading-tight">
               Social Media Brand Management for Political Leaders: The Assam Playbook
             </h1>

@@ -86,16 +86,18 @@ const ManyDivs = () => {
         style={{ backgroundColor }}
         className="transition-colors duration-300 text-center text-white py-8"
       >
-        <section className="px-10 py-34">
+        <section className="px-10 py-34 ">
           <div
             ref={boxRef}
             style={{ backgroundColor }}
             className="transition-colors duration-300 text-center text-white py-8"
           >
             <h1 className="text-6xl mb-20">Area of Expertise</h1>
-            <div className="flex flex-row gap-6 w-full">
+            <div className="flex md:flex-row gap-6 w-full lg:flex-row flex-col">
               {/* LEFT COLUMN */}
-              <div className="w-3/4 flex flex-col gap-6">
+              {/* <div className="w-3/4 flex flex-col gap-6"> */}
+              <div className="w-full lg:w-3/4 flex flex-col gap-6">
+
                 {/* Box 1 */}
                 <div
                   className={`bg-white rounded-3xl flex flex-col h-3/6  justify-between transition-shadow duration-300 ${shadowClass}`}
@@ -121,7 +123,7 @@ const ManyDivs = () => {
                 >
                   <div className="flex justify-center ">
                     <img
-                      src="/pencil.png"
+                      src="/pencil1.jpeg"
                       alt="Pencil"
                       className="  transition-transform duration-300 hover:translate-x-2"
                     />
@@ -133,12 +135,14 @@ const ManyDivs = () => {
               </div>
 
               {/* RIGHT COLUMN */}
-              <div className="w-3/4 flex flex-col items-center gap-6">
+              {/* <div className="w-3/4 flex flex-col items-center gap-6"> */}
+              <div className="w-full lg:w-3/4 flex flex-col items-center gap-6">
+
                 {/* Header Box */}
                 <div
                   className={`bg-white p-10 w-full rounded-3xl py-14 transition-shadow duration-300 ${shadowClass}`}
                 >
-                  <h2 className="text-black text-[5rem] sm:text-[7.6rem] w-full leading-tight mr-6">
+                  <h2 className="text-black text-[2rem] lg:text-[7.6rem] w-full leading-tight mr-6">
                     urbanchanakya.in
                   </h2>
                   <p className="underline mt-3 text-black text-lg max-w-5xl text-left">
@@ -154,9 +158,13 @@ const ManyDivs = () => {
                 </div>
 
                 {/* Grid Boxes Row */}
-                <div className="flex flex-row gap-6 w-full">
+                {/* <div className="flex flex-row gap-6 w-full"> */}
+                <div className="flex flex-col lg:flex-row gap-6 w-full">
+
                   {/* Left Sub-Column */}
-                  <div className="w-2/3 flex flex-col gap-6">
+                  {/* <div className="w-2/3 flex flex-col gap-6"> */}
+                  <div className="w-full lg:w-2/3 flex flex-col gap-6">
+
                     {/* Avatars Box */}
                     <div
                       className={`bg-white p-9 rounded-3xl transition-shadow duration-300 ${shadowClass}`}
@@ -234,11 +242,11 @@ const ManyDivs = () => {
                   </div>
 
                   {/* Right Sub-Column */}
-                  <div
-                    className={`w-1/3 bg-white p-6 rounded-3xl flex flex-col items-center justify-between text-center gap-3 transition-shadow duration-300 ${shadowClass}`}
-                  >
+               
+                  <div className="w-full lg:w-1/3 bg-white p-6 rounded-3xl flex flex-col items-center justify-between text-center gap-3 transition-shadow duration-300">
+
                     <img
-                      src="/link.png"
+                      src="/link1.jpeg"
                       alt=""
                       className=" text-black h-auto w-full mr-10 mt-5"
                     />

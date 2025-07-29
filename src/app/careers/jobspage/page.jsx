@@ -78,9 +78,9 @@ export default function Page() {
       {/* Hero Section */}
       <section
         className="relative bg-cover bg-center h-screen flex items-center justify-center text-white"
-        style={{ backgroundImage: "url('/your-background.jpg')" }}
+        style={{ backgroundImage: "url('/your-background.png')" }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-40 z-0" />
+      
         <div className="relative z-10 text-center px-4 max-w-3xl">
           <p className="text-lg mb-4">Find the career of your dreams</p>
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">

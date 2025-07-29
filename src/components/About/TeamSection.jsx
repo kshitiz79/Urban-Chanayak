@@ -18,7 +18,7 @@ const items = [
 const itemVariants = {
   hidden: { 
     opacity: 0, 
-    scale: 0.8, 
+    scale: 0.9, 
     y: 60 
   },
   show: {
@@ -26,7 +26,7 @@ const itemVariants = {
     scale: 1,
     y: 0,
     transition: {
-      duration: 6.0,
+      duration: 2.0,
       ease: [0.6, -0.05, 0.01, 0.9],
       type: "spring",
       stiffness: 80,
@@ -37,7 +37,7 @@ const itemVariants = {
     opacity: 0,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.9,
       ease: "easeIn",
     },
   },
@@ -46,12 +46,12 @@ const itemVariants = {
 
 const TeamSection = () => {
   return (
-    <div  className="relative bg-white min-h-screen flex items-center">
+    <div  className="relative bg-white min-h-screen flex items-center py-10">
       <div  className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 px-4 md:px-10 py-20 gap-10">
         
         {/* Left Half (Less than 50%) */}
         <div className="hidden md:block md:col-span-2 items-center ">
-          <img src="/ghoda.png" alt="" className="mt-60 -ml-20"/>
+          <img src="/ghoda.png" alt="" className="mt-80 -ml-20"/>
         </div>
 
         {/* Right Half (More than 50%) */}
@@ -68,28 +68,28 @@ const TeamSection = () => {
             Concept to Campaign. First Thought to Final Impact
           </motion.p>
 
-          <div className="rounded-xl space-y-6 mt-20">
+          <div className="rounded-xl space-y-4 mt-40">
             {items.map((text, index) => (
              <motion.div
              key={index}
-             className="bg-orange-500 hover:bg-[#182d3b] p-8  text-white text-[1.2rem] shadow-lg"
+             className="bg-orange-500 hover:bg-[#182d3b] p-8 shadow-lg rounded-lg"
              variants={itemVariants}
              initial="hidden"
              whileInView="show"
              exit="exit"
              viewport={{
                once: false,
-               amount: 0.5,
+               amount: 0.9,
              }}
            >
 
 
 <motion.p
 className="text-2xl text-white"
-  initial={{ opacity: 0, x: -100 }} // Start 100px to the left and invisible
-  whileInView={{ opacity: 1, x: 0 }} // Animate to original position and visible
+  initial={{ opacity: 0, x: -50 }} // Start 100px to the left and invisible
+  whileInView={{ opacity: 1, x: 0.5 }} // Animate to original position and visible
   exit={{ opacity: 0, x: 100 }} // (Optional) Animate out to the right
-  transition={{ duration: 0.7, ease: "easeOut" }}
+  transition={{ duration: 0.5, ease: "easeOut" }}
   viewport={{ once: false, amount: 0.5 }}
 >
   {text}

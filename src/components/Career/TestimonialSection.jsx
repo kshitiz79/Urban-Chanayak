@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-white px-4 py-16 md:px-20 text-black">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row">
+    <section className="bg-white px-12 py-16  text-black">
+      <div className=" flex flex-col md:flex-row">
         {/* Left 30%: Heading */}
         <div className="w-full md:w-[30%] mb-10 md:mb-0">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
@@ -16,35 +16,35 @@ export default function TestimonialSection() {
         </div>
 
         {/* Right 70%: Testimonial */}
-        <div className="w-full md:w-[70%] flex flex-col md:flex-row gap-10">
+        <div className="w-full md:w-[60%] flex flex-col md:flex-row gap-10">
           {/* Quote Section */}
-          <div className="text-lg relative flex-1">
+          <div className="text-xl relative flex-1">
             <p className="mb-2">
-              <h1 className="text-xl underline text-orange-600">
-                🔸 A Supportive, Inclusive Culture
+              <h1 className="text-xl  text-[#f7680e]">
+                🔸 <span className="underline">A Supportive, Inclusive Culture</span>
               </h1>
               We take pride in fostering a space where everyone feels respected,
               heard, and encouraged to grow. Your ideas matter here. Your voice
               is valued.
             </p>
             <p className="mb-2">
-              <h1 className="text-xl underline text-orange-600">
+              <h1 className="text-xl text-[#f7680e]">
                 {" "}
-                🔸 Meaningful Work, Real Impact{" "}
+                🔸 <span className="underline">Meaningful Work, Real Impact{" "}</span>
               </h1>
               Whether it’s a campaign that shifts public opinion or a brand
               story that inspires—your work will help create real change
               on-ground and online.
             </p>
             <p className="mb-2">
-              <h1 className="text-xl underline text-orange-600">🔸 Room to Learn and Lead </h1>
+              <h1 className="text-xl text-[#f7680e]">🔸  <span className="underline">Room to Learn and Lead </span> </h1>
               From digital media and design to strategy and event execution,
               you’ll have the opportunity to explore your interests and build a
               fulfilling career.
             </p>
             <p>
-              <h1 className="text-xl text-orange-500 underline">
-                🔸Workplace That Feels Like Home{" "}
+              <h1 className="text-xl text-[#f7680e] ">
+                🔸 <span className="underline">Workplace That Feels Like Home{" "}</span>
               </h1>
               With collaboration at the heart of everything we do, you’ll be
               surrounded by people who genuinely care—for the work and for one

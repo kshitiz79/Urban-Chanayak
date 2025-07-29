@@ -21,7 +21,7 @@ export default function HeroSection() {
     <motion.section
       ref={sectionRef}
       style={{ backgroundColor: background }}
-      className="text-white min-h-screen flex flex-col items-center justify-center px-4 py-26 transition-colors duration-1000"
+      className="text-white min-h-screen flex flex-col items-center justify-center py-26 transition-colors duration-1000"
     >
      <div className="text-center mb-12 mt-12">
      <h1 className="text-4xl md:text-[7rem] font-bold leading-none dark:text-white">
@@ -36,46 +36,46 @@ export default function HeroSection() {
 
 
       {/* Grid of images */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 max-w-7xl w-full px-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mx-auto px-10 w-full ">
         <img
           src="https://cdn.prod.website-files.com/64e875748a2cfff2e33de161/66cf051312dfedb8cd02c324_item-decor-1.svg"
           alt=""
-          className="rounded-tr-[3rem] rounded-bl-[3rem] bg-orange-500"
+          className="rounded-tr-[3rem] rounded-bl-[3rem] bg-[#f7680e]"
         />
         <img
-          src="/items2.jpg"
+          src="/item5.jpeg"
           alt=""
           className="rounded-tl-[3rem] rounded-br-[3rem] h-68 w-92 object-cover"
         />
         <img
-          src="/items2.jpg"
+          src="/item3.jpeg"
           alt=""
-          className="rounded-tr-[3rem] rounded-bl-[3rem] h-48 w-92 object-cover"
+          className="rounded-tr-[3rem] rounded-bl-[3rem] h-54 w-92 object-cover"
         />
         <img
           src="https://cdn.prod.website-files.com/64e875748a2cfff2e33de161/66cf051bcd6f2a55e70911c0_item-decor-2.svg"
           alt=""
-          className="rounded-tr-[3rem] rounded-bl-[3rem] bg-white"
+          className="rounded-tr-[3rem] rounded-bl-[3rem] bg-[#182d3b]"
         />
         <img
-          src="/items2.jpg"
+          src="/item2.jpeg"
           alt=""
-          className="rounded-tr-[3rem] rounded-bl-[3rem] h-68 w-92 -mt-28 object-cover"
+          className="rounded-tr-[3rem] rounded-bl-[3rem] h-64 w-92 -mt-22 object-cover"
         />
         <img
           src="https://cdn.prod.website-files.com/64e875748a2cfff2e33de161/66cf05247dd2f2d70b3fce60_item-decor-3.svg"
           alt=""
-          className="rounded-tr-[3rem] rounded-bl-[3rem] bg-white"
+          className="rounded-tr-[3rem] rounded-bl-[3rem] bg-[#182d3b]"
         />
         <img
-          src="https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg"
+          src="https://cdn.prod.website-files.com/64e875748a2cfff2e33de161/66cf051312dfedb8cd02c324_item-decor-1.svg"
           alt=""
-          className="rounded-tr-[3rem] rounded-bl-[3rem] bg-orange-500 h-58 w-92 -mt-18"
+          className="rounded-tr-[3rem] rounded-bl-[3rem] bg-[#f7680e] h-58 w-92 -mt-12"
         />
         <img
-          src="/items2.jpg"
+          src="/item4.jpeg"
           alt=""
-          className="rounded-tl-[3rem] rounded-br-[3rem] h-68 w-92 -mt-28 object-cover"
+          className="rounded-tl-[3rem] rounded-br-[3rem] h-68 w-92 -mt-22 object-cover"
         />
       </div>
     </motion.section>
