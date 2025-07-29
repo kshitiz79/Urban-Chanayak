@@ -44,7 +44,7 @@ const AudioVideo = () => {
       </div>
 
       {/* Right image */}
-      <div className="w-full md:w-1/2 relative h-screen">
+      <div className="w-full md:w-1/2 relative h-[90vh]">
         <Image
           src="/audio.gif" // Ensure this path is correct
           alt="Audio-Visual Production example"
