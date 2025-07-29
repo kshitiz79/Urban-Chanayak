@@ -18,27 +18,15 @@ const Section1 = () => {
         </div>
       </header>
       <main className="container mx-auto py-6">
-        <div className="relative w-full h-[70vh] md:h-[100vh] xl:h-[100vh] lg:h-[100vh] overflow-hidden shadow-lg">
+        <div className="relative w-full h-[40vh] md:h-[100vh] xl:h-[100vh] lg:h-[100vh] overflow-hidden shadow-lg">
           <img
             src="/blogpage.png" // Replace with actual image URL
             alt="Meg O’Hara in a snowy landscape"
-            className="w-full h-full"
+            className="w-full h-full object-cover"
             loading="lazy"
           />
         </div>
-        <div className="flex flex-col md:flex-row gap-2 text-sm text-gray-500 mt-8 justify-between">
-          <div className='flex flex-col'> 
-            <p>Published <br />
-            <span className='text-red-500'>
-               4.25.24</span></p>
-            </div>
-            <div className='flex flex-col'> 
-            <p>Category <br />
-            <span className="text-red-600">Ambassadors</span>
-               </p>
-            </div>
-            <span className="ml-2">SHARE THIS STORY</span>
-          </div>
+      
       </main>
     </div>
     </section>

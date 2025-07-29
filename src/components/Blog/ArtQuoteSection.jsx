@@ -19,7 +19,7 @@ const ArtQuoteSection = () => {
       const text = paragraph.textContent;
       paragraph.innerHTML = text
         .split(" ")
-        .map((char) => `<span class="text-gray-700 ">${char}</span>`)
+        .map((char) => `<span class="text-gray-700">${char}</span>`)
         .join(" ");
     });
 
@@ -28,15 +28,15 @@ const ArtQuoteSection = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         spans,
-        { color: "#ffffff" }, // Tailwind's gray-500 (adjusted to gray-700 for better contrast)
+        { color: "#ffffff" },
         {
-          color: "#000000", // Black
-          stagger: 0.05, // Delay between each letter
+          color: "#000000",
+          stagger: 0.05,
           scrollTrigger: {
             trigger: textRef.current,
-            start: "top 80%", // Start when 80% from top
-            end: "bottom 20%", // End when 20% from bottom
-            scrub: 1, // Smooth scroll syncing
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: 1,
           },
         }
       );
@@ -46,25 +46,27 @@ const ArtQuoteSection = () => {
   }, []);
 
   return (
-    <div className="scroll-smooth bg-orange-500 min-h-screen py-20 md:px-20">
-      <div className=" mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-        <div ref={textRef} className="flex-1 z-2 max-w-5xl">
-                      <p className="text-5xl text-gray-700 italic mb-6 -mt-4">The Assam Model</p>
-          <p className="text-4xl md:text-6xl font-bold mb-4 -mr-4 " >
-            <span className="text-gray-100">These two case studies highlight two distinct yet successful approaches to political brand-building on social media.</span>
+    <div className="scroll-smooth bg-orange-500 min-h-screen py-16 px-4 md:px-20">
+      <div className="mx-auto flex flex-col md:flex-row items-center gap-12">
+        
+        {/* Text Section */}
+        <div ref={textRef} className="flex-1 z-10 max-w-5xl">
+          <p className="text-3xl sm:text-4xl md:text-5xl text-gray-700 italic mb-4">
+            The Assam Model
           </p>
-
+          <p className="text-2xl sm:text-3xl md:text-6xl font-bold text-gray-100">
+            These two case studies highlight two distinct yet successful approaches to political brand-building on social media.
+          </p>
         </div>
-        <div className="flex-1 flex flex-col md:flex-row gap-6">
-          <div className="w-full   z-0">
+
+        {/* Image Section */}
+        <div className="flex-1 w-full">
           <img
-              src="/assammodel.png" 
-              alt="Artwork by Meg O'Hara"
-              loading="lazy"
-            /> 
-             
-          </div>
-         
+            src="/assammodel.png"
+            alt="Artwork by Meg O'Hara"
+            className="w-full h-auto object-contain"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
