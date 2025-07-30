@@ -34,7 +34,7 @@ const UrbanAbout = () => {
 
   // Scroll-based calculations
   const fontSize = isMobile
-    ? Math.max(scrollY < 300 ? 112 - scrollY / 1 : 26, 46)
+    ? Math.max(scrollY < 300 ? 100 - scrollY / 1 : 26, 46)
     : Math.max(scrollY < 300 ? 182 - scrollY / 1 : 26, 96);
   const translateX = Math.min(scrollY / 38, 96);
   const paraTranslateY = Math.min(scrollY / 2, 300);
@@ -94,7 +94,7 @@ const UrbanAbout = () => {
             <br className="hidden sm:block" /> but by rewriting the playbook
           </p>
 
-          <div className="md:w-1/3 flex md:justify-center">
+          <div className="md:w-1/3 flex md:justify-center pb-8 md:pb-0">
             <button className="bg-black hover:bg-orange-500 text-white px-6 py-2 text-sm md:text-base rounded-full uppercase font-bold w-full md:w-auto">
               Let’s Work Together
             </button>

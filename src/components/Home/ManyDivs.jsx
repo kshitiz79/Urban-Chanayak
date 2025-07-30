@@ -123,7 +123,7 @@ const ManyDivs = () => {
                 >
                   <div className="flex justify-center ">
                     <img
-                      src="/pencil1.jpeg"
+                      src="/pencil.png"
                       alt="Pencil"
                       className="  transition-transform duration-300 hover:translate-x-2"
                     />
@@ -142,7 +142,7 @@ const ManyDivs = () => {
                 <div
                   className={`bg-white p-10 w-full rounded-3xl py-14 transition-shadow duration-300 ${shadowClass}`}
                 >
-                  <h2 className="text-black text-[2rem] lg:text-[7.6rem] w-full leading-tight mr-6">
+                  <h2 className="text-black text-[1.6rem] lg:text-[7.6rem] w-full leading-tight mr-6">
                     urbanchanakya.in
                   </h2>
                   <p className="underline mt-3 text-black text-lg max-w-5xl text-left">
@@ -224,7 +224,7 @@ const ManyDivs = () => {
                         ].map((tag) => (
                           <div
                             key={tag}
-                            className="px-12 py-4 border-2 text-2xl rounded-full hover:bg-[#f7680d] hover:border-[#f7680d] hover:text-white transition-all duration-200"
+                            className="md:px-12 px-10 md:py-4 py-2 border-2 text-2xl rounded-full hover:bg-[#f7680d] hover:border-[#f7680d] hover:text-white transition-all duration-200"
                           >
                             {tag}
                           </div>
@@ -242,7 +242,7 @@ const ManyDivs = () => {
                   </div>
 
                   {/* Right Sub-Column */}
-               
+
                   <div className="w-full lg:w-1/3 bg-white p-6 rounded-3xl flex flex-col items-center justify-between text-center gap-3 transition-shadow duration-300">
 
                     <img

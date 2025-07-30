@@ -5,7 +5,7 @@ import React from "react";
 
 const PaidPromotion = () => {
   return (
-    <section className="relative scroll-smooth sticky top-0 w-full min-h-screen bg-white text-black flex flex-col md:flex-row">
+    <section className="relative scroll-smooth sticky md:top-0 w-full md:h-screen -top-60 h-[140vh] bg-white text-black flex flex-col md:flex-row">
       {/* Left content */}
       <div className="w-full md:w-1/2 px-6 md:px-16 py-12 flex flex-col justify-center bg-gray-100">
         <h1 className="text-3xl md:text-5xl font-bold mb-6">Paid Promotion</h1>

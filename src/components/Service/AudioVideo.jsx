@@ -5,9 +5,9 @@ import React from "react";
 
 const AudioVideo = () => {
   return (
-    <section className="scroll-smooth sticky top-0 w-full h-screen bg-gray-100  text-black flex flex-col md:flex-row">
+    <section className="scroll-smooth sticky md:top-0 w-full md:h-screen -top-50 bg-gray-100  text-black flex flex-col md:flex-row">
       {/* Left content */}
-      <div className="w-full md:w-1/2 px-6 md:px-16 md:py-16 py-0 flex flex-col justify-center bg-gray-100 space-y-6">
+      <div className="w-full md:w-1/2 px-6 md:px-16 md:py-16 py-10 flex flex-col justify-center bg-gray-100 space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold">Audio-Visual Production</h1>
 
         <ul className="text-lg font-semibold space-y-2">

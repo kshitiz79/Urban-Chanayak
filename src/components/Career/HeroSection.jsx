@@ -50,7 +50,7 @@ export default function HeroSection() {
         <img
           src="/item3.jpeg"
           alt=""
-          className="rounded-tr-[3rem] rounded-bl-[3rem] h-54 w-92 object-cover"
+          className="rounded-tr-[3rem] rounded-bl-[3rem] h-54 w-92 object-cover md:mt-0 -mt-40 mb-8"
         />
         <img
           src="https://cdn.prod.website-files.com/64e875748a2cfff2e33de161/66cf051bcd6f2a55e70911c0_item-decor-2.svg"

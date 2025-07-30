@@ -7,7 +7,7 @@ import React from "react";
 
 const ContentCreation = () => {
   return (
-    <section className="relative scroll-smooth sticky top-0 w-full h-auto bg-white text-black flex flex-col md:flex-row">
+    <section className="relative scroll-smooth sticky md:top-0 w-full md:h-screen -top-100 bg-white text-black flex flex-col md:flex-row">
       {/* Left content */}
       <div className="w-full md:w-1/2 px-6 md:px-16 py-10 md:py-16 flex flex-col justify-center space-y-6">
         <h1 className="text-3xl md:text-5xl font-bold">Content Creation and Design</h1>

@@ -7,7 +7,7 @@ import React from "react";
 
 const ElectionManagement = () => {
   return (
-    <section className="relative sticky top-0 h-[100vh] scroll-smooth w-full bg-white text-black min-h-screen flex flex-col md:flex-row">
+    <section className="relative sticky md:top-0 -top-100 md:h-[100vh] h-[200vh] scroll-smooth w-full bg-white text-black md:min-h-screen flex flex-col md:flex-row">
       {/* Left content */}
       <div className="w-full md:w-1/2 px-6 sm:px-8 md:px-16 py-10 sm:py-14 md:py-20 flex flex-col justify-center bg-gray-200">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
@@ -47,7 +47,8 @@ const ElectionManagement = () => {
       </div>
 
       {/* Right image */}
-      <div className="w-full md:w-1/2 relative h-[50vh] md:h-auto">
+     <div className="w-full md:w-1/2 relative h-[50vh] min-h-[300px] md:h-auto bg-gray-300">
+
         <Image
           src="/election.gif" // Replace with your image path
           alt="Election Campaign"

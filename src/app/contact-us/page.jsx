@@ -179,7 +179,7 @@ const page = () => {
               alt="Team"
               width={620}
               height={700}
-              className="w-full h-auto max-h-[500px] object-cover md:h-full"
+              className="w-full h-auto  object-cover md:h-full"
             />
           </div>
         </div>

@@ -43,8 +43,8 @@ const Section3 = () => {
   }, []);
 
   return (
-    <div className="scroll-smooth bg-white">
-      <div className="min-h-screen py-10 bg-white max-w-5xl mx-auto px-4 md:px-0">
+    <div className="relative scroll-smooth bg-white">
+      <div className=" py-10 bg-white max-w-5xl mx-auto px-8 md:px-0">
         <p
           ref={textRef}
           className="text-2xl md:text-4xl text-black leading-none"

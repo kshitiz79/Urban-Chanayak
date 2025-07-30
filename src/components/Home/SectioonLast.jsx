@@ -40,14 +40,14 @@ const SectioonLast = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[310vh] overflow-hidden">
+    <div className="relative w-full md:h-[310vh] h-[230vh] overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full  object-cover z-0"
       >
         <source src="/hero.mp4" type="video/mp4" />
       </video>
@@ -55,14 +55,14 @@ const SectioonLast = () => {
       {/* FIRST SECTION WITH WHITE BG INITIALLY */}
       <div
         ref={gateRef}
-        className="absolute top-0 left-0 w-full h-[100vh] z-10"
+        className="absolute top-0 left-0 w-full md:h-[100vh] h-[60vh] z-10"
         style={{ backgroundColor: whitePhase ? "transparent" : "white" }}
       >
         {/* Image Card Section */}
-        <section className="w-full h-full p-8 px-10 flex items-center">
+        <section className="w-full h-full md:p-8 p-0 px-10 flex items-center md:mb-0 ">
           <div className="flex flex-col md:flex-row bg-black rounded-2xl overflow-hidden w-full">
             {/* Left Image */}
-            <div className="w-full md:w-3/4 relative h-96 md:h-[39rem]">
+            <div className="w-full md:w-3/4 relative h-56 md:h-[39rem] md:mb-0">
               <img
                 src="/image2.png"
                 alt="Visual"
@@ -71,7 +71,7 @@ const SectioonLast = () => {
             </div>
             {/* Right Text */}
             <div className="w-full md:w-1/4 p-5 flex items-end">
-              <p className="text-gray-50 hover:text-orange-500">
+              <p className="text-gray-50 hover:text-orange-500 md:text-2xl text-lg font-semibold">
                 From campaign reels to interactive content — every frame tells
                 your story with impact.
               </p>
@@ -92,8 +92,8 @@ const SectioonLast = () => {
       </div>
 
       {/* SCROLLING CONTENT – APPEARS AFTER FIRST SCREEN */}
-      <div className="relative z-20 flex flex-col items-center justify-center h-[200vh] space-y-14 px-10 mt-[100vh]">
-        <div className="bg-white text-black text-4xl md:text-7xl py-12 px-12 rounded-3xl w-full h-[40vh]">
+      <div className="relative z-20 flex flex-col items-center justify-center md:h-[200vh] h-[120vh] md:space-y-14 space-y-6 px-10 mt-[100vh]">
+        <div className="bg-white text-black text-[1.9rem] md:leading-tight leading-none md:text-7xl md:py-12 py-10 px-12 rounded-3xl w-full h-[40vh]">
           <p>
             From Concept to Campaign. <br /> From First Thought to Final Impact.
           </p>

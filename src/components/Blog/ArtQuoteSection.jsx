@@ -46,8 +46,8 @@ const ArtQuoteSection = () => {
   }, []);
 
   return (
-    <div className="scroll-smooth bg-orange-500 min-h-screen py-16 px-4 md:px-20">
-      <div className="mx-auto flex flex-col md:flex-row items-center gap-12">
+    <div className="relative scroll-smooth bg-orange-500 md:h-screen md:py-16 py-10 px-8 md:px-20">
+      <div className="mx-auto flex flex-col md:flex-row items-center md:gap-12 gap-6">
         
         {/* Text Section */}
         <div ref={textRef} className="flex-1 z-10 max-w-5xl">

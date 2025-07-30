@@ -43,9 +43,9 @@ const ScrollColorText = () => {
   }, []);
 
   return (
-    <div className="bg-white scroll-smooth">
-      <div className="min-h-screen py-20 px-4 md:px-0 bg-white max-w-5xl mx-auto">
-        <p ref={textRef} className="text-2xl md:text-4xl text-black leading-none">
+    <div className="relative bg-white scroll-smooth">
+      <div className="py-10 px-8 md:px-0 bg-white max-w-5xl mx-auto">
+        <p ref={textRef} className="text-xl md:text-4xl text-black leading-none">
           In today’s political reality, social media is not just a platform. It is the main stage. For political leaders in Assam, it has become a powerful medium to communicate vision, counter opposition, and shape public perception. The digital voice of a leader now carries as much weight as their speech at a rally or a statement in the Assembly.
         </p>
 
@@ -80,7 +80,7 @@ const ScrollColorText = () => {
           />
         </div>
 
-        <div className="text-black text-lg md:text-xl py-16 md:ml-80 ml-4">
+        <div className="text-black text-lg md:text-xl md:py-16 py-10 md:ml-80 ml-4">
           <h2 className="text-xl md:text-2xl font-bold mb-4">Case Study 2: Ashok Singhal</h2>
           <h3 className="text-lg md:text-xl font-semibold mb-6 italic">The Crisis Communicator</h3>
 

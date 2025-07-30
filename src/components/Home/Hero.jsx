@@ -49,7 +49,7 @@ const Hero = () => {
   );
 
   return (
-    <section className="relative w-full" style={{ height: "480vh", zIndex: 10 }}>
+    <section className="relative w-full md:h-[480vh] h-[300vh] z-10" >
       {/* Sticky Layer */}
       <div className="sticky top-0 w-full h-screen overflow-hidden" style={{ zIndex: 5 }}>
         {/* Background Video */}
@@ -71,7 +71,7 @@ const Hero = () => {
         {/* Center Text Box */}
         <div className="relative z-10 flex justify-center items-center h-full text-center">
           <div
-            className="md:rounded-[8rem] rounded-[4rem] px-10 md:px-60 py-24 bg-white  text-black transition-opacity duration-100 hover:bg-orange-500 hover:text-white"
+            className="md:rounded-[8rem] rounded-[4rem] px-10 md:px-60 md:py-24 py-10 bg-white  text-black transition-opacity duration-100 hover:bg-orange-500 hover:text-white"
             style={{ opacity: textOpacity }}
           >
             <h1 className="text-4xl md:text-8xl font-telegraf text-center hover:text-white">

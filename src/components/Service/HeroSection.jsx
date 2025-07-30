@@ -5,7 +5,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="sticky top-0 w-full min-h-screen bg-white text-black flex flex-col md:flex-row scroll-smooth">
+    <section className="sticky top-0 w-full md:min-h-screen h-[120vh] bg-white text-black flex flex-col md:flex-row scroll-smooth">
       {/* Left content */}
       <div className="w-full md:w-1/2 px-4 sm:px-6 md:px-16 py-12 sm:py-16 flex flex-col justify-center md:mt-0 mt-12">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">

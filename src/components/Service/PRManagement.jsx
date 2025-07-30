@@ -7,7 +7,7 @@ import React from "react";
 
 const PRManagement = () => {
   return (
-    <section className="relative sticky top-0 h-[110vh] w-full min-h-screen flex flex-col md:flex-row bg-white text-black">
+    <section className="relative sticky md:top-0 md:h-[110vh] -top-50 h-[120vh] w-full min-h-screen flex flex-col md:flex-row bg-white text-black">
       {/* Left content */}
       <div className="w-full md:w-1/2 px-6 md:px-16 py-12 md:py-16 flex flex-col justify-center bg-white z-10">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">

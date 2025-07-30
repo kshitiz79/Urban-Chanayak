@@ -43,8 +43,8 @@ const Section4 = () => {
   }, []);
 
   return (
-    <div className="scroll-smooth bg-white">
-      <div className="bg-white max-w-6xl px-4 sm:px-10 md:px-20 pb-10 mx-auto">
+    <div className="relative scroll-smooth  bg-white">
+      <div className="bg-white  max-w-6xl px-8 sm:px-10 md:px-20 pb-10 mx-auto">
         <p ref={textRef} className="text-2xl sm:text-3xl md:text-4xl text-black">
           <span className="underline text-orange-500">
             Bodoland CEM Cup 2025: How Urban Chanakya Turned a Regional Tournament into Northeast India’s Loudest Roar to the Prime Minister Narendra Modi
@@ -56,7 +56,7 @@ const Section4 = () => {
         <img src="/blognew2.png" alt="jj" className="w-full h-auto" />
       </div>
 
-      <div className="text-black text-base sm:text-lg md:text-xl mt-12 px-4 sm:px-10 md:ml-80 md:mr-40">
+      <div className="text-black text-base sm:text-lg md:text-xl mt-12 px-8 sm:px-10 md:ml-80 md:mr-40">
         <p>
           The first-ever Bodoland CEM Cup 2025 wasn’t just a football tournament – it was a movement...
         </p>
