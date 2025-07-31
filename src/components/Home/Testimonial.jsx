@@ -18,11 +18,11 @@ const Testimonial = () => {
           campaigns, we handle complexity with precision and speed - we don’t
           just manage perceptions, we shape destinies. With a sharp eye for
           detail and a relentless drive for impact, Urban Chanakya turns
-          strategy into success. <br /> <br />Where ideas meet execution, and campaigns
-          become movements.
+          strategy into success. <br /> <br /> <span className="text-orange-600">Where ideas meet execution, and campaigns
+          become movements.</span>
           </span>
         </p>
-        <p className="text-gray-300 text-4xl font-semibold text-left mt-40 hover:text-orange-500">
+        <p className="text-gray-300 text-4xl font-semibold text-left mt-30 hover:text-orange-500">
           Welcome to Urban Chanakya{" "}
         </p>
       </div>
