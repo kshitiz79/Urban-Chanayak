@@ -64,9 +64,7 @@ const UrbanAbout = () => {
               transition: "transform 0.2s ease-out",
             }}
           >
-            <span className="text-orange-500">Urban Chanakya</span> is a strategy-first,
-            creativity-led brand powerhouse, delivering impactful outcomes across brand,
-            political, and digital domains.
+            <span className="text-orange-500">Urban Chanakya</span>  IS A STRATEGY-FIRST, CREATIVITY-LED BRAND POWERHOUSE, DELIVERING IMPACTFUL OUTCOMES ACROSS BRANDS IN POLITICS, PUBLIC SECTOR, GOVERNMENT AND CORPORATE DOMAINS.
           </p>
         </div>
       </section>

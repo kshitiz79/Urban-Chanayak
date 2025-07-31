@@ -1,9 +1,5 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Global/Header";
-import Footer from "@/components/Global/Footer";
-import CustomCursor from "@/components/Global/CustomerCursor";
-
+import LayoutWrapper from "./LayoutWrapper";
 
 export const metadata = {
   title: "Urban Chanayak",
@@ -13,13 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-    
-      >
-        <CustomCursor/>
-        <Header/>
-        {children}
-          <Footer/>
+      <body>
+        <LayoutWrapper>
+          {children}
+        </LayoutWrapper>
       </body>
     </html>
   );

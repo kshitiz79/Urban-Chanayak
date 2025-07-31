@@ -12,6 +12,7 @@ const items = [
   "Crisis Management – Clarity in Chaos, Creativity in Crisis",
   "Public Relations – Shaping Perception, Building Trust",
   "Strategic Messaging – Making Every Word Count",
+  'Technology & Software – Digital Solutions for Political Innovation & Smarter Governance',
 ];
 
 // Define animation variants for the items
