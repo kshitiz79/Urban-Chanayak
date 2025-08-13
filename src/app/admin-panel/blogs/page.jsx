@@ -12,7 +12,7 @@ export default function BlogListPage() {
     try {
       setLoading(true);
       setError('');
-      const res = await fetch('http://localhost:5001/api/blogs');
+      const res = await fetch('http://localhost:5001/api/blog');
       if (res.ok) {
         const data = await res.json();
         setBlogs(data);
@@ -34,7 +34,7 @@ export default function BlogListPage() {
     if (!confirm('Are you sure you want to delete this blog post?')) return;
 
     try {
-      const res = await fetch(`http://localhost:5001/api/blogs/admin/delete/${id}`, {
+      const res = await fetch(`http://localhost:5001/api/blog/admin/delete/${id}`, {
         method: 'DELETE',
       });
 
@@ -165,14 +165,14 @@ export default function BlogListPage() {
                       <div className="flex items-start space-x-4">
                         {blog.image && (
                           <img 
-                            src={blog.image} 
+                            src={blog.image.startsWith('http') ? blog.image : `http://localhost:5001${blog.image}`} 
                             alt={blog.title}
                             className="w-16 h-16 object-cover rounded-lg"
                           />
                         )}
                         <div>
                           <h2 className="text-xl font-semibold text-slate-800 mb-2">{blog.title}</h2>
-                          <p className="text-slate-600 mb-3 line-clamp-2">{blog.excerpt || blog.content?.substring(0, 150) + '...'}</p>
+                          <p className="text-slate-600 mb-3 line-clamp-2">{blog.excerpt || (blog.paragraphs && blog.paragraphs[0] ? blog.paragraphs[0].substring(0, 150) + '...' : '')}</p>
                         </div>
                       </div>
                       <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${

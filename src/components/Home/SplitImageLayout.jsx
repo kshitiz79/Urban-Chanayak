@@ -65,10 +65,10 @@ const SplitImageLayout = () => {
       {/* Heading to trigger bg change */}
       <h1
         ref={headingRef}
-        className="text-3xl sm:text-4xl md:text-6xl text-center text-white font-bold py-16 md:py-24 px-4"
+        className="text-3xl sm:text-4xl md:text-[3.3rem] text-center text-white font-bold py-16 md:py-24 px-6 "
       >
         
-        Our diverse projects range from environmental <br className="hidden md:block" />initiatives to educational programs.
+       Our projects range from high-octane elections to impactful government initiatives, trend-setting political campaigns to perception-shaping public movements, tech-driven innovations to unforgettable events
       </h1>
     </div>
   );

@@ -38,8 +38,8 @@ export default function AdminDashboard() {
         const [jobs, applications, messages, blogs] = await Promise.all([
           fetchWithFallback('http://localhost:5001/api/jobs'),
           fetchWithFallback('http://localhost:5001/api/applications'),
-          fetchWithFallback('http://localhost:5001/api/messages'),
-          fetchWithFallback('http://localhost:5001/api/blogs')
+          fetchWithFallback('http://localhost:5001/api/message'),
+          fetchWithFallback('http://localhost:5001/api/blog')
         ]);
         
         // Calculate additional stats

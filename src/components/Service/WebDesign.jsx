@@ -8,31 +8,27 @@ const WebDesign = () => {
     <section className=" relative sticky top-0 h-[110vh] scroll-smooth w-full min-h-screen bg-white  text-black flex flex-col md:flex-row">
       {/* Left content */}
       <div className="w-full md:w-1/2 px-6 md:px-16 py-10 flex flex-col justify-center bg-white">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">Web Design</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">Technology, Data & Governance Enablement</h1>
 
         <ul className="text-base md:text-lg font-semibold space-y-2 mb-6">
-          <li>• Visual Appeal &nbsp;&nbsp; • User Experience</li>
-          <li>• Brand Identity Integration</li>
+         <li>•	Custom Software Development & Services</li>
+         <li>•	Government Recruitment & Appointment Systems</li>
+         <li>•	Political Membership Tools</li>
+         <li>•	Political Organization Reporting & Analysis System</li>
+         <li>•	Electoral Data Mapping & Digitalization</li>
+         <li>•	Workflow Automation & Data Dashboards</li>
+         <li>•	Web Design & Integration</li>
         </ul>
 
         <div className="text-gray-800 text-base md:text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4">
           <p>
-            At Urban Chanakya, we specialize in creating custom websites and web portals tailored for government bodies and corporate entities. Our focus on SEO-friendly content ensures that your digital presence is not only visually appealing but also ranks well on search engines.
-          </p>
-          <p>
-            Trust Urban Chanakya to elevate your online presence and connect you with your audience more effectively.
-          </p>
-        </div>
-
-        <div className="pt-6">
-          <a href="#" className="text-black font-medium underline underline-offset-4 uppercase">
-            Designing Digital Experiences, Tailored for Success
-          </a>
+            21st century governance demands more than intent - it demands intelligent infrastructure and innovative implementation. Urban Chanakya builds digital ecosystems that transform how governments operate and political organizations mobilize. From streamlining recruitment processes and scaling membership networks to designing real-time reporting tools and intelligent data systems, our solutions bridge complexity with clarity. We fuse technology with transparency, embed IT with insights - enabling sharper decisions, faster execution, and systemic transformation.
+            </p>
         </div>
       </div>
 
       {/* Right image */}
-      <div className="w-full md:w-1/2 relative min-h-[300px] md:min-h-full">
+      <div className="w-full md:w-1/2 relative min-h-[200px] md:min-h-full">
         <Image
           src="/webdesign.gif"
           alt="Web Design"

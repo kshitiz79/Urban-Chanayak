@@ -11,7 +11,7 @@ export default function MessagesPage() {
     try {
       setLoading(true);
       setError('');
-      const res = await fetch('http://localhost:5001/api/messages');
+      const res = await fetch('http://localhost:5001/api/message');
       if (res.ok) {
         const data = await res.json();
         setMessages(Array.isArray(data) ? data : data.messages || []);

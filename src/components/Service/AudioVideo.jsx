@@ -33,14 +33,7 @@ const AudioVideo = () => {
           </p>
         </div>
 
-        <div>
-          <a
-            href="#"
-            className="text-black font-medium underline underline-offset-4 uppercase hover:text-orange-600 transition-colors"
-          >
-            Crafting Stories That Resonate Across Generations
-          </a>
-        </div>
+       
       </div>
 
       {/* Right image */}

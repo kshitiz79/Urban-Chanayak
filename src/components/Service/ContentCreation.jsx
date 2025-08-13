@@ -10,50 +10,29 @@ const ContentCreation = () => {
     <section className="relative scroll-smooth sticky md:top-0 w-full md:h-screen -top-100 bg-white text-black flex flex-col md:flex-row">
       {/* Left content */}
       <div className="w-full md:w-1/2 px-6 md:px-16 py-10 md:py-16 flex flex-col justify-center space-y-6">
-        <h1 className="text-3xl md:text-5xl font-bold">Content Creation and Design</h1>
+        <h1 className="text-3xl md:text-5xl font-bold">Publishing, Design & Print Solutions</h1>
 
         <ul className="text-lg font-semibold space-y-1">
-          <li>• Strategic Content</li>
-          <li>• Creative Design</li>
-          <li>• Measurable Impact</li>
+          <li>•	Coffee Table Books & Booklet Design</li>
+<li>•	Concept-to-Print Publications</li>
+<li>•	Leaflets, Pamphlets, Posters & Reports</li>
+<li>•	Print & Production Management</li>
         </ul>
 
         <div className="text-gray-800 text-base md:text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4">
           <p>
-            Urban Chanakya specializes in Content & Design Services, catering to
-            the diverse needs of clients with expert copywriting, content
-            creation, and stunning design. Our seasoned writers and innovative
-            designers work hand in hand to ensure your brand identity and
-            narratives not only resonate with but also convert your target
-            audience.
+           Ink meets innovation in everything we create. At Urban Chanakya, print is not just a medium, but a manifestation of strategy and storytelling. From timeless coffee table books to crisp brochures and meticulously designed reports, we turn complex ideas into beautifully crafted publications. Each piece is designed to capture, captivate, and communicate - page after page, print after print.
           </p>
-          <p>
-            From crafting iconic logos and engaging social media content to designing
-            dynamic hoardings, print ads, prospectuses, and television ads, we tailor
-            each piece to amplify your message effectively.
-          </p>
-          <p>
-            If you’re active on Twitter, you're likely familiar with our impact.
-            Urban Chanakya stands at the forefront of Content & Design, expertly
-            bridging the gap between your brand and its audience with unmatched
-            precision and creativity.
-          </p>
+       
         </div>
 
-        <div>
-          <a
-            href="#"
-            className="text-black font-medium underline underline-offset-4 uppercase hover:text-orange-600 transition-colors"
-          >
-            Creative Content, Dynamic Design
-          </a>
-        </div>
+       
       </div>
 
       {/* Right image */}
       <div className="w-full md:w-1/2 relative h-[100vh] md:min-h-full">
         <Image
-          src="/content.png" // Ensure this image path is correct
+          src="/contect.png" // Ensure this image path is correct
           alt="Content Creation and Design"
           fill
           className="object-cover"

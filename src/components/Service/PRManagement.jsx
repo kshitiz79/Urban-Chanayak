@@ -11,43 +11,26 @@ const PRManagement = () => {
       {/* Left content */}
       <div className="w-full md:w-1/2 px-6 md:px-16 py-12 md:py-16 flex flex-col justify-center bg-white z-10">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          PR Management
+          Media, PR & Digital Engagement
         </h1>
 
         <ul className="text-base sm:text-lg font-semibold space-y-2 mb-6">
-          <li>
-            • Reputation Enhancement &nbsp;&nbsp; • Media Relations
-          </li>
-          <li>• Crisis Management</li>
+     
+          
+          <li>  •	Public Relations, Brand Visibility & Media Outreach</li>
+          <li>•	Influencer & Celebrity Management</li>
+          <li>•	Audience Targeting & Paid Promotions</li>
+          <li>•	Live Streaming, 3D LED, Light & Sound Solutions</li>
+          <li>•	Theme Songs, TVCs, Audio-Visual Productions</li>
+          <li>•	High-end Photography and Drone Videography</li>
+          <li>•	Brand Image & Crisis Management</li>
         </ul>
 
         <div className="text-gray-800 text-base sm:text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4">
           <p>
-            Urban Chanakya distinguishes itself with a foundation in thorough
-            problem identification and tailoring unique solutions. In a field
-            often reliant on generic templates and methodologies, we venture
-            into innovative territories for every project. Renowned for its
-            exceptional delivery, superior execution stands as a hallmark of
-            Urban Chanakya's service.
+            Perception matters most in the minds of the masses. And that’s where we operate. We don’t just handle PR, media, or celebrity management - we choreograph perception. From headline strategy to high-impact productions, from influencer synergy to immersive real-world experiences, every move is powered by tech and timed for relevance. Whether it's about shaping public sentiment or navigating a crisis, we manage the message - and the moment.
           </p>
-          <p>
-            We don't just shift the dynamics; we command them. Our cadre of
-            public relations experts excels in harnessing both proactive and
-            responsive PR strategies. We're not about mere promotion; we
-            position you as a pivotal voice in ongoing discussions, ensuring
-            your business and brand become integral to any dialogue, regardless
-            of the subject.
-          </p>
-        </div>
-
-        <div className="pt-6">
-          <a
-            href="#"
-            className="text-black font-medium underline underline-offset-4 uppercase"
-          >
-            Fostering Connections, Influencing Perspectives, Cultivating
-            Meaningful Values
-          </a>
+          
         </div>
       </div>
 

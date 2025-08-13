@@ -105,15 +105,13 @@ const ManyDivs = () => {
                   <div className="flex justify-center">
                     <img src="/lotus.png" className="text-[14rem] h-full w-auto text-black p-8 pt-12" />
                   </div>
-                  <p className="text-black text-lg p-4 text-left">
-                    <span className="underline">
+                  <p className="text-black text-xl p-4 text-left">
+                    <span className="underline text-2xl">
                       {" "}
-                      Strategic Political & Campaign Services
+                      Political Clients
                     </span>
                     <br />
-                    Election & Electoral Management Leadership Branding 360°
-                    Campaign Planning & Execution Ground Intelligence, Surveys &
-                    Field Reports Voter Outreach Drives
+                    We offer 360° Political & Electoral Management, Leadership Branding, Ground Campaign Execution, Field Reports and Intelligence.
                   </p>
                 </div>
 
@@ -129,7 +127,7 @@ const ManyDivs = () => {
                     />
                   </div>
                   <p className="text-black text-lg mt-4 text-left">
-                  Experience with government projects, designing outdoor branding and exhibitions. Whether it's large-scale outdoor campaigns or curated exhibition designs, Urban Chanakya brings creativity, precision, and strategic thinking to every project, ensuring a lasting impression
+                    Experience with government projects, designing outdoor branding and exhibitions. Whether it's large-scale outdoor campaigns or curated exhibition designs, Urban Chanakya brings creativity, precision, and strategic thinking to every project, ensuring a lasting impression
                   </p>
                 </div>
               </div>
@@ -145,15 +143,11 @@ const ManyDivs = () => {
                   <h2 className="text-black text-[1.6rem] lg:text-[7.6rem] w-full leading-tight mr-6">
                     urbanchanakya.in
                   </h2>
-                  <p className="underline mt-3 text-black text-lg max-w-5xl text-left">
+                  <p className="underline mt-3 text-black text-2xl max-w-5xl text-left">
                     Our Mission
                   </p>
-                  <p className="text-black text-lg max-w-4xl text-left">
-                    Is to craft compelling, clear, and culturally resonant
-                    communication that informs, engages, and inspires the
-                    public. We specialize in translating government initiatives
-                    into powerful visual narratives that are accessible to
-                    diverse audiences
+                  <p className="text-black text-2xl max-w-4xl text-left">
+                    To craft clear, creative and compelling communication solutions that impact the narrative and resonate with the audience.
                   </p>
                 </div>
 
@@ -200,13 +194,11 @@ const ManyDivs = () => {
                         </div>
                       </div>
 
-                      <p className="mt-5 text-black font-semibold text-left text-lg">
+                      <p className="mt-5 text-black font-semibold text-left text-2xl underline">
                         Government Clients :
                       </p>
-                      <p className="text-black text-lg mt-2 text-left">
-                        Transform your brand's presence now. Discover how our
-                        innovative approach can amplify your impact and resonate
-                        with your audience.
+                      <p className="text-black text-xl mt-2 text-left">
+                        We offer Governmental Social Media Management, Public Relations, Branding, Logistics, Stakeholder Engagement.
                       </p>
                     </div>
 
@@ -216,27 +208,29 @@ const ManyDivs = () => {
                     >
                       <div className="flex flex-wrap justify-start gap-2">
                         {[
-                          "Innovative Design",
-                          "Impact Creation",
-                          "Public Policy",
-                          "Crisis Management",
                           "Strategic Messaging",
+                          "IT/AI Innovation",
+                          "Public Relations",
+
+                          "Crisis Management",
+                          "Social Media Management",
+
+
                         ].map((tag) => (
                           <div
                             key={tag}
-                            className="md:px-12 px-10 md:py-4 py-2 border-2 text-2xl rounded-full hover:bg-[#f7680d] hover:border-[#f7680d] hover:text-white transition-all duration-200"
+                            className="md:px-10 px-10 md:py-4 py-2 border-2 text-2xl rounded-full hover:bg-[#f7680d] hover:border-[#f7680d] hover:text-white transition-all duration-200"
                           >
                             {tag}
                           </div>
                         ))}
                       </div>
-                      <p className="mt-4 underline text-xl text-left">
+                      <p className="mt-4 underline text-2xl text-left">
                         Core Competencies
                       </p>
-                      <p className="text-lg text-left">
-                        We specialize in crafting integrated marketing &
-                        communications strategies that go beyond traditional
-                        boundaries.
+                      <p className="text-xl text-left">
+                        We specialize in crafting out-of-the-box communication strategies designed to create the impact you want.
+
                       </p>
                     </div>
                   </div>
@@ -255,8 +249,8 @@ const ManyDivs = () => {
                         Driving Impactful Public Communication
                       </p>
                       <p className="text-lg text-black text-left">
-                      Creating Impactful Public Communication
-                      By merging innovative creativity with strategic messaging, we ensure that every campaign goes beyond just reaching the audience. We focus on crafting messages that resonate deeply, leaving a memorable and lasting impact on the public while driving meaningful engagement.
+                        Creating Impactful Public Communication
+                        By merging innovative creativity with strategic messaging, we ensure that every campaign goes beyond just reaching the audience. We focus on crafting messages that resonate deeply, leaving a memorable and lasting impact on the public while driving meaningful engagement.
                       </p>
                     </div>
                   </div>

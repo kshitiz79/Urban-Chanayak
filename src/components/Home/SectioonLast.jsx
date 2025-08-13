@@ -95,7 +95,7 @@ const SectioonLast = () => {
       <div className="relative z-20 flex flex-col items-center justify-center md:h-[200vh] h-[120vh] md:space-y-14 space-y-6 px-10 mt-[100vh]">
         <div className="bg-white text-black text-[1.9rem] md:leading-tight leading-none md:text-7xl md:py-12 py-10 px-12 rounded-3xl w-full h-[40vh]">
           <p>
-            From Concept to Campaign. <br /> From First Thought to Final Impact.
+            From Concept to Campaign. <br />From Inception to Impact.
           </p>
         </div>
         <div className="bg-orange-600 hover:bg-white text-white hover:text-black text-4xl md:text-6xl py-24 px-12 rounded-full text-center w-full">

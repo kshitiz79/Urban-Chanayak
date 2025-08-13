@@ -82,10 +82,10 @@ export default function Page() {
       >
       
         <div className="relative z-10 text-center px-4 max-w-3xl">
-          <p className="text-lg mb-4">Find the career of your dreams</p>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+          <p className="text-3xl mb-4">Find the career of your dreams</p>
+          <h1 className="text-4xl md:text-5xl font-bold leading-none mb-6">
             We're more than just a workplace.
-            <br />
+     
             We're a family.
           </h1>
           <p className="text-base md:text-lg mb-8">
