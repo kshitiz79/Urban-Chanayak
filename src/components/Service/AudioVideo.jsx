@@ -11,25 +11,20 @@ const AudioVideo = () => {
         <h1 className="text-4xl md:text-5xl font-bold">Audio-Visual Production</h1>
 
         <ul className="text-lg font-semibold space-y-2">
-          <li>• Creative Storytelling</li>
-          <li>• State-of-the-Art Technology</li>
-          <li>• Professional Execution</li>
+          <li>•  ⁠High-end Audio/Video Productions</li>
+          <li>•  ⁠Campaign Theme Songs</li>
+          <li>• Short films and Documentaries</li>
+          <li>• ⁠TVC, Jingle, Ads</li>
+          <li>• Video Scripts and Closed Captionings</li>
         </ul>
 
         <div className="text-gray-800 text-base md:text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4">
           <p>
-            Crafting impactful theme songs that people repeatedly request,
-            even years after their release, is no small feat. Within a mere
-            3.5 years, we've crafted numerous standout video ads, theme
-            songs, and radio jingles for a wide range of clients.
+          From powerful awareness videos to memorable theme songs, from insightful documentaries to impactful scripts, we deliver a full spectrum of audio-visual solutions designed to achieve your strategic objectives.
+
           </p>
           <p>
-            Our expert team is committed to providing a seamless,
-            professional video production service. From engaging awareness
-            videos to compelling theme songs, we offer a variety of video
-            styles to meet your strategic needs. With Urban Chanakya, rest
-            assured your message will not only reach but deeply resonate
-            with your audience.
+          With Urban Chanakya, your message won’t just be seen or heard – it will connect, inspire, and leave a lasting impact.
           </p>
         </div>
 

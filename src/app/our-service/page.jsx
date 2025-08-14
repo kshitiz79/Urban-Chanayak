@@ -15,15 +15,19 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-        <HeroSection />
-        <ElectionManagement/>
-        <Branding/>
-        <WebDesign/>
-        <PaidPromotion/>
-        <PRManagement/>
-        <AudioVideo/>
-        <ContentCreation/>
         <EventManagement/>
+        <ElectionManagement/>
+        <WebDesign/>
+        <HeroSection />
+      
+        <Branding/>
+        <ContentCreation/>
+        <PaidPromotion/>
+
+        <AudioVideo/>
+        <PRManagement/>
+    
+      
     </div>
   )
 }
