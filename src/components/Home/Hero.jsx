@@ -82,7 +82,7 @@ const Hero = () => {
 
         {/* Final Bottom Heading */}
         {showFinalHeading && (
-          <div className="absolute bottom-20 w-full text-center z-20">
+          <div className="absolute bottom-20 w-full text-center z-20 py-6">
             <h2 className="text-white text-5xl md:text-5xl font-bold tracking-wide">
               Urban Chanakya is for
             </h2>

@@ -31,10 +31,10 @@ const ThreeBox = () => {
     [0, 0, 0],           // black
     [0, 0, 0],        // dark gray
     [15, 15, 15],     // medium gray
-    [243, 243, 243], 
+    [243, 243, 243],
     [255, 255, 255],    // light gray
   ];
-  
+
 
   // Interpolate between color stops
   const getInterpolatedColor = (t) => {
@@ -58,21 +58,21 @@ const ThreeBox = () => {
     <div
       ref={boxRef}
       style={{ backgroundColor }}
-      className="transition-colors duration-300 text-center text-white py-8"
+      className="transition-colors duration-300 text-center text-white "
     >
       <div className="flex flex-col items-center px-8 mx-auto space-y-4 mb-8">
         <div className="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-6 w-full justify-center">
-          <div className="bg-white hover:bg-orange-500 hover:text-white text-black font-normal w-full md:w-[50%] text-4xl py-16 px-10 rounded-2xl">
+          <div className="bg-white hover:bg-orange-500 hover:text-white text-black font-normal w-full md:w-[50%] md:text-4xl text-2xl  md:py-16 md:px-10  py-10 px-5 rounded-2xl">
             Political Parties & Leaders
           </div>
-          <div className="bg-white text-black hover:bg-orange-500 hover:text-white font-normal w-full md:w-[55%] text-4xl py-16 px-10 rounded-2xl">
+          <div className="bg-white text-black hover:bg-orange-500 hover:text-white font-normal w-full md:w-[55%] md:text-4xl text-2xl    md:py-16 md:px-10  py-7 px-5   rounded-2xl">
             Government & Public Sector Bodies
           </div>
         </div>
-        <div className="bg-white text-black hover:bg-orange-500 hover:text-white font-normal text-4xl w-full md:w-[100%] py-16 px-10 rounded-2xl mt-2">
+        <div className="bg-white text-black hover:bg-orange-500 hover:text-white font-normal md:text-4xl  w-full md:w-[100%]  text-2xl   md:py-16    md:px-10  py-7 px-5 rounded-2xl mt-2">
           Brands & Businesses Seeking Impact
         </div>
-        <p className="text-white text-xl max-w-4xl mx-auto py-10">
+        <p className="text-white text-xl max-w-4xl text-center mx-auto py-10 [word-spacing:0.15em]">
           Urban Chanakya empowers changemakers through strategy, creativity, and innovation. From political campaigns to brand launches — we don’t follow trends, we create the impact.
         </p>
       </div>

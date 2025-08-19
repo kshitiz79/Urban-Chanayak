@@ -105,7 +105,7 @@ const ManyDivs = () => {
                   <div className="flex justify-center">
                     <img src="/lotus.png" className="text-[14rem] h-full w-auto text-black p-8 pt-12" />
                   </div>
-                  <p className="text-black text-xl p-4 text-left">
+                  <p className="text-black text-xl p-4 text-left font-semibold">
                     <span className="underline text-2xl">
                       {" "}
                       Political Clients
@@ -143,7 +143,7 @@ const ManyDivs = () => {
                   <h2 className="text-black text-[1.6rem] lg:text-[7.6rem] w-full leading-tight mr-6">
                     urbanchanakya.in
                   </h2>
-                  <p className="underline mt-3 text-black text-2xl max-w-5xl text-left">
+                  <p className="underline mt-3 text-black text-2xl font-semibold max-w-5xl text-left">
                     Our Mission
                   </p>
                   <p className="text-black text-2xl max-w-4xl text-left">
@@ -225,7 +225,7 @@ const ManyDivs = () => {
                           </div>
                         ))}
                       </div>
-                      <p className="mt-4 underline text-2xl text-left">
+                      <p className="mt-4 underline font-semibold text-2xl text-left">
                         Core Competencies
                       </p>
                       <p className="text-xl text-left">
@@ -245,7 +245,7 @@ const ManyDivs = () => {
                       className=" text-black h-auto w-full mr-10 mt-5"
                     />
                     <div>
-                      <p className="mt-4 underline text-xl text-black text-left">
+                      <p className="mt-4 underline text-xl font-semibold text-black text-left">
                         Driving Impactful Public Communication
                       </p>
                       <p className="text-lg text-black text-left">

@@ -4,6 +4,9 @@ import LayoutWrapper from "./LayoutWrapper";
 export const metadata = {
   title: "Urban Chanayak",
   description: "We Create The Impact",
+   icons: {
+    icon: "/hirse.png",
+  },
 };
 
 export default function RootLayout({ children }) {

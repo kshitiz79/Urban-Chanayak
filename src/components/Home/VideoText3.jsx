@@ -1,4 +1,5 @@
 import React from 'react';
+const videoSrc = "/homepage.mp4";
 
 const VideoText3 = () => {
   return (
@@ -20,7 +21,7 @@ const VideoText3 = () => {
         <div className="w-full md:w-3/4 h-auto m-0 p-0">
           <video
             className="w-full h-full aspect-video rounded-r-2xl object-cover block"
-            src="/homepage.mp4"
+            src={videoSrc}
             autoPlay
             muted
             loop

@@ -40,7 +40,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-4 text-xl font-semibold">
+          <nav className="hidden md:flex space-x-4 text-xl ">
             {[
               { href: "/", label: "Home" },
               { href: "/about-us", label: "About Us" },

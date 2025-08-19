@@ -1,19 +1,30 @@
-import React from 'react';
+import React from "react";
+// Option A (recommended): import the asset so the bundler fingerprints it
+// Put FinalCut.mp4 in src/assets (or similar) and import:
+// import videoSrc from "./../../../public/FinalCut.mp4";
+
+// Option B (static public path):
+// - Vite/Next.js/CRA: place FinalCut.mp4 in /public and use: const videoSrc = "/FinalCut.mp4";
+const videoSrc = "/FinalCut.mp4";
 
 const Video = () => {
   return (
-    <div className="bg-white w-full h-full px-6 py-10">
-      <div className="rounded-xl overflow-hidden h-full w-full max-w-[2830px] mx-auto shadow-lg">
+    <div className="bg-white w-full md:px-9 md:py-10  px-2 py-6 ">
+      {/* Avoid h-full; enforce a visible box via aspect ratio */}
+      <div className="rounded-xl overflow-hidden w-full  shadow-lg ">
+      <div className="rounded-xl overflow-hidden w-full shadow-lg ">
         <video
-          className="w-full h-full object-cover rounded-2xl mb-"
-          src="FinalCut.mp4"
-          controls
+          className="block w-full h-auto"
+          src={videoSrc}
           autoPlay
           muted
           loop
+          playsInline
+          preload="metadata"
         >
           Your browser does not support the video tag.
         </video>
+        </div>
       </div>
     </div>
   );

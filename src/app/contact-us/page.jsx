@@ -9,7 +9,7 @@ const page = () => {
     name: "",
     email: "",
     phone: "",
-    subject: "",
+    subject: "", 
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);

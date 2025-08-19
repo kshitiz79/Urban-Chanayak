@@ -7,7 +7,7 @@ const VideoText = () => {
         3.7+ Billion Breached
       </h1>
 
-      <div className="bg-black rounded-2xl flex flex-col md:flex-row md:items-stretch overflow-hidden">
+      <div className="bg-gray-950 rounded-2xl flex flex-col md:flex-row md:items-stretch overflow-hidden">
         {/* Left Text Section */}
         <div className="w-full md:w-1/4 px-6 py-8 flex flex-col">
           <h2 className="text-2xl text-white font-bold mb-4">Our FY 2024-25</h2>

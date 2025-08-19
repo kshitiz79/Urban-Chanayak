@@ -13,7 +13,7 @@ import VideoText3 from "@/components/Home/VideoText3";
 export default function Home() {
   return (
     <div>
-      <Hero />
+      <Hero /> 
       <ThreeBox />
       <Video />
       <Testimonial />

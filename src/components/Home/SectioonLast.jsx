@@ -40,7 +40,7 @@ const SectioonLast = () => {
   }, []);
 
   return (
-    <div className="relative w-full md:h-[310vh] h-[230vh] overflow-hidden">
+    <div className="relative w-full md:h-[310vh] h-[210vh] overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay
@@ -92,19 +92,19 @@ const SectioonLast = () => {
       </div>
 
       {/* SCROLLING CONTENT – APPEARS AFTER FIRST SCREEN */}
-      <div className="relative z-20 flex flex-col items-center justify-center md:h-[200vh] h-[120vh] md:space-y-14 space-y-6 px-10 mt-[100vh]">
-        <div className="bg-white text-black text-[1.9rem] md:leading-tight leading-none md:text-7xl md:py-12 py-10 px-12 rounded-3xl w-full h-[40vh]">
+      <div className="relative z-20 flex flex-col items-center justify-center md:h-[200vh] h-[120vh] md:space-y-14 space-y-6 px-10 md:mt-[100vh] mt-[78vh]">
+        <div className="bg-white text-black text-[1.5rem] md:leading-tight leading-none md:text-7xl md:py-12 py-8 px-10 rounded-3xl w-full md:h-[40vh] ">
           <p>
             From Concept to Campaign. <br />From Inception to Impact.
           </p>
         </div>
-        <div className="bg-orange-600 hover:bg-white text-white hover:text-black text-4xl md:text-6xl py-24 px-12 rounded-full text-center w-full">
+        <div className="bg-orange-600 hover:bg-white text-white hover:text-black text-2xl md:text-6xl  md:py-24 md:px-12 py-10  px-8 rounded-4xl md:rounded-full  text-center w-full">
           Impact Creation – We Make the Trend
         </div>
-        <div className="bg-black hover:bg-white text-white hover:text-black text-4xl md:text-6xl py-24 px-12 rounded-full text-center w-full">
+        <div className="bg-black hover:bg-white text-white hover:text-black text-2xl md:text-6xl md:py-24 md:px-12  py-10  px-8  rounded-4xl md:rounded-full text-center w-full">
           Innovation – Smart Ideas, Real Results
         </div>
-        <div className="bg-orange-600 hover:bg-white hover:text-black  text-white text-4xl md:text-6xl py-28 px-12 rounded-full text-center w-full mb-60">
+        <div className="bg-orange-600 hover:bg-white hover:text-black  text-white text-2xl md:text-6xl md:py-28  md:px-12  py-10  px-8    rounded-4xl  md:rounded-full text-center w-full mb-60">
           Public Relations – Shaping Perception
         </div>
       </div>

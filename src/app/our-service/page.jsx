@@ -1,33 +1,27 @@
-import AudioVideo from '@/components/Service/AudioVideo';
-import Branding from '@/components/Service/Branding';
-import ContentCreation from '@/components/Service/ContentCreation';
-import ElectionManagement from '@/components/Service/ElectionManagement';
-import EventManagement from '@/components/Service/EventManagement';
-import HeroSection from '@/components/Service/HeroSection'
-import PaidPromotion from '@/components/Service/PaidPromotion';
-import PRManagement from '@/components/Service/PRManagement';
-import WebDesign from '@/components/Service/WebDesign';
-
-
-
+import ServiceSection from '@/components/Service/ServiceSection';
+import { servicesData } from '@/data/servicesData';
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-        <EventManagement/>
-        <ElectionManagement/>
-        <WebDesign/>
-        <HeroSection />
-      
-        <Branding/>
-        <ContentCreation/>
-        <PaidPromotion/>
-
-        <AudioVideo/>
-        <PRManagement/>
-    
-      
+      {servicesData.map((service) => (
+        <ServiceSection
+          key={service.id}
+          title={service.title}
+          bulletPoints={service.bulletPoints}
+          description={service.description}
+          imageSrc={service.imageSrc}
+          imageAlt={service.imageAlt}
+          sectionClassName={service.sectionClassName}
+          leftContentClassName={service.leftContentClassName}
+          rightImageClassName={service.rightImageClassName}
+          titleClassName={service.titleClassName}
+          bulletListClassName={service.bulletListClassName}
+          descriptionClassName={service.descriptionClassName}
+          useImg={service.useImg}
+        />
+      ))}
     </div>
   )
 }

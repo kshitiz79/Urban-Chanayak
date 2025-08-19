@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Logo and Socials */}
           <div className="flex flex-col items-center md:items-start">
             <img
-              src="https://urbanchanakya.in/wp-content/uploads/2024/04/logo-uc.png"
+              src="./logo1.png"
               alt="Urban Chanakya Logo"
               className="w-40 mb-4"
             />

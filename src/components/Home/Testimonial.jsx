@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonial = () => {
   return (
-    <div className="flex md:flex-col flex-row items-center py-24 md:px-10 px-2 bg-white">
+    <div className="flex md:flex-col flex-row items-center md:py-24 pb-10 md:px-10 px-2 bg-white">
       <div className="border-4 border-black rounded-2xl p-8 text-center">
         <p className="text-xl font-semibold text-gray-950 text-left md:text-3xl">
           <i> Strategy. Storytelling. Impact.</i> <br /> <br />
