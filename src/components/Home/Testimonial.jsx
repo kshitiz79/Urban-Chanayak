@@ -22,7 +22,7 @@ const Testimonial = () => {
           become movements.</span>
           </span>
         </p>
-        <p className="text-gray-300 text-4xl font-semibold text-left mt-30 hover:text-orange-500">
+        <p className="text-gray-300 text-4xl font-semibold text-left mt-20 hover:text-orange-500">
           Welcome to Urban Chanakya{" "}
         </p>
       </div>

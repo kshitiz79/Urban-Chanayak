@@ -26,18 +26,16 @@ const SplitImageLayout = () => {
 
           <div className="py-10 flex flex-col md:flex-row gap-6">
             <div className="w-full md:w-3/4 h-full">
-  <video
-    src={`${prefix}/fif.mp4`}   // ⬅ absolute from /public
-    alt="Right Video"
-    className="w-full h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none"
-    autoPlay
-    loop
-    muted
-    playsInline
-  />
-</div>
-
-
+              <video
+                src={`${prefix}/output.webm`}   // ⬅ absolute from /public
+                alt="Right Video"
+                className="w-full h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none"
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+            </div>
             <div className="w-full md:w-1/4 h-full">
               <img
                 src={`${prefix}/web.gif`}            // ⬅ absolute from /public
