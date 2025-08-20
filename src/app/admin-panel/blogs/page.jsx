@@ -12,7 +12,7 @@ export default function BlogListPage() {
     try {
       setLoading(true);
       setError('');
-      const res = await fetch('http://localhost:5001/api/blog');
+      const res = await fetch('https://ucbankend.onrender.com/api/blog');
       if (res.ok) {
         const data = await res.json();
         setBlogs(data);
@@ -34,7 +34,7 @@ export default function BlogListPage() {
     if (!confirm('Are you sure you want to delete this blog post?')) return;
 
     try {
-      const res = await fetch(`http://localhost:5001/api/blog/admin/delete/${id}`, {
+      const res = await fetch(`https://ucbankend.onrender.com/api/blog/admin/delete/${id}`, {
         method: 'DELETE',
       });
 
@@ -165,7 +165,7 @@ export default function BlogListPage() {
                       <div className="flex items-start space-x-4">
                         {blog.image && (
                           <img 
-                            src={blog.image.startsWith('http') ? blog.image : `http://localhost:5001${blog.image}`} 
+                            src={blog.image.startsWith('http') ? blog.image : `https://ucbankend.onrender.com${blog.image}`} 
                             alt={blog.title}
                             className="w-16 h-16 object-cover rounded-lg"
                           />

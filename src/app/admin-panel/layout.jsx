@@ -3,10 +3,12 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { useAuth } from '@/contexts/AuthContext';
 
 export default function AdminLayout({ children }) {
   const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { isAuthenticated, isLoading, adminEmail, logout } = useAuth();
 
   const navItems = [
     {
@@ -56,6 +58,19 @@ export default function AdminLayout({ children }) {
       )
     }
   ];
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-50">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-600" />
+      </div>
+    );
+  }
+
+  if (!isAuthenticated) {
+    // AuthProvider will redirect, but avoid content flash
+    return null;
+  }
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -110,10 +125,20 @@ export default function AdminLayout({ children }) {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
               </div>
-              <div className="hidden sm:block">
-                <p className="text-sm font-medium text-slate-800">Admin User</p>
+              <div className="hidden sm:block text-right">
+                <p className="text-sm font-medium text-slate-800">{adminEmail || 'Admin User'}</p>
                 <p className="text-xs text-slate-500">Administrator</p>
               </div>
+              <button
+                onClick={logout}
+                className="ml-2 inline-flex items-center px-3 py-2 bg-red-50 text-red-600 text-sm font-medium rounded-lg hover:bg-red-100 transition-colors"
+                title="Logout"
+              >
+                <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h4a2 2 0 012 2v1" />
+                </svg>
+                Logout
+              </button>
             </div>
 
             {/* Back to Site */}

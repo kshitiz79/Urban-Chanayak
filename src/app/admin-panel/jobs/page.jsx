@@ -11,7 +11,7 @@ export default function JobListPage() {
   const fetchJobs = async () => {
     try {
       setLoading(true);
-      const res = await fetch('http://localhost:5001/api/jobs');
+      const res = await fetch('https://ucbankend.onrender.com/api/jobs');
       if (res.ok) {
         const data = await res.json();
         setJobs(data);
@@ -33,7 +33,7 @@ export default function JobListPage() {
     if (!confirm('Are you sure you want to delete this job?')) return;
 
     try {
-      const res = await fetch(`http://localhost:5001/api/jobs/admin/delete/${id}`, {
+      const res = await fetch(`https://ucbankend.onrender.com/api/jobs/admin/delete/${id}`, {
         method: 'DELETE',
       });
 

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from 'react';
+import { API_CONFIG, API_ENDPOINTS } from '@/config/baseUrl';
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState({
@@ -35,11 +36,13 @@ export default function AdminDashboard() {
           }
         };
 
+        const { JOBS, APPLICATIONS, MESSAGES, BLOG } = API_ENDPOINTS;
+        
         const [jobs, applications, messages, blogs] = await Promise.all([
-          fetchWithFallback('http://localhost:5001/api/jobs'),
-          fetchWithFallback('http://localhost:5001/api/applications'),
-          fetchWithFallback('http://localhost:5001/api/message'),
-          fetchWithFallback('http://localhost:5001/api/blog')
+          fetchWithFallback(JOBS),
+          fetchWithFallback(APPLICATIONS),
+          fetchWithFallback(MESSAGES),
+          fetchWithFallback(BLOG)
         ]);
         
         // Calculate additional stats

@@ -65,7 +65,7 @@ export default function AddBlogPage() {
         formDataToSend.append('image', formData.image);
       }
       
-      const res = await fetch('http://localhost:5001/api/blog/admin/add', {
+      const res = await fetch('https://ucbankend.onrender.com/api/blog/admin/add', {
         method: 'POST',
         body: formDataToSend,
       });

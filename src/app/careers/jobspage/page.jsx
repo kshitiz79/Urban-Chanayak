@@ -20,7 +20,7 @@ export default function Page() {
   const portfolioRef = useRef();
 
   useEffect(() => {
-    fetch("http://localhost:5001/api/jobs")
+    fetch("https://ucbankend.onrender.com/api/jobs")
       .then((res) => res.json())
       .then((data) => setJobs(data));
   }, []);
@@ -47,7 +47,7 @@ export default function Page() {
     formData.append("portfolio", portfolioRef.current.files[0]);
 
     try {
-      const res = await fetch("http://localhost:5001/api/applications/apply", {
+      const res = await fetch("https://ucbankend.onrender.com/api/applications/apply", {
         method: "POST",
         body: formData,
       });

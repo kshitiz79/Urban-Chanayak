@@ -11,7 +11,7 @@ export default function MessagesPage() {
     try {
       setLoading(true);
       setError('');
-      const res = await fetch('http://localhost:5001/api/message');
+      const res = await fetch('https://ucbankend.onrender.com/api/message');
       if (res.ok) {
         const data = await res.json();
         setMessages(Array.isArray(data) ? data : data.messages || []);
@@ -30,7 +30,7 @@ export default function MessagesPage() {
     if (!confirm('Are you sure you want to delete this message?')) return;
 
     try {
-      const res = await fetch(`http://localhost:5001/api/messages/admin/delete/${id}`, {
+      const res = await fetch(`https://ucbankend.onrender.com/api/message/admin/delete/${id}`, {
         method: 'DELETE',
       });
 

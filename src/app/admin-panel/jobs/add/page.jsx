@@ -34,7 +34,7 @@ export default function AddJobPage() {
     setError('');
     
     try {
-      const res = await fetch('http://localhost:5001/api/jobs/admin/add', {
+      const res = await fetch('https://ucbankend.onrender.com/api/jobs/admin/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -1,8 +1,8 @@
 // Enhanced Applications Page UI with Tailwind CSS
-
 'use client';
 
 import { useEffect, useState } from 'react';
+import { API_ENDPOINTS } from '@/config/baseUrl';
 
 export default function ApplicationsPage() {
   const [applications, setApplications] = useState([]);
@@ -13,7 +13,7 @@ export default function ApplicationsPage() {
 
   const fetchApplications = async () => {
     try {
-      const res = await fetch('http://localhost:5001/api/applications');
+      const res = await fetch(API_ENDPOINTS.APPLICATIONS);
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);
       }
@@ -24,17 +24,25 @@ export default function ApplicationsPage() {
       console.error("Fetch error in frontend:", err);
     }
   };
-  
 
   const deleteApplication = async (id) => {
     if (!confirm('Are you sure you want to delete this application?')) return;
 
-    const res = await fetch(`http://localhost:5001/api/applications/admin/delete/${id}`, {
-      method: 'DELETE',
-    });
+    try {
+      const res = await fetch(API_ENDPOINTS.APPLICATION(id), {
+        method: 'DELETE',
+      });
 
-    if (res.ok) fetchApplications();
-    else alert('Failed to delete application.');
+      if (res.ok) {
+        fetchApplications();
+      } else {
+        const error = await res.json();
+        throw new Error(error.message || 'Failed to delete application');
+      }
+    } catch (err) {
+      console.error('Delete error:', err);
+      alert(err.message || 'Failed to delete application. Please try again.');
+    }
   };
 
   return (
@@ -63,23 +71,32 @@ export default function ApplicationsPage() {
               <td className="px-4 py-3 text-sm text-gray-600">{app.phone}</td>
               <td className="px-4 py-3 text-sm text-gray-600">{app.job?.title || '—'}</td>
               <td className="px-4 py-3 text-sm">
-              <a
-  href={`http://localhost:5001/uploads/${app.resume}`}
-  target="_blank"
-  rel="noreferrer"
-  className="text-blue-600 underline"
->
-  View
-</a>
-              </td>
-              <td className="px-4 py-3 text-sm">
+              {app.resume ? (
                 <a
-                  href={`http://localhost:5001/uploads/${app.portfolio}`}
+                  href={`${API_ENDPOINTS.UPLOADS}/${app.resume}`}
                   target="_blank"
-                  className="text-green-600 underline"
+                  rel="noreferrer"
+                  className="text-blue-600 hover:underline"
                 >
                   View
                 </a>
+              ) : (
+                '—'
+              )}
+              </td>
+              <td className="px-4 py-3 text-sm">
+                {app.portfolio ? (
+                <a
+                  href={`${API_ENDPOINTS.UPLOADS}/${app.portfolio}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-green-600 hover:underline"
+                >
+                  View
+                </a>
+              ) : (
+                '—'
+              )}
               </td>
               <td className="px-4 py-3">
                 <button
