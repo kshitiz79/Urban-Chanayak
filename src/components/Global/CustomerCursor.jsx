@@ -5,7 +5,7 @@ import "./CustomCursor.css";
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
-  const [color, setColor] = useState("rgba(246, 119, 9, 0.8)"); // Start with orange
+  const [color, setColor] = useState("rgba(211, 103, 9, 0.8)"); // Start with orange
 
   // Use more orange tones and fewer others
   const colors = [

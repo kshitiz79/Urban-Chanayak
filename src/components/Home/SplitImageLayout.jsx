@@ -40,7 +40,7 @@ const SplitImageLayout = () => {
               <img
                 src={`${prefix}/web.gif`}            // ⬅ absolute from /public
                 alt="Left Image"
-                className="w-full h-[60vh] md:h-[70vh] object-cover rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none"
+                className="w-full h-[60vh] 2xl:h-[75vh] md:h-[67vh] object-cover rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none"
               />
             </div>
           </div>

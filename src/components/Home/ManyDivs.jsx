@@ -96,14 +96,14 @@ const ManyDivs = () => {
             <div className="flex md:flex-row gap-6 w-full lg:flex-row flex-col">
               {/* LEFT COLUMN */}
               {/* <div className="w-3/4 flex flex-col gap-6"> */}
-              <div className="w-full lg:w-3/4 flex flex-col gap-6">
+              <div className="w-full lg:w-3/4 2xl:w-[30rem] flex flex-col gap-6">
 
                 {/* Box 1 */}
                 <div
-                  className={`bg-white rounded-3xl flex flex-col h-3/6  justify-between transition-shadow duration-300 ${shadowClass}`}
+                  className={`bg-white rounded-3xl flex flex-col md:h-3/6 2xl:h-4/2  justify-between transition-shadow duration-300 ${shadowClass}`}
                 >
                   <div className="flex justify-center">
-                    <img src="/lotus.png" className="text-[14rem] h-full w-auto text-black p-8 pt-12" />
+                    <img src="/lotus.png" className="text-[14rem] h-full w-auto text-black p-8 pt-12 2xl:w-[25rem]" />
                   </div>
                   <p className="text-black text-xl p-4 text-left font-semibold">
                     <span className="underline text-2xl">
@@ -117,16 +117,16 @@ const ManyDivs = () => {
 
                 {/* Box 2 */}
                 <div
-                  className={`bg-white rounded-3xl flex flex-col p-6 justify-between h-3/6 justify-between transition-shadow duration-300 ${shadowClass}`}
+                  className={`bg-white rounded-3xl flex flex-col p-6 justify-between md:h-3/6 2xl:h-4/2 justify-between transition-shadow duration-300 ${shadowClass}`}
                 >
                   <div className="flex justify-center ">
                     <img
                       src="/pencil.png"
                       alt="Pencil"
-                      className="  transition-transform duration-300 hover:translate-x-2"
+                      className="transition-transform duration-300 hover:translate-x-2 2xl:w-[20rem]"
                     />
                   </div>
-                  <p className="text-black text-lg mt-4 text-left">
+                  <p className="text-black text-lg mt-4 text-left 2xl:text-xl">
                     Experience with government projects, designing outdoor branding and exhibitions. Whether it's large-scale outdoor campaigns or curated exhibition designs, Urban Chanakya brings creativity, precision, and strategic thinking to every project, ensuring a lasting impression
                   </p>
                 </div>

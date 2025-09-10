@@ -25,7 +25,7 @@ export default function HeroSection() {
     >
      <div className="text-center mb-12 mt-12">
      <h1 className="text-4xl md:text-[7rem] font-bold leading-none dark:text-white">
-  become <span className="relative inline-block">
+  Become <span className="relative inline-block">
     <span className="z-10 relative">a part</span>
   </span> of Urban Chanakya family
 </h1>
@@ -36,7 +36,7 @@ export default function HeroSection() {
 
 
       {/* Grid of images */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mx-auto px-10 w-full ">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 2xl:gap-4 mx-auto px-10 w-full 2xl:w-[85%] ">
         <img
           src="https://cdn.prod.website-files.com/64e875748a2cfff2e33de161/66cf051312dfedb8cd02c324_item-decor-1.svg"
           alt=""

@@ -74,9 +74,9 @@ const page = () => {
 
   return (
     <>
-      <section className="bg-white py-20  px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl text-black font-black leading-tight drop-shadow-[1px_1px_0_black] uppercase mt-10">
+      <section className="bg-white py-20 px-4 sm:px-6 2xl:px-10">
+        <div className="max-w-full mx-auto text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl text-black font-medium leading-tight drop-shadow-[1px_1px_0_black] uppercase mt-10">
             Your brand is unique, and so are our solutions. <br className="hidden md:block" /> Get in touch.
           </h1>
         </div>
@@ -84,18 +84,18 @@ const page = () => {
         <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-stretch justify-between">
           {/* Left - Contact Form */}
           <div className="w-full md:w-1/2 bg-[#182d3b] rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl">
-            <h3 className="text-white text-sm tracking-widest uppercase text-center">
+            <h3 className="text-white text-sm tracking-widest uppercase text-center 2xl:text-3xl">
               Send Us A Message
             </h3>
 
-            <form className="space-y-4" onSubmit={handleSubmit}>
+            <form className="space-y-4 2xl:mt-10" onSubmit={handleSubmit}>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Name"
-                className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+                className="w-full px-4 py-3 2xl:py-4 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
                 required
               />
 
@@ -106,7 +106,7 @@ const page = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Email"
-                  className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+                  className="w-full px-4 py-3 2xl:py-4 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
                   required
                 />
                 <input
@@ -115,7 +115,7 @@ const page = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="Phone"
-                  className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+                  className="w-full px-4 py-3 2xl:py-4 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
                 />
               </div>
 
@@ -125,7 +125,7 @@ const page = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="Enter Subject"
-                className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+                className="w-full px-4 py-3 2xl:py-4 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
                 required
               />
 
@@ -135,22 +135,22 @@ const page = () => {
                 onChange={handleChange}
                 rows="4"
                 placeholder="Enter your Message"
-                className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+                className="w-full px-4 py-3 2xl:py-4 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
                 required
               ></textarea>
 
               <button
                 type="submit"
-                className="w-full py-3 bg-orange-500 text-white font-medium rounded-md hover:bg-orange-600 transition"
+                className="w-full py-3 2xl:py-4 2xl:text-2xl bg-orange-500 text-white font-medium rounded-md hover:bg-orange-600 transition"
               >
                 Submit
               </button>
             </form>
 
             {/* Direct Email */}
-            <div className="text-center text-white text-sm space-y-1 pt-4">
-              <div className="uppercase tracking-widest">Direct Email</div>
-              <div className="text-lg font-light">hello@urbanchanakya.in</div>
+            <div className="text-center text-white text-sm 2xl:text-xl space-y-1 pt-4">
+              <div className="uppercase tracking-widest">Email Us at</div>
+              <div className="text-lg 2xl:text-2xl font-light">hello@urbanchanakya.in</div>
             </div>
 
             {/* Social Icons */}
@@ -161,10 +161,10 @@ const page = () => {
                   href={item.Link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white rounded-lg py-6 flex flex-col items-center justify-center text-black hover:text-orange-500 transition"
+                  className="bg-white rounded-lg py-6 2xl:py-8 flex flex-col items-center justify-center text-black hover:text-orange-500 transition"
                 >
                   <FontAwesomeIcon icon={item.icon} className="text-2xl" />
-                  <span className="text-xs mt-2 uppercase tracking-wider">
+                  <span className="text-xs mt-2 uppercase tracking-wider 2xl:text-2xl">
                     {item.name}
                   </span>
                 </a>

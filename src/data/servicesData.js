@@ -15,8 +15,8 @@ export const servicesData = [
         sectionClassName: "scroll-smooth sticky top-0 w-full min-h-screen bg-white text-black flex flex-col md:flex-row",
         leftContentClassName: "w-full md:w-1/2 px-4 md:px-16 py-10 md:py-16 flex flex-col justify-center bg-gray-100",
         rightImageClassName: "w-full md:w-1/2 relative h-[100vh] md:h-screen",
-        titleClassName: "text-3xl md:text-5xl font-bold mb-4 md:mb-6",
-        bulletListClassName: "text-base md:text-lg font-semibold space-y-2 mb-6",
+        titleClassName: "text-3xl md:text-5xl font-semibold mb-4 md:mb-6",
+        bulletListClassName: "text-base md:text-lg font-medium space-y-2 mb-6",
         descriptionClassName: "text-gray-800 text-base md:text-lg leading-relaxed border-t border-gray-300 pt-4 md:pt-6 space-y-4",
         useImg: true
     },
@@ -37,8 +37,8 @@ export const servicesData = [
         sectionClassName: "relative sticky md:top-0 -top-100 md:h-[100vh] h-[200vh] scroll-smooth w-full bg-white text-black md:min-h-screen flex flex-col md:flex-row",
         leftContentClassName: "w-full md:w-1/2 px-6 sm:px-8 md:px-16 py-10 sm:py-14 md:py-20 flex flex-col justify-center bg-gray-200",
         rightImageClassName: "w-full md:w-1/2 relative h-[50vh] min-h-[300px] md:h-auto bg-gray-300",
-        titleClassName: "text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight",
-        bulletListClassName: "text-sm sm:text-lg font-semibold space-y-2 mb-6",
+        titleClassName: "text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 leading-tight",
+        bulletListClassName: "text-sm sm:text-lg font-medium space-y-2 mb-6",
         descriptionClassName: "text-gray-800 text-base sm:text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4"
     },
     {
@@ -59,8 +59,8 @@ export const servicesData = [
         sectionClassName: "relative sticky top-0 h-[110vh] scroll-smooth w-full min-h-screen bg-white text-black flex flex-col md:flex-row",
         leftContentClassName: "w-full md:w-1/2 px-6 md:px-16 py-10 flex flex-col justify-center bg-white",
         rightImageClassName: "w-full md:w-1/2 relative min-h-[200px] md:min-h-full",
-        titleClassName: "text-4xl md:text-5xl font-bold mb-6",
-        bulletListClassName: "text-base md:text-lg font-semibold space-y-2 mb-6",
+        titleClassName: "text-4xl md:text-5xl font-semibold mb-6",
+        bulletListClassName: "text-base md:text-lg font-medium space-y-2 mb-6",
         descriptionClassName: "text-gray-800 text-base md:text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4"
     },
     {
@@ -79,8 +79,8 @@ export const servicesData = [
         sectionClassName: "sticky top-0 w-full md:min-h-screen h-[120vh] bg-white text-black flex flex-col md:flex-row scroll-smooth",
         leftContentClassName: "w-full md:w-1/2 px-4 sm:px-6 md:px-16 md:py-12 py-16 flex flex-col justify-center md:mt-0 mt-12",
         rightImageClassName: "w-full md:w-1/2 relative h-[300px] sm:h-[400px] md:h-auto",
-        titleClassName: "text-3xl sm:text-4xl md:text-5xl font-bold mb-6",
-        bulletListClassName: "text-sm sm:text-lg font-semibold space-y-2 mb-6",
+        titleClassName: "text-3xl sm:text-4xl md:text-5xl font-semibold mb-6",
+        bulletListClassName: "text-sm sm:text-lg font-medium space-y-2 mb-6",
         descriptionClassName: "text-gray-800 text-lg sm:text-base leading-relaxed border-t border-gray-300 pt-6 space-y-8"
     },
     {
@@ -99,8 +99,8 @@ export const servicesData = [
         sectionClassName: "relative sticky md:top-0 md:h-[110vh] -top-50 h-[130vh] scroll-smooth w-full bg-white text-black min-h-screen flex flex-col md:flex-row",
         leftContentClassName: "w-full md:w-1/2 px-4 sm:px-6 md:px-16 py-10 md:py-16 flex flex-col justify-center bg-gray-300",
         rightImageClassName: "w-full md:w-1/2 relative h-[300px] sm:h-[400px] md:h-auto",
-        titleClassName: "text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6",
-        bulletListClassName: "text-base sm:text-md font-semibold space-y-2 mb-6",
+        titleClassName: "text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 md:mb-6",
+        bulletListClassName: "text-base sm:text-md font-medium space-y-2 mb-6",
         descriptionClassName: "text-gray-800 text-base sm:text-md leading-relaxed border-t border-gray-300 pt-6 space-y-4"
     },
     {
@@ -118,8 +118,8 @@ export const servicesData = [
         sectionClassName: "relative scroll-smooth sticky md:top-0 w-full md:h-screen -top-100 bg-white text-black flex flex-col md:flex-row",
         leftContentClassName: "w-full md:w-1/2 px-6 md:px-16 py-10 md:py-16 flex flex-col justify-center space-y-6",
         rightImageClassName: "w-full md:w-1/2 relative h-[100vh] md:min-h-full",
-        titleClassName: "text-3xl md:text-5xl font-bold",
-        bulletListClassName: "text-lg font-semibold space-y-1",
+        titleClassName: "text-3xl md:text-5xl font-semibold",
+        bulletListClassName: "text-lg font-medium space-y-1",
         descriptionClassName: "text-gray-800 text-base md:text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4"
     },
     {
@@ -141,8 +141,8 @@ export const servicesData = [
         sectionClassName: "relative scroll-smooth sticky md:top-0 w-full md:h-screen -top-60 h-[140vh] bg-white text-black flex flex-col md:flex-row",
         leftContentClassName: "w-full md:w-1/2 px-6 md:px-16 py-12 flex flex-col justify-center bg-gray-100",
         rightImageClassName: "w-full md:w-1/2 relative min-h-[300px] md:min-h-full",
-        titleClassName: "text-3xl md:text-5xl font-bold mb-6",
-        bulletListClassName: "text-base md:text-lg font-semibold space-y-2 mb-6",
+        titleClassName: "text-3xl md:text-5xl font-semibold mb-6",
+        bulletListClassName: "text-base md:text-lg font-medium space-y-2 mb-6",
         descriptionClassName: "text-gray-800 text-base md:text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4"
     },
     {
@@ -161,8 +161,8 @@ export const servicesData = [
         sectionClassName: "scroll-smooth sticky md:top-0 w-full md:h-screen -top-50 bg-gray-100 text-black flex flex-col md:flex-row",
         leftContentClassName: "w-full md:w-1/2 px-6 md:px-16 md:py-16 py-10 flex flex-col justify-center bg-gray-100 space-y-6",
         rightImageClassName: "w-full md:w-1/2 relative h-[300px] sm:h-[400px] md:h-auto",
-        titleClassName: "text-4xl md:text-5xl font-bold",
-        bulletListClassName: "text-lg font-semibold space-y-2",
+        titleClassName: "text-4xl md:text-5xl font-semibold",
+        bulletListClassName: "text-lg font-medium space-y-2",
         descriptionClassName: "text-gray-800 text-base md:text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4"
     },
     {
@@ -178,13 +178,13 @@ export const servicesData = [
             '• Brand Image & Crisis Management'
         ],
         description: 'Perception matters most in the minds of the masses. And that\'s where we operate. We don\'t just handle PR, media, or celebrity management - we choreograph perception. From headline strategy to high-impact productions, from influencer synergy to immersive real-world experiences, every move is powered by tech and timed for relevance. Whether it\'s about shaping public sentiment or navigating a crisis, we manage the message - and the moment.',
-        imageSrc: '/pr.gif',
+        imageSrc: '/output.gif',
         imageAlt: 'Branding Billboard',
         sectionClassName: "relative sticky md:top-0 md:h-[110vh] -top-50 h-[120vh] w-full min-h-screen flex flex-col md:flex-row bg-white text-black",
         leftContentClassName: "w-full md:w-1/2 px-6 md:px-16 py-12 md:py-16 flex flex-col justify-center bg-white z-10",
         rightImageClassName: "w-full md:w-1/2 relative h-[300px] sm:h-[400px] md:min-h-full",
-        titleClassName: "text-3xl sm:text-4xl md:text-5xl font-bold mb-6",
-        bulletListClassName: "text-base sm:text-lg font-semibold space-y-2 mb-6",
+        titleClassName: "text-3xl sm:text-4xl md:text-5xl font-semibold mb-6",
+        bulletListClassName: "text-base sm:text-lg font-medium space-y-2 mb-6",
         descriptionClassName: "text-gray-800 text-base sm:text-lg leading-relaxed border-t border-gray-300 pt-6 space-y-4"
     }
 ];
