@@ -23,17 +23,19 @@ export const AuthProvider = ({ children }) => {
   // Check authentication status on mount
   useEffect(() => {
     const checkAuth = () => {
-      const authStatus = localStorage.getItem('adminAuth');
-      const email = localStorage.getItem('adminEmail');
-      
-      if (authStatus === 'true' && email) {
-        setIsAuthenticated(true);
-        setAdminEmail(email);
-      } else {
-        setIsAuthenticated(false);
-        setAdminEmail('');
+      if (typeof window !== 'undefined') {
+        const authStatus = localStorage.getItem('adminAuth');
+        const email = localStorage.getItem('adminEmail');
+
+        if (authStatus === 'true' && email) {
+          setIsAuthenticated(true);
+          setAdminEmail(email);
+        } else {
+          setIsAuthenticated(false);
+          setAdminEmail('');
+        }
       }
-      
+
       setIsLoading(false);
     };
 
@@ -44,7 +46,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     if (!isLoading) {
       const isAdminRoute = pathname?.startsWith('/admin-panel');
-      
+
       if (isAdminRoute && !isAuthenticated) {
         router.push('/admin-login');
       }
@@ -52,15 +54,19 @@ export const AuthProvider = ({ children }) => {
   }, [isAuthenticated, isLoading, pathname, router]);
 
   const login = (email) => {
-    localStorage.setItem('adminAuth', 'true');
-    localStorage.setItem('adminEmail', email);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('adminAuth', 'true');
+      localStorage.setItem('adminEmail', email);
+    }
     setIsAuthenticated(true);
     setAdminEmail(email);
   };
 
   const logout = () => {
-    localStorage.removeItem('adminAuth');
-    localStorage.removeItem('adminEmail');
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('adminAuth');
+      localStorage.removeItem('adminEmail');
+    }
     setIsAuthenticated(false);
     setAdminEmail('');
     router.push('/admin-login');
