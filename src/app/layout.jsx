@@ -1,10 +1,10 @@
 import "./globals.css";
 import LayoutWrapper from "./LayoutWrapper";
-
+import { telegraph } from "./font";
 export const metadata = {
   title: "Urban Chanayak",
   description: "We Create The Impact",
-   icons: {
+  icons: {
     icon: "/hirse.png",
   },
 };
@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={telegraph.className}>
         <LayoutWrapper>
           {children}
         </LayoutWrapper>

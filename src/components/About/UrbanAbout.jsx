@@ -45,7 +45,7 @@ const UrbanAbout = () => {
       <section className="bg-white md:h-[80vh] h-[60vh] w-full relative z-10 pt-32 sm:pt-40 px-6 sm:px-10">
         <div>
           <h1
-            className="font-black text-black uppercase leading-none origin-left"
+            className="font-semibold text-black uppercase leading-none origin-left"
             style={{
               fontSize: `${fontSize}px`,
               transform: `translateX(-${translateX}px)`,
@@ -71,7 +71,7 @@ const UrbanAbout = () => {
 
 
       {/* Section 2: Background Video */}
-    <section className="relative md:w-full  md:h-[130vh] w-auto h-[60vh] bg-black overflow-hidden z-10">
+      <section className="relative md:w-full  md:h-[130vh] w-auto h-[60vh] bg-black overflow-hidden z-10">
         <video
           src="/about-replace.webm"
           className="absolute top-0 left-0 w-full h-full object-cover"

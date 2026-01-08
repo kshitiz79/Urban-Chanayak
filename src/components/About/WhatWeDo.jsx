@@ -5,37 +5,37 @@ const WhatWeDo = () => {
     <div className='relative scroll-smooth'>
 
 
-        <section>  <section className="relative z-10 bg-white md:pt-40 py-14 px-10 pb-10">
-  <div className="flex flex-col md:flex-row items-start md:items-start justify-between gap-10">
-    
-    {/* Left side: Heading + Video */}
-    <div className="flex flex-col md:w-2/3">
-      <h2 className="text-5xl md:text-8xl font-extrabold text-black uppercase whitespace-nowrap drop-shadow-[1px_1px_0_black]">
-        what we do
-      </h2>
+      <section>  <section className="relative z-10 bg-white md:pt-40 py-14 px-10 pb-10">
+        <div className="flex flex-col md:flex-row items-start md:items-start justify-between gap-10">
 
-      <video
-        src="/hero.mp4"
-        className="mt-6 w-full max-w-[328px]"
-        autoPlay
-        muted
-        loop
-        playsInline
-      ></video>
-    </div>
+          {/* Left side: Heading + Video */}
+          <div className="flex flex-col md:w-2/3">
+            <h2 className="text-5xl md:text-8xl font-semibold text-black uppercase whitespace-nowrap drop-shadow-[1px_1px_0_black]">
+              what we do
+            </h2>
 
-    {/* Right side: Paragraph */}
-    <div className="md:w-2/3 flex md:justify-center">
-      <p className="text-black px-2 md:px-6 py-2 text-xl ">
-      At Urban Chanakya, we go beyond providing services — we work to engineer Impact.
-Whether it’s crafting winning political campaigns, shaping public opinion, building powerful brand identities, or integrating cutting-edge technology into outreach — we don’t just ask what can we do for you — we ask what can’t we.
+            <video
+              src="/hero.mp4"
+              className="mt-6 w-full max-w-[328px]"
+              autoPlay
+              muted
+              loop
+              playsInline
+            ></video>
+          </div>
 
-      </p>
-    </div>
-  </div>
-</section>
+          {/* Right side: Paragraph */}
+          <div className="md:w-2/3 flex md:justify-center">
+            <p className="text-black px-2 md:px-6 py-2 text-xl ">
+              At Urban Chanakya, we go beyond providing services — we work to engineer Impact.
+              Whether it’s crafting winning political campaigns, shaping public opinion, building powerful brand identities, or integrating cutting-edge technology into outreach — we don’t just ask what can we do for you — we ask what can’t we.
 
-        </section>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      </section>
     </div>
   )
 }
